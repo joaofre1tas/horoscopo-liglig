@@ -23908,9 +23908,10 @@ function ZodiacWheel({ onResult }) {
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "relative h-[300px] w-[300px] md:h-[450px] md:w-[450px]",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "h-full w-full transition-transform duration-[4000ms] ease-out-quad",
+				className: "h-full w-full transition-transform",
 				style: {
 					transform: `rotate(${rotation}deg)`,
+					transitionDuration: "4000ms",
 					transitionTimingFunction: "cubic-bezier(0.25, 0.1, 0.25, 1)"
 				},
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
@@ -30835,4 +30836,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-9AE8mb5A.js.map
+//# sourceMappingURL=index-I7HUDWE1.js.map

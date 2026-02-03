@@ -40,31 +40,13 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
     setIsSpinning(true)
 
     // Calculate rotation
-    // Each segment is 360/12 = 30 degrees.
-    // Index 0 is at top (0 degrees or -90 degrees depending on SVG start).
-    // Our SVG starts at 3 o'clock (0 degrees). We want index 0 at 12 o'clock (-90 degrees).
-    // Actually, let's keep it simple:
-    // If we want index `i` to be at the top pointer.
-    // We need to rotate the wheel such that segment `i` aligns with the pointer.
-    // Let's assume the pointer is at the TOP (270deg / -90deg visually).
-    // If the wheel is constructed with segment 0 starting at -15deg to 15deg (centered at 0deg - Right).
-    // Wait, let's look at the SVG construction below.
-    // I'll construct segment 0 at the top (-90deg relative to 0 which is right).
-    // To keep it simple: Segment 0 is at rotation 0.
-    // To show Segment i, we rotate - (i * 30).
-    // Add extra spins: 5 * 360.
-
     const segmentAngle = 360 / 12
     const targetIndex = sign.id
 
     // We want to land on the target index.
-    // Current rotation logic:
     const spins = 5
     const baseRotation = 360 * spins
     const targetRotation = -(targetIndex * segmentAngle)
-
-    // Random offset to land in the middle of the segment
-    // const randomOffset = Math.random() * 20 - 10
 
     const newRotation =
       rotation + baseRotation + targetRotation - (rotation % 360)
@@ -116,9 +98,10 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
       {/* Wheel Container */}
       <div className="relative h-[300px] w-[300px] md:h-[450px] md:w-[450px]">
         <div
-          className="h-full w-full transition-transform duration-[4000ms] ease-out-quad"
+          className="h-full w-full transition-transform"
           style={{
             transform: `rotate(${rotation}deg)`,
+            transitionDuration: '4000ms',
             transitionTimingFunction: 'cubic-bezier(0.25, 0.1, 0.25, 1)',
           }}
         >

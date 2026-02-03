@@ -1357,6 +1357,38 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes fade-in{
+
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+.animate-fade-in{
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+@keyframes fade-in-down{
+
+  0%{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down{
+  animation: fade-in-down 0.8s ease-out forwards;
+}
+
 @keyframes fade-in-up{
 
   0%{
