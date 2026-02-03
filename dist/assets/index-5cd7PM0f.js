@@ -18870,6 +18870,10 @@ var createLucideIcon = (iconName, iconNode) => {
 	Component.displayName = toPascalCase(iconName);
 	return Component;
 };
+var ChevronDown = createLucideIcon("chevron-down", [["path", {
+	d: "m6 9 6 6 6-6",
+	key: "qrunsl"
+}]]);
 var CircleCheck = createLucideIcon("circle-check", [["circle", {
 	cx: "12",
 	cy: "12",
@@ -18905,20 +18909,68 @@ var Instagram = createLucideIcon("instagram", [
 		key: "r4j83e"
 	}]
 ]);
+var Linkedin = createLucideIcon("linkedin", [
+	["path", {
+		d: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z",
+		key: "c2jq9f"
+	}],
+	["rect", {
+		width: "4",
+		height: "12",
+		x: "2",
+		y: "9",
+		key: "mk3on5"
+	}],
+	["circle", {
+		cx: "4",
+		cy: "4",
+		r: "2",
+		key: "bt5ra8"
+	}]
+]);
 var LoaderCircle = createLucideIcon("loader-circle", [["path", {
 	d: "M21 12a9 9 0 1 1-6.219-8.56",
 	key: "13zald"
 }]]);
-var Search = createLucideIcon("search", [["path", {
-	d: "m21 21-4.34-4.34",
-	key: "14j7rj"
-}], ["circle", {
-	cx: "11",
-	cy: "11",
-	r: "8",
-	key: "4ej97u"
+var Menu = createLucideIcon("menu", [
+	["path", {
+		d: "M4 5h16",
+		key: "1tepv9"
+	}],
+	["path", {
+		d: "M4 12h16",
+		key: "1lakjw"
+	}],
+	["path", {
+		d: "M4 19h16",
+		key: "1djgab"
+	}]
+]);
+var Sparkles = createLucideIcon("sparkles", [
+	["path", {
+		d: "M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z",
+		key: "1s2grr"
+	}],
+	["path", {
+		d: "M20 2v4",
+		key: "1rf3ol"
+	}],
+	["path", {
+		d: "M22 4h-4",
+		key: "gwowj6"
+	}],
+	["circle", {
+		cx: "4",
+		cy: "20",
+		r: "2",
+		key: "6kqj1y"
+	}]
+]);
+var Star = createLucideIcon("star", [["path", {
+	d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",
+	key: "r04s7s"
 }]]);
-var Ticket = createLucideIcon("ticket", [
+var Ticket$1 = createLucideIcon("ticket", [
 	["path", {
 		d: "M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z",
 		key: "qn84l0"
@@ -18936,12 +18988,23 @@ var Ticket = createLucideIcon("ticket", [
 		key: "1wjjxi"
 	}]
 ]);
+var Twitter = createLucideIcon("twitter", [["path", {
+	d: "M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z",
+	key: "pff0z6"
+}]]);
 var X = createLucideIcon("x", [["path", {
 	d: "M18 6 6 18",
 	key: "1bl5f8"
 }], ["path", {
 	d: "m6 6 12 12",
 	key: "d8bk6v"
+}]]);
+var Youtube = createLucideIcon("youtube", [["path", {
+	d: "M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17",
+	key: "1q2vi4"
+}], ["path", {
+	d: "m10 15 5-3-5-3z",
+	key: "1jp15x"
 }]]);
 var CLASS_PART_SEPARATOR = "-";
 var createClassGroupUtils = (config$1) => {
@@ -23635,85 +23698,85 @@ const zodiacSigns = [
 	{
 		id: 0,
 		name: "Rato",
-		prediction: "Um ano de agilidade e novas oportunidades baterão à sua porta.",
-		imageQuery: "chinese zodiac rat art",
+		prediction: "Um ano de agilidade e novas oportunidades baterão à sua porta. Sua inteligência será a chave para abrir caminhos inesperados.",
+		imageQuery: "chinese zodiac rat elegant art",
 		iconQuery: "rat"
 	},
 	{
 		id: 1,
 		name: "Búfalo",
-		prediction: "Sua persistência será recompensada com estabilidade e prosperidade.",
-		imageQuery: "chinese zodiac ox buffalo art",
+		prediction: "Sua persistência será recompensada com estabilidade e prosperidade. Construa com calma e colha frutos duradouros.",
+		imageQuery: "chinese zodiac ox buffalo elegant art",
 		iconQuery: "bull"
 	},
 	{
 		id: 2,
 		name: "Tigre",
-		prediction: "A coragem guiará seus passos para grandes conquistas este ano.",
-		imageQuery: "chinese zodiac tiger art",
+		prediction: "A coragem guiará seus passos para grandes conquistas este ano. Não tenha medo de liderar e mostrar sua verdadeira força.",
+		imageQuery: "chinese zodiac tiger elegant art",
 		iconQuery: "tiger"
 	},
 	{
 		id: 3,
 		name: "Coelho",
-		prediction: "Um período de paz, harmonia e momentos doces com quem você ama.",
-		imageQuery: "chinese zodiac rabbit art",
+		prediction: "Um período de paz, harmonia e momentos doces com quem você ama. A sorte estará nos detalhes e nas conexões gentis.",
+		imageQuery: "chinese zodiac rabbit elegant art",
 		iconQuery: "rabbit"
 	},
 	{
 		id: 4,
 		name: "Dragão",
-		prediction: "Sua energia está no auge! É hora de brilhar e liderar novos projetos.",
-		imageQuery: "chinese zodiac dragon art",
+		prediction: "Sua energia está no auge! É hora de brilhar e liderar novos projetos. O sucesso acompanha aqueles que ousam sonhar alto.",
+		imageQuery: "chinese zodiac dragon elegant art",
 		iconQuery: "dragon"
 	},
 	{
 		id: 5,
 		name: "Serpente",
-		prediction: "A sabedoria será sua melhor aliada para tomar decisões brilhantes.",
-		imageQuery: "chinese zodiac snake art",
+		prediction: "A sabedoria será sua melhor aliada para tomar decisões brilhantes. Observe, planeje e ataque no momento certo.",
+		imageQuery: "chinese zodiac snake elegant art",
 		iconQuery: "snake"
 	},
 	{
 		id: 6,
 		name: "Cavalo",
-		prediction: "Prepare-se para uma jornada cheia de liberdade e novas aventuras.",
-		imageQuery: "chinese zodiac horse art",
+		prediction: "Prepare-se para uma jornada cheia de liberdade e novas aventuras. O movimento trará a renovação que você busca.",
+		imageQuery: "chinese zodiac horse elegant art",
 		iconQuery: "horse"
 	},
 	{
 		id: 7,
 		name: "Cabra",
-		prediction: "Sua criatividade florescerá, trazendo beleza para todos os seus dias.",
-		imageQuery: "chinese zodiac goat sheep art",
+		prediction: "Sua criatividade florescerá, trazendo beleza para todos os seus dias. Use sua arte para encantar e transformar o mundo ao redor.",
+		imageQuery: "chinese zodiac goat sheep elegant art",
 		iconQuery: "goat"
 	},
 	{
 		id: 8,
 		name: "Macaco",
-		prediction: "Sua inteligência e bom humor abrirão caminhos antes fechados.",
-		imageQuery: "chinese zodiac monkey art",
+		prediction: "Sua inteligência e bom humor abrirão caminhos antes fechados. A inovação será sua marca registrada neste ciclo.",
+		imageQuery: "chinese zodiac monkey elegant art",
 		iconQuery: "monkey"
 	},
 	{
 		id: 9,
 		name: "Galo",
-		prediction: "O reconhecimento pelo seu esforço chegará de forma surpreendente.",
-		imageQuery: "chinese zodiac rooster chicken art",
+		prediction: "O reconhecimento pelo seu esforço chegará de forma surpreendente. Mostre suas cores e orgulhe-se de quem você é.",
+		imageQuery: "chinese zodiac rooster chicken elegant art",
 		iconQuery: "rooster"
 	},
 	{
 		id: 10,
 		name: "Cão",
-		prediction: "A lealdade e as boas amizades serão o pilar de um ano inesquecível.",
-		imageQuery: "chinese zodiac dog art",
+		prediction: "A lealdade e as boas amizades serão o pilar de um ano inesquecível. Proteja quem você ama e será recompensado.",
+		imageQuery: "chinese zodiac dog elegant art",
 		iconQuery: "dog"
 	},
 	{
 		id: 11,
 		name: "Porco",
-		prediction: "Um ano de fartura, celebração e muita alegria em cada detalhe.",
-		imageQuery: "chinese zodiac pig art",
+		prediction: "Um ano de fartura, celebração e muita alegria em cada detalhe. Aproveite a abundância e compartilhe bons momentos.",
+		imageQuery: "chinese zodiac pig elegant art",
 		iconQuery: "pig"
 	}
 ];
@@ -23896,90 +23959,70 @@ function ZodiacWheel({ onResult }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "relative mx-auto flex w-full max-w-[500px] flex-col items-center justify-center",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "absolute top-0 z-20 -mt-4 text-secondary drop-shadow-lg",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", {
-				width: "40",
-				height: "40",
-				viewBox: "0 0 24 24",
-				fill: "currentColor",
-				xmlns: "http://www.w3.org/2000/svg",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M12 22L5 10H19L12 22Z" })
-			})
+			className: "absolute top-0 z-20 -mt-2 text-white drop-shadow-lg filter",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-8 w-8 rotate-45 transform rounded-sm bg-white shadow-md border-2 border-secondary" })
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "relative h-[300px] w-[300px] md:h-[450px] md:w-[450px]",
+			className: "relative h-[320px] w-[320px] md:h-[480px] md:w-[480px]",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "h-full w-full transition-transform",
+				className: "h-full w-full transition-transform will-change-transform",
 				style: {
 					transform: `rotate(${rotation}deg)`,
 					transitionDuration: "4000ms",
-					transitionTimingFunction: "cubic-bezier(0.25, 0.1, 0.25, 1)"
+					transitionTimingFunction: "cubic-bezier(0.25, 0.1, 0.1, 1)"
 				},
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
 					viewBox: "0 0 300 300",
 					className: "h-full w-full drop-shadow-2xl",
 					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("defs", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("filter", {
-							id: "glow",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("feGaussianBlur", {
-								stdDeviation: "2.5",
-								result: "coloredBlur"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("feMerge", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("feMergeNode", { in: "coloredBlur" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("feMergeNode", { in: "SourceGraphic" })] })]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("linearGradient", {
-							id: "goldGradient",
-							x1: "0%",
-							y1: "0%",
-							x2: "100%",
-							y2: "0%",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
-									offset: "0%",
-									stopColor: "#D4AF37"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
-									offset: "50%",
-									stopColor: "#FFD700"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
-									offset: "100%",
-									stopColor: "#D4AF37"
-								})
-							]
-						})] }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
 							cx: "150",
 							cy: "150",
 							r: "148",
-							fill: "#1a1a1a",
-							stroke: "url(#goldGradient)",
+							fill: "#E30613",
+							stroke: "#FFD700",
 							strokeWidth: "4"
 						}),
 						zodiacSigns.map((sign) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
-							className: "wheel-segment hover:opacity-90",
+							className: "wheel-segment group",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
 								d: createSectorPath(sign.id, 12),
-								fill: sign.id % 2 === 0 ? "#B71C1C" : "#C62828",
+								fill: sign.id % 2 === 0 ? "#C40510" : "#E30613",
 								stroke: "#FFD700",
 								strokeWidth: "1",
-								className: "transition-colors duration-300"
+								strokeOpacity: "0.5",
+								className: "transition-all duration-300 group-hover:fill-red-800"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("g", {
 								transform: `
-                            translate(${150 + 110 * Math.cos((sign.id * 30 - 90) * Math.PI / 180)}, ${150 + 110 * Math.sin((sign.id * 30 - 90) * Math.PI / 180)})
+                            translate(${150 + 115 * Math.cos((sign.id * 30 - 90) * Math.PI / 180)}, ${150 + 115 * Math.sin((sign.id * 30 - 90) * Math.PI / 180)})
                             rotate(${sign.id * 30})
                         `,
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("image", {
-									href: `https://img.usecurling.com/i?q=${sign.iconQuery}&color=yellow&shape=outline`,
-									x: "-15",
-									y: "-15",
-									height: "30",
-									width: "30",
-									className: "drop-shadow-sm"
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
+									x: "0",
+									y: "0",
+									fill: "#FFD700",
+									fontSize: "10",
+									fontWeight: "bold",
+									textAnchor: "middle",
+									alignmentBaseline: "middle",
+									transform: "rotate(90)",
+									className: "font-display tracking-widest uppercase",
+									children: sign.name
 								})
 							})]
-						}, sign.id))
+						}, sign.id)),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+							cx: "150",
+							cy: "150",
+							r: "45",
+							fill: "none",
+							stroke: "#FFD700",
+							strokeWidth: "2",
+							strokeDasharray: "4 2"
+						})
 					]
 				})
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-black/90 p-6 shadow-2xl ring-4 ring-secondary/50 backdrop-blur-sm",
+				className: "absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-white p-6 shadow-[0_0_40px_rgba(227,6,19,0.3)] ring-4 ring-secondary/50 backdrop-blur-sm md:p-10",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
 					onSubmit: handleSpin,
 					className: "flex flex-col items-center gap-3",
@@ -23987,7 +24030,7 @@ function ZodiacWheel({ onResult }) {
 						className: "text-center",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
 							htmlFor: "year",
-							className: "mb-1 block text-xs font-bold uppercase tracking-widest text-secondary",
+							className: "mb-1 block text-[10px] font-bold uppercase tracking-widest text-primary md:text-xs",
 							children: "Ano de Nasc."
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
 							ref: inputRef,
@@ -23998,17 +24041,17 @@ function ZodiacWheel({ onResult }) {
 							placeholder: "AAAA",
 							value: year,
 							onChange: (e) => setYear(e.target.value.replace(/\D/g, "")),
-							className: cn("h-10 w-24 border-0 border-b-2 bg-transparent text-center font-display text-2xl font-bold text-white focus-visible:border-secondary focus-visible:ring-0", error && "border-destructive text-destructive animate-pulse"),
+							className: cn("h-10 w-24 border-0 border-b-2 bg-transparent text-center font-display text-2xl font-bold text-primary placeholder:text-gray-300 focus-visible:border-secondary focus-visible:ring-0 md:h-12 md:w-32 md:text-3xl", error && "border-destructive text-destructive animate-pulse"),
 							disabled: isSpinning
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
 						type: "submit",
 						size: "sm",
-						className: "w-full rounded-full bg-gradient-to-r from-yellow-600 to-yellow-400 font-bold text-black shadow-lg transition-all hover:scale-105 hover:shadow-yellow-500/20 disabled:opacity-50",
+						className: "w-full whitespace-nowrap rounded-full bg-secondary px-6 font-bold text-primary shadow-lg transition-all hover:scale-105 hover:bg-secondary/90 disabled:opacity-50",
 						disabled: isSpinning || !year,
-						children: [isSpinning ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "animate-spin" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Search, { className: "h-4 w-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "ml-1",
-							children: isSpinning ? "..." : "Revelar"
+						children: [isSpinning ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "animate-spin" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "h-4 w-4 mr-2" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-xs md:text-sm",
+							children: isSpinning ? "Lendo o destino..." : "REVELAR"
 						})]
 					})]
 				})
@@ -29592,12 +29635,12 @@ var styleHookSingleton = function() {
 };
 var styleSingleton = function() {
 	var useStyle = styleHookSingleton();
-	var Sheet = function(_a$1) {
+	var Sheet$1 = function(_a$1) {
 		var styles = _a$1.styles, dynamic = _a$1.dynamic;
 		useStyle(styles, dynamic);
 		return null;
 	};
-	return Sheet;
+	return Sheet$1;
 };
 var zeroGap = {
 	left: 0,
@@ -30273,6 +30316,7 @@ var DescriptionWarning = ({ contentRef, descriptionId }) => {
 	return null;
 };
 var Root$1 = Dialog$1;
+var Trigger = DialogTrigger$1;
 var Portal$1 = DialogPortal$1;
 var Overlay = DialogOverlay$1;
 var Content = DialogContent$1;
@@ -30493,20 +30537,20 @@ function LeadModal({ isOpen, onOpenChange }) {
 		open: isOpen,
 		onOpenChange,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogContent, {
-			className: "border-secondary/20 bg-background/95 text-foreground backdrop-blur-xl sm:max-w-md",
+			className: "border-secondary bg-white text-primary sm:max-w-md",
 			children: !isSuccess ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(DialogHeader, {
 				className: "space-y-3 text-center",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-secondary/20",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ticket, { className: "h-6 w-6 text-secondary" })
+						className: "mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ticket$1, { className: "h-7 w-7 text-primary" })
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogTitle, {
-						className: "font-display text-2xl text-secondary",
+						className: "font-display text-2xl font-bold text-primary",
 						children: "Resgate seu presente!"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogDescription, {
-						className: "text-muted-foreground",
+						className: "text-gray-600",
 						children: "Receba um cupom especial do Lig-Lig para usar na sua próxima visita."
 					})
 				]
@@ -30521,12 +30565,12 @@ function LeadModal({ isOpen, onOpenChange }) {
 							name: "name",
 							render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, { children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
-									className: "text-secondary/80",
+									className: "text-primary font-bold",
 									children: "Nome"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
 									placeholder: "Como você se chama?",
-									className: "border-white/10 bg-white/5 text-white placeholder:text-white/30 focus:border-secondary focus:ring-secondary/50",
+									className: "border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20",
 									...field
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {})
@@ -30537,12 +30581,12 @@ function LeadModal({ isOpen, onOpenChange }) {
 							name: "contact",
 							render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, { children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
-									className: "text-secondary/80",
+									className: "text-primary font-bold",
 									children: "Email ou Telefone"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
 									placeholder: "seu@email.com ou (11) 99999-9999",
-									className: "border-white/10 bg-white/5 text-white placeholder:text-white/30 focus:border-secondary focus:ring-secondary/50",
+									className: "border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20",
 									...field
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {})
@@ -30550,9 +30594,9 @@ function LeadModal({ isOpen, onOpenChange }) {
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 							type: "submit",
-							className: "w-full bg-secondary font-bold text-primary hover:bg-secondary/90",
+							className: "w-full bg-primary text-white hover:bg-primary/90 font-bold text-lg h-12",
 							disabled: isLoading,
-							children: isLoading ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "mr-2 h-4 w-4 animate-spin" }), "Gerando cupom..."] }) : "Quero meu cupom"
+							children: isLoading ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "mr-2 h-4 w-4 animate-spin" }), "Gerando cupom..."] }) : "QUERO MEU CUPOM"
 						})
 					]
 				})
@@ -30560,28 +30604,28 @@ function LeadModal({ isOpen, onOpenChange }) {
 				className: "flex flex-col items-center justify-center space-y-6 py-6 text-center animate-in fade-in zoom-in duration-300",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "flex h-16 w-16 items-center justify-center rounded-full bg-green-500/20 text-green-500",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "h-8 w-8" })
+						className: "flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-green-600",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "h-10 w-10" })
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "space-y-2",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "font-display text-2xl font-bold text-secondary",
+							className: "font-display text-2xl font-bold text-primary",
 							children: "Sua sorte está garantida!"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-muted-foreground",
-							children: "Em breve você receberá seu cupom do Lig-Lig. Aproveite para conhecer nosso cardápio."
+							className: "text-gray-600 px-4",
+							children: "Em breve você receberá seu cupom do Lig-Lig. Aproveite para conhecer nosso cardápio e fazer seu pedido."
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex w-full flex-col gap-3 sm:flex-row",
+						className: "flex w-full flex-col gap-3 sm:flex-row pt-4",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 							variant: "outline",
-							className: "w-full border-secondary text-secondary hover:bg-secondary/10",
+							className: "w-full border-primary text-primary hover:bg-primary/5",
 							onClick: handleClose,
 							children: "Fechar"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							className: "w-full bg-secondary text-primary hover:bg-secondary/90",
+							className: "w-full bg-secondary text-primary hover:bg-secondary/90 font-bold",
 							children: "Ver Cardápio"
 						})]
 					})
@@ -30604,98 +30648,102 @@ function Index() {
 		}, 100);
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "relative min-h-screen w-full overflow-hidden bg-pattern-oriental",
+		className: "flex min-h-screen w-full flex-col overflow-x-hidden bg-background pt-20",
 		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "pointer-events-none absolute inset-0 z-0 overflow-hidden",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "absolute -left-20 top-20 h-96 w-96 animate-float opacity-20 blur-3xl",
-					style: { background: "radial-gradient(circle, #D32F2F 0%, transparent 70%)" }
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "absolute -right-20 bottom-20 h-96 w-96 animate-float opacity-20 blur-3xl",
-					style: {
-						background: "radial-gradient(circle, #FFD700 0%, transparent 70%)",
-						animationDelay: "2s"
-					}
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+				className: "relative flex min-h-[600px] flex-col items-center justify-center bg-pattern-brand px-4 py-16 text-center text-white md:py-24",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[url('https://img.usecurling.com/i?q=chinese%20clouds%20pattern%20red&color=red&shape=fill')] opacity-10 mix-blend-overlay" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "mx-auto mb-4 flex w-fit items-center gap-2 rounded-full bg-white/10 px-4 py-1 backdrop-blur-sm",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "h-4 w-4 text-secondary fill-secondary" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-sm font-semibold uppercase tracking-wider text-secondary",
+								children: "Lig-Lig Especial"
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
+							className: "font-display text-4xl font-bold leading-tight drop-shadow-sm md:text-6xl lg:text-7xl",
+							children: [
+								"Descubra sua sorte no ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-secondary text-glow",
+									children: "Horóscopo Chinês"
+								})
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mx-auto max-w-2xl text-lg text-white/90 md:text-xl font-light leading-relaxed",
+							children: "Veja o que este ano reserva para você — e ganhe um presente exclusivo do Lig-Lig para celebrar os bons momentos."
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "pt-8 animate-bounce",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronDown, { className: "mx-auto h-8 w-8 text-white/50" })
+						})
+					]
 				})]
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "container relative z-10 mx-auto flex flex-col items-center px-4 py-12 md:py-20",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-						className: "mb-12 text-center md:mb-20",
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+				className: "relative -mt-10 mb-20 w-full md:-mt-20",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "container mx-auto px-4",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex flex-col items-center justify-center gap-12 lg:flex-row",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "mx-auto mb-6 max-w-4xl animate-fade-in-down",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-								className: "font-display text-4xl font-bold leading-tight text-white drop-shadow-md md:text-6xl lg:text-7xl",
-								children: [
-									"Descubra sua sorte no ",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-500 text-glow",
-										children: "Horóscopo Chinês"
-									})
-								]
-							})
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mx-auto max-w-2xl animate-fade-in text-lg text-white/80 md:text-xl",
-							children: "Veja o que este ano reserva para você — e ganhe um presente exclusivo do Lig-Lig para celebrar."
-						})]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-						className: "relative mb-16 w-full animate-fade-in-up",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "flex justify-center",
+							className: "relative z-20 animate-fade-in-up",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ZodiacWheel, { onResult: handleResult })
-						})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						ref: resultRef,
-						className: "w-full scroll-mt-32",
-						children: result && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-							className: "mx-auto max-w-4xl animate-fade-in-up rounded-2xl border border-secondary/20 bg-black/60 p-8 backdrop-blur-md md:p-12",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "grid gap-8 md:grid-cols-2 md:items-center",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "relative flex justify-center",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 animate-pulse rounded-full bg-secondary/10 blur-2xl" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-										src: `https://img.usecurling.com/p/400/400?q=${result.imageQuery}&dpr=2`,
-										alt: result.name,
-										className: "relative z-10 h-64 w-64 object-contain drop-shadow-2xl transition-transform duration-700 hover:scale-105"
-									})]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-6 text-center md:text-left",
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							ref: resultRef,
+							className: `w-full max-w-xl transition-all duration-1000 ${result ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 lg:translate-x-10 pointer-events-none absolute lg:relative"}`,
+							children: result && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "relative overflow-hidden rounded-3xl bg-white p-8 shadow-2xl ring-1 ring-black/5 md:p-12",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-10 -top-10 h-40 w-40 rounded-full bg-secondary/20 blur-3xl" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left",
 									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-											className: "mb-2 font-display text-3xl font-bold text-secondary md:text-5xl",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "mb-6 rounded-full bg-red-50 p-4",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+												src: `https://img.usecurling.com/i?q=${result.iconQuery}&color=red&shape=fill`,
+												alt: result.name,
+												className: "h-16 w-16 md:h-20 md:w-20 object-contain"
+											})
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+											className: "mb-2 font-display text-4xl font-bold text-primary md:text-5xl",
 											children: result.name
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-1 w-20 bg-primary md:mx-0 mx-auto rounded-full" })] }),
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "mb-6 h-1 w-24 bg-secondary lg:mx-0 mx-auto rounded-full" }),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-											className: "text-xl leading-relaxed text-white/90",
+											className: "mb-8 text-lg leading-relaxed text-gray-600",
 											children: [
 												"\"",
 												result.prediction,
 												"\""
 											]
 										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "pt-4",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-												size: "lg",
-												onClick: () => setIsModalOpen(true),
-												className: "group relative overflow-hidden rounded-full bg-secondary px-8 py-6 text-lg font-bold text-primary transition-all hover:scale-105 hover:bg-white",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+											size: "lg",
+											onClick: () => setIsModalOpen(true),
+											className: "group relative w-full overflow-hidden rounded-xl bg-primary px-8 py-8 text-xl font-bold text-white shadow-xl transition-all hover:scale-[1.02] hover:bg-primary/90 md:w-auto",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center justify-center gap-3",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 													className: "relative z-10",
-													children: "Sua sorte no Lig-Lig"
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-1000 group-hover:translate-x-full" })]
-											})
+													children: "SUA SORTE NO LIG-LIG"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ticket, { className: "h-6 w-6 relative z-10" })]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full" })]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "mt-4 text-xs text-muted-foreground",
+											children: "*Ao clicar, você ganhará um benefício exclusivo."
 										})
 									]
 								})]
 							})
-						})
+						})]
 					})
-				]
+				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LeadModal, {
 				isOpen: isModalOpen,
@@ -30732,72 +30780,303 @@ var NotFound = () => {
 	});
 };
 var NotFound_default = NotFound;
+var Sheet = Root$1;
+var SheetTrigger = Trigger;
+var SheetPortal = Portal$1;
+var SheetOverlay = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Overlay, {
+	className: cn("fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0", className),
+	...props,
+	ref
+}));
+SheetOverlay.displayName = Overlay.displayName;
+var sheetVariants = cva("fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500", {
+	variants: { side: {
+		top: "inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
+		bottom: "inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
+		left: "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
+		right: "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"
+	} },
+	defaultVariants: { side: "right" }
+});
+var SheetContent = import_react.forwardRef(({ side = "right", className, children, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SheetPortal, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SheetOverlay, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Content, {
+	ref,
+	className: cn(sheetVariants({ side }), className),
+	...props,
+	children: [children, /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Close, {
+		className: "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "h-4 w-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+			className: "sr-only",
+			children: "Close"
+		})]
+	})]
+})] }));
+SheetContent.displayName = Content.displayName;
+var SheetHeader = ({ className, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	className: cn("flex flex-col space-y-2 text-center sm:text-left", className),
+	...props
+});
+SheetHeader.displayName = "SheetHeader";
+var SheetFooter = ({ className, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	className: cn("flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2", className),
+	...props
+});
+SheetFooter.displayName = "SheetFooter";
+var SheetTitle = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Title, {
+	ref,
+	className: cn("text-lg font-semibold text-foreground", className),
+	...props
+}));
+SheetTitle.displayName = Title.displayName;
+var SheetDescription = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Description, {
+	ref,
+	className: cn("text-sm text-muted-foreground", className),
+	...props
+}));
+SheetDescription.displayName = Description.displayName;
 const Header = () => {
+	const [isOpen, setIsOpen] = (0, import_react.useState)(false);
+	const navItems = [
+		{
+			name: "CARDÁPIO",
+			href: "#"
+		},
+		{
+			name: "PROMOÇÕES",
+			href: "#"
+		},
+		{
+			name: "LOJAS",
+			href: "#"
+		},
+		{
+			name: "O LIG-LIG",
+			href: "#"
+		},
+		{
+			name: "SEJA UM FRANQUEADO",
+			href: "#"
+		},
+		{
+			name: "TRABALHE CONOSCO",
+			href: "#"
+		}
+	];
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-		className: "fixed top-0 left-0 right-0 z-50 flex h-20 items-center justify-between border-b border-white/10 bg-black/50 px-6 backdrop-blur-md transition-all duration-300",
+		className: "fixed left-0 right-0 top-0 z-50 h-20 border-b border-white/10 bg-[#E30613] text-white shadow-md transition-all",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "container mx-auto flex items-center justify-between",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-				to: "/",
-				className: "flex items-center gap-2",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "flex h-10 w-10 items-center justify-center rounded-full bg-primary text-secondary",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "font-display text-xl font-bold",
-						children: "L"
+			className: "container mx-auto flex h-full items-center justify-between px-4",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+					to: "/",
+					className: "flex items-center gap-2",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "relative flex h-14 w-14 items-center justify-center rounded-full bg-white border-2 border-secondary shadow-lg overflow-hidden p-1",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							src: "https://img.usecurling.com/i?q=chinese%20food%20chef%20logo&color=red&shape=fill",
+							alt: "Lig-Lig Logo",
+							className: "h-full w-full object-contain"
+						})
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "hidden font-display text-2xl font-bold tracking-widest text-white md:block",
+						children: "LIG-LIG"
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", {
+					className: "hidden items-center gap-6 lg:flex",
+					children: navItems.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						href: item.href,
+						className: "text-xs font-bold uppercase tracking-wider text-white transition-colors hover:text-secondary",
+						children: item.name
+					}, item.name))
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "hidden items-center gap-4 lg:flex",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+						className: "rounded-none bg-secondary px-6 py-2 font-bold text-primary hover:bg-secondary/90 hover:scale-105 transition-transform",
+						children: "PEÇA JÁ"
 					})
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "font-display text-2xl font-bold tracking-widest text-white",
-					children: "LIG-LIG"
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", {
-				className: "hidden md:block",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-0.5 w-12 bg-secondary/50" })
-			})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "lg:hidden",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Sheet, {
+						open: isOpen,
+						onOpenChange: setIsOpen,
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SheetTrigger, {
+							asChild: true,
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+								variant: "ghost",
+								size: "icon",
+								className: "text-white hover:bg-white/10",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, { className: "h-6 w-6" })
+							})
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SheetContent, {
+							side: "right",
+							className: "bg-[#E30613] text-white border-l-white/10",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
+								className: "mt-8 flex flex-col gap-4",
+								children: [navItems.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+									href: item.href,
+									onClick: () => setIsOpen(false),
+									className: "text-lg font-bold text-white hover:text-secondary",
+									children: item.name
+								}, item.name)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									className: "mt-4 w-full rounded-none bg-secondary font-bold text-primary hover:bg-white hover:text-primary",
+									children: "PEÇA JÁ"
+								})]
+							})
+						})]
+					})
+				})
+			]
 		})
 	});
 };
 const Footer = () => {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", {
-		className: "border-t border-white/10 bg-black/80 py-8 text-center text-muted-foreground backdrop-blur-sm",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "container mx-auto flex flex-col items-center justify-center gap-6",
-			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "flex items-center gap-2 opacity-80",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "font-display text-lg font-bold tracking-wider text-white",
-						children: "LIG-LIG"
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("footer", {
+		className: "w-full bg-[#E30613] pt-16 text-white",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "container mx-auto px-6 pb-12",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "space-y-6",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "font-display text-xl font-bold uppercase tracking-wider text-white",
+							children: "Links Úteis"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+							className: "space-y-3 text-sm font-medium opacity-90",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "hover:text-secondary hover:underline",
+									children: "Cardápio"
+								}) }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "hover:text-secondary hover:underline",
+									children: "Promoções"
+								}) }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "hover:text-secondary hover:underline",
+									children: "Lojas"
+								}) }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "hover:text-secondary hover:underline",
+									children: "Ficha Nutricional"
+								}) })
+							]
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "space-y-6",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "font-display text-xl font-bold uppercase tracking-wider text-white",
+							children: "Institucional"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+							className: "space-y-3 text-sm font-medium opacity-90",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "hover:text-secondary hover:underline",
+									children: "O Lig-Lig"
+								}) }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "hover:text-secondary hover:underline",
+									children: "Contato"
+								}) }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "hover:text-secondary hover:underline",
+									children: "Trabalhe Conosco"
+								}) }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "hover:text-secondary hover:underline",
+									children: "Seja um Fornecedor"
+								}) }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "hover:text-secondary hover:underline",
+									children: "Seja um Franqueado"
+								}) })
+							]
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "space-y-6",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "font-display text-xl font-bold uppercase tracking-wider text-white",
+							children: "Baixe o App"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-col gap-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+								to: "#",
+								className: "block w-40 transition-transform hover:scale-105",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+									src: "https://img.usecurling.com/i?q=app%20store%20badge%20black&color=black&shape=fill",
+									alt: "Disponível na App Store",
+									className: "h-auto w-full rounded-md border border-white/20 bg-black"
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+								to: "#",
+								className: "block w-40 transition-transform hover:scale-105",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+									src: "https://img.usecurling.com/i?q=google%20play%20badge%20black&color=black&shape=fill",
+									alt: "Disponível no Google Play",
+									className: "h-auto w-full rounded-md border border-white/20 bg-black"
+								})
+							})]
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "space-y-6",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "font-display text-xl font-bold uppercase tracking-wider text-white",
+							children: "Acompanhe Nossas Redes"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-wrap gap-4",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "rounded-full bg-white p-2 text-primary transition-colors hover:bg-secondary hover:text-primary",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Instagram, { className: "h-5 w-5" })
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "rounded-full bg-white p-2 text-primary transition-colors hover:bg-secondary hover:text-primary",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, { className: "h-5 w-5" })
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "rounded-full bg-white p-2 text-primary transition-colors hover:bg-secondary hover:text-primary",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Linkedin, { className: "h-5 w-5" })
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "rounded-full bg-white p-2 text-primary transition-colors hover:bg-secondary hover:text-primary",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Twitter, { className: "h-5 w-5" })
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "#",
+									className: "rounded-full bg-white p-2 text-primary transition-colors hover:bg-secondary hover:text-primary",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Youtube, { className: "h-5 w-5" })
+								})
+							]
+						})]
 					})
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex gap-6",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-						to: "#",
-						className: "text-secondary transition-colors hover:text-white",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Instagram, { className: "h-6 w-6" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "sr-only",
-							children: "Instagram"
-						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-						to: "#",
-						className: "text-secondary transition-colors hover:text-white",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, { className: "h-6 w-6" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "sr-only",
-							children: "Facebook"
-						})]
-					})]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "text-sm",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
-						"© ",
-						(/* @__PURE__ */ new Date()).getFullYear(),
-						" Lig-Lig. Todos os direitos reservados."
-					] })
-				})
-			]
-		})
+				]
+			})
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "border-t border-white/10 bg-black py-6 text-center text-xs text-white/60",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Site desenvolvido por João Freitas Web Design" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Políticas de Privacidade" })]
+			})
+		})]
 	});
 };
 function Layout() {
@@ -30836,4 +31115,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-I7HUDWE1.js.map
+//# sourceMappingURL=index-5cd7PM0f.js.map

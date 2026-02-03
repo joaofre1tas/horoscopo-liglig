@@ -75,6 +75,7 @@ export default {
         'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
         'fade-in-down': 'fade-in-down 0.8s ease-out forwards',
         float: 'float 6s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 3s infinite',
       },
       keyframes: {
         'fade-in': {
@@ -92,6 +93,16 @@ export default {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        'pulse-glow': {
+          '0%, 100%': {
+            opacity: '1',
+            boxShadow: '0 0 20px rgba(255, 215, 0, 0.2)',
+          },
+          '50%': {
+            opacity: '0.8',
+            boxShadow: '0 0 40px rgba(255, 215, 0, 0.5)',
+          },
         },
       },
     },

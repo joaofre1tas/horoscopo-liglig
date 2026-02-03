@@ -3,7 +3,7 @@ import { ZodiacWheel } from '@/components/ZodiacWheel'
 import { LeadModal } from '@/components/LeadModal'
 import { type ZodiacSign } from '@/lib/zodiac'
 import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
+import { ChevronDown, Star } from 'lucide-react'
 
 export default function Index() {
   const [result, setResult] = useState<ZodiacSign | null>(null)
@@ -19,90 +19,98 @@ export default function Index() {
   }
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-pattern-oriental">
-      {/* Decorative background elements */}
-      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        <div
-          className="absolute -left-20 top-20 h-96 w-96 animate-float opacity-20 blur-3xl"
-          style={{
-            background: 'radial-gradient(circle, #D32F2F 0%, transparent 70%)',
-          }}
-        />
-        <div
-          className="absolute -right-20 bottom-20 h-96 w-96 animate-float opacity-20 blur-3xl"
-          style={{
-            background: 'radial-gradient(circle, #FFD700 0%, transparent 70%)',
-            animationDelay: '2s',
-          }}
-        />
-      </div>
+    <div className="flex min-h-screen w-full flex-col overflow-x-hidden bg-background pt-20">
+      {/* Hero Section */}
+      <section className="relative flex min-h-[600px] flex-col items-center justify-center bg-pattern-brand px-4 py-16 text-center text-white md:py-24">
+        {/* Decorative background overlay */}
+        <div className="absolute inset-0 bg-[url('https://img.usecurling.com/i?q=chinese%20clouds%20pattern%20red&color=red&shape=fill')] opacity-10 mix-blend-overlay"></div>
 
-      <div className="container relative z-10 mx-auto flex flex-col items-center px-4 py-12 md:py-20">
-        {/* Hero Section */}
-        <section className="mb-12 text-center md:mb-20">
-          <div className="mx-auto mb-6 max-w-4xl animate-fade-in-down">
-            <h1 className="font-display text-4xl font-bold leading-tight text-white drop-shadow-md md:text-6xl lg:text-7xl">
-              Descubra sua sorte no <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-500 text-glow">
-                Horóscopo Chinês
-              </span>
-            </h1>
+        <div className="relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6">
+          <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full bg-white/10 px-4 py-1 backdrop-blur-sm">
+            <Star className="h-4 w-4 text-secondary fill-secondary" />
+            <span className="text-sm font-semibold uppercase tracking-wider text-secondary">
+              Lig-Lig Especial
+            </span>
           </div>
-          <p className="mx-auto max-w-2xl animate-fade-in text-lg text-white/80 md:text-xl">
+
+          <h1 className="font-display text-4xl font-bold leading-tight drop-shadow-sm md:text-6xl lg:text-7xl">
+            Descubra sua sorte no <br />
+            <span className="text-secondary text-glow">Horóscopo Chinês</span>
+          </h1>
+
+          <p className="mx-auto max-w-2xl text-lg text-white/90 md:text-xl font-light leading-relaxed">
             Veja o que este ano reserva para você — e ganhe um presente
-            exclusivo do Lig-Lig para celebrar.
+            exclusivo do Lig-Lig para celebrar os bons momentos.
           </p>
-        </section>
 
-        {/* Wheel Section */}
-        <section className="relative mb-16 w-full animate-fade-in-up">
-          <div className="flex justify-center">
-            <ZodiacWheel onResult={handleResult} />
+          <div className="pt-8 animate-bounce">
+            <ChevronDown className="mx-auto h-8 w-8 text-white/50" />
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Result Section */}
-        <div ref={resultRef} className="w-full scroll-mt-32">
-          {result && (
-            <section className="mx-auto max-w-4xl animate-fade-in-up rounded-2xl border border-secondary/20 bg-black/60 p-8 backdrop-blur-md md:p-12">
-              <div className="grid gap-8 md:grid-cols-2 md:items-center">
-                <div className="relative flex justify-center">
-                  <div className="absolute inset-0 animate-pulse rounded-full bg-secondary/10 blur-2xl" />
-                  <img
-                    src={`https://img.usecurling.com/p/400/400?q=${result.imageQuery}&dpr=2`}
-                    alt={result.name}
-                    className="relative z-10 h-64 w-64 object-contain drop-shadow-2xl transition-transform duration-700 hover:scale-105"
-                  />
-                </div>
-                <div className="space-y-6 text-center md:text-left">
-                  <div>
-                    <h2 className="mb-2 font-display text-3xl font-bold text-secondary md:text-5xl">
+      {/* Main Interaction Section */}
+      <section className="relative -mt-10 mb-20 w-full md:-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center justify-center gap-12 lg:flex-row">
+            {/* Wheel */}
+            <div className="relative z-20 animate-fade-in-up">
+              <ZodiacWheel onResult={handleResult} />
+            </div>
+
+            {/* Result Display - Shows only after spin */}
+            <div
+              ref={resultRef}
+              className={`w-full max-w-xl transition-all duration-1000 ${result ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 lg:translate-x-10 pointer-events-none absolute lg:relative'}`}
+            >
+              {result && (
+                <div className="relative overflow-hidden rounded-3xl bg-white p-8 shadow-2xl ring-1 ring-black/5 md:p-12">
+                  {/* Card Decoration */}
+                  <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-secondary/20 blur-3xl"></div>
+
+                  <div className="relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left">
+                    <div className="mb-6 rounded-full bg-red-50 p-4">
+                      <img
+                        src={`https://img.usecurling.com/i?q=${result.iconQuery}&color=red&shape=fill`}
+                        alt={result.name}
+                        className="h-16 w-16 md:h-20 md:w-20 object-contain"
+                      />
+                    </div>
+
+                    <h2 className="mb-2 font-display text-4xl font-bold text-primary md:text-5xl">
                       {result.name}
                     </h2>
-                    <div className="h-1 w-20 bg-primary md:mx-0 mx-auto rounded-full" />
-                  </div>
-                  <p className="text-xl leading-relaxed text-white/90">
-                    "{result.prediction}"
-                  </p>
-                  <div className="pt-4">
+                    <div className="mb-6 h-1 w-24 bg-secondary lg:mx-0 mx-auto rounded-full" />
+
+                    <p className="mb-8 text-lg leading-relaxed text-gray-600">
+                      "{result.prediction}"
+                    </p>
+
                     <Button
                       size="lg"
                       onClick={() => setIsModalOpen(true)}
-                      className="group relative overflow-hidden rounded-full bg-secondary px-8 py-6 text-lg font-bold text-primary transition-all hover:scale-105 hover:bg-white"
+                      className="group relative w-full overflow-hidden rounded-xl bg-primary px-8 py-8 text-xl font-bold text-white shadow-xl transition-all hover:scale-[1.02] hover:bg-primary/90 md:w-auto"
                     >
-                      <span className="relative z-10">
-                        Sua sorte no Lig-Lig
-                      </span>
-                      <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
+                      <div className="flex items-center justify-center gap-3">
+                        <span className="relative z-10">
+                          SUA SORTE NO LIG-LIG
+                        </span>
+                        <Ticket className="h-6 w-6 relative z-10" />
+                      </div>
+                      <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
                     </Button>
+                    <p className="mt-4 text-xs text-muted-foreground">
+                      *Ao clicar, você ganhará um benefício exclusivo.
+                    </p>
                   </div>
                 </div>
-              </div>
-            </section>
-          )}
+              )}
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
+      {/* Modal */}
       <LeadModal isOpen={isModalOpen} onOpenChange={setIsModalOpen} />
     </div>
   )

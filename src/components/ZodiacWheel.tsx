@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils'
 import { calculateZodiac, zodiacSigns, type ZodiacSign } from '@/lib/zodiac'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Loader2, Search } from 'lucide-react'
+import { Loader2, Sparkles } from 'lucide-react'
 
 interface ZodiacWheelProps {
   onResult: (sign: ZodiacSign) => void
@@ -29,7 +29,6 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
     ) {
       setError(true)
       inputRef.current?.focus()
-      // Shake animation effect could be added here
       return
     }
     setError(false)
@@ -39,15 +38,19 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
     const sign = calculateZodiac(yearNum)
     setIsSpinning(true)
 
-    // Calculate rotation
+    // Calculate rotation: We want the selected sign at the TOP (0 degrees visual)
     const segmentAngle = 360 / 12
     const targetIndex = sign.id
 
-    // We want to land on the target index.
+    // To land at top, we need to rotate so the target segment aligns with -90deg or similar depending on implementation
+    // My SVG starts at -90deg (top). Segment index 0 is at top.
+    // So to put index X at top, we rotate by -X * 30deg.
+
     const spins = 5
     const baseRotation = 360 * spins
     const targetRotation = -(targetIndex * segmentAngle)
 
+    // Add randomness for realism but lock to center of segment eventually? No, precise is better for UI.
     const newRotation =
       rotation + baseRotation + targetRotation - (rotation % 360)
 
@@ -65,7 +68,7 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
   const center = 150
 
   const createSectorPath = (index: number, total: number) => {
-    const startAngle = (index * 360) / total - 90 - 15 // Start 15deg before top to center segment at top
+    const startAngle = (index * 360) / total - 90 - 15 // Start 15deg before top to center segment at top (since 30deg width)
     const endAngle = startAngle + 360 / total
 
     // Convert to radians
@@ -82,99 +85,90 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
 
   return (
     <div className="relative mx-auto flex w-full max-w-[500px] flex-col items-center justify-center">
-      {/* Pointer */}
-      <div className="absolute top-0 z-20 -mt-4 text-secondary drop-shadow-lg">
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M12 22L5 10H19L12 22Z" />
-        </svg>
+      {/* Indicator/Pointer */}
+      <div className="absolute top-0 z-20 -mt-2 text-white drop-shadow-lg filter">
+        <div className="h-8 w-8 rotate-45 transform rounded-sm bg-white shadow-md border-2 border-secondary"></div>
       </div>
 
       {/* Wheel Container */}
-      <div className="relative h-[300px] w-[300px] md:h-[450px] md:w-[450px]">
+      <div className="relative h-[320px] w-[320px] md:h-[480px] md:w-[480px]">
         <div
-          className="h-full w-full transition-transform"
+          className="h-full w-full transition-transform will-change-transform"
           style={{
             transform: `rotate(${rotation}deg)`,
             transitionDuration: '4000ms',
-            transitionTimingFunction: 'cubic-bezier(0.25, 0.1, 0.25, 1)',
+            transitionTimingFunction: 'cubic-bezier(0.25, 0.1, 0.1, 1)',
           }}
         >
           <svg viewBox="0 0 300 300" className="h-full w-full drop-shadow-2xl">
-            <defs>
-              <filter id="glow">
-                <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
-                <feMerge>
-                  <feMergeNode in="coloredBlur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-              <linearGradient
-                id="goldGradient"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-              >
-                <stop offset="0%" stopColor="#D4AF37" />
-                <stop offset="50%" stopColor="#FFD700" />
-                <stop offset="100%" stopColor="#D4AF37" />
-              </linearGradient>
-            </defs>
+            {/* Outer Ring */}
             <circle
               cx="150"
               cy="150"
               r="148"
-              fill="#1a1a1a"
-              stroke="url(#goldGradient)"
+              fill="#E30613"
+              stroke="#FFD700"
               strokeWidth="4"
             />
 
             {zodiacSigns.map((sign) => (
-              <g key={sign.id} className="wheel-segment hover:opacity-90">
+              <g key={sign.id} className="wheel-segment group">
                 <path
                   d={createSectorPath(sign.id, 12)}
-                  fill={sign.id % 2 === 0 ? '#B71C1C' : '#C62828'} // Alternating reds
+                  fill={sign.id % 2 === 0 ? '#C40510' : '#E30613'} // Subtle tone difference
                   stroke="#FFD700"
                   strokeWidth="1"
-                  className="transition-colors duration-300"
+                  strokeOpacity="0.5"
+                  className="transition-all duration-300 group-hover:fill-red-800"
                 />
-                {/* Icon placeholder positioning */}
+                {/* Animal Name / Icon */}
                 <g
                   transform={`
                             translate(${
                               150 +
-                              110 *
+                              115 *
                                 Math.cos(((sign.id * 30 - 90) * Math.PI) / 180)
                             }, ${
                               150 +
-                              110 *
+                              115 *
                                 Math.sin(((sign.id * 30 - 90) * Math.PI) / 180)
                             })
                             rotate(${sign.id * 30})
                         `}
                 >
-                  <image
-                    href={`https://img.usecurling.com/i?q=${sign.iconQuery}&color=yellow&shape=outline`}
-                    x="-15"
-                    y="-15"
-                    height="30"
-                    width="30"
-                    className="drop-shadow-sm"
-                  />
+                  {/* Text rotation adjustment to keep it somewhat readable or aligned outwards */}
+                  <text
+                    x="0"
+                    y="0"
+                    fill="#FFD700"
+                    fontSize="10"
+                    fontWeight="bold"
+                    textAnchor="middle"
+                    alignmentBaseline="middle"
+                    transform="rotate(90)"
+                    className="font-display tracking-widest uppercase"
+                  >
+                    {sign.name}
+                  </text>
                 </g>
               </g>
             ))}
+
+            {/* Inner Ring Decorative */}
+            <circle
+              cx="150"
+              cy="150"
+              r="45"
+              fill="none"
+              stroke="#FFD700"
+              strokeWidth="2"
+              strokeDasharray="4 2"
+            />
           </svg>
         </div>
 
         {/* Center Control - Absolute Center of Wheel */}
-        <div className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-black/90 p-6 shadow-2xl ring-4 ring-secondary/50 backdrop-blur-sm">
+        <div className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-white p-6 shadow-[0_0_40px_rgba(227,6,19,0.3)] ring-4 ring-secondary/50 backdrop-blur-sm md:p-10">
           <form
             onSubmit={handleSpin}
             className="flex flex-col items-center gap-3"
@@ -182,7 +176,7 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
             <div className="text-center">
               <label
                 htmlFor="year"
-                className="mb-1 block text-xs font-bold uppercase tracking-widest text-secondary"
+                className="mb-1 block text-[10px] font-bold uppercase tracking-widest text-primary md:text-xs"
               >
                 Ano de Nasc.
               </label>
@@ -196,7 +190,7 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
                 value={year}
                 onChange={(e) => setYear(e.target.value.replace(/\D/g, ''))}
                 className={cn(
-                  'h-10 w-24 border-0 border-b-2 bg-transparent text-center font-display text-2xl font-bold text-white focus-visible:border-secondary focus-visible:ring-0',
+                  'h-10 w-24 border-0 border-b-2 bg-transparent text-center font-display text-2xl font-bold text-primary placeholder:text-gray-300 focus-visible:border-secondary focus-visible:ring-0 md:h-12 md:w-32 md:text-3xl',
                   error && 'border-destructive text-destructive animate-pulse',
                 )}
                 disabled={isSpinning}
@@ -205,15 +199,17 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
             <Button
               type="submit"
               size="sm"
-              className="w-full rounded-full bg-gradient-to-r from-yellow-600 to-yellow-400 font-bold text-black shadow-lg transition-all hover:scale-105 hover:shadow-yellow-500/20 disabled:opacity-50"
+              className="w-full whitespace-nowrap rounded-full bg-secondary px-6 font-bold text-primary shadow-lg transition-all hover:scale-105 hover:bg-secondary/90 disabled:opacity-50"
               disabled={isSpinning || !year}
             >
               {isSpinning ? (
                 <Loader2 className="animate-spin" />
               ) : (
-                <Search className="h-4 w-4" />
+                <Sparkles className="h-4 w-4 mr-2" />
               )}
-              <span className="ml-1">{isSpinning ? '...' : 'Revelar'}</span>
+              <span className="text-xs md:text-sm">
+                {isSpinning ? 'Lendo o destino...' : 'REVELAR'}
+              </span>
             </Button>
           </form>
         </div>

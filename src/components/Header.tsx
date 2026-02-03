@@ -1,22 +1,93 @@
 import { Link } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
+import { Menu } from 'lucide-react'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { useState } from 'react'
+import logoImg from '@/assets/logo-lig-lig.png' // Using mock path, will use text if not available
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const navItems = [
+    { name: 'CARDÁPIO', href: '#' },
+    { name: 'PROMOÇÕES', href: '#' },
+    { name: 'LOJAS', href: '#' },
+    { name: 'O LIG-LIG', href: '#' },
+    { name: 'SEJA UM FRANQUEADO', href: '#' },
+    { name: 'TRABALHE CONOSCO', href: '#' },
+  ]
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex h-20 items-center justify-between border-b border-white/10 bg-black/50 px-6 backdrop-blur-md transition-all duration-300">
-      <div className="container mx-auto flex items-center justify-between">
+    <header className="fixed left-0 right-0 top-0 z-50 h-20 border-b border-white/10 bg-[#E30613] text-white shadow-md transition-all">
+      <div className="container mx-auto flex h-full items-center justify-between px-4">
+        {/* Brand Logo */}
         <Link to="/" className="flex items-center gap-2">
-          {/* Logo Placeholder - Lig-Lig Brand */}
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-secondary">
-            <span className="font-display text-xl font-bold">L</span>
+          <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-white border-2 border-secondary shadow-lg overflow-hidden p-1">
+            <img
+              src="https://img.usecurling.com/i?q=chinese%20food%20chef%20logo&color=red&shape=fill"
+              alt="Lig-Lig Logo"
+              className="h-full w-full object-contain"
+            />
           </div>
-          <span className="font-display text-2xl font-bold tracking-widest text-white">
+          <span className="hidden font-display text-2xl font-bold tracking-widest text-white md:block">
             LIG-LIG
           </span>
         </Link>
-        <nav className="hidden md:block">
-          {/* Decorative element or secondary nav */}
-          <div className="h-0.5 w-12 bg-secondary/50"></div>
+
+        {/* Desktop Nav */}
+        <nav className="hidden items-center gap-6 lg:flex">
+          {navItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-xs font-bold uppercase tracking-wider text-white transition-colors hover:text-secondary"
+            >
+              {item.name}
+            </a>
+          ))}
         </nav>
+
+        {/* Action Button */}
+        <div className="hidden items-center gap-4 lg:flex">
+          <Button className="rounded-none bg-secondary px-6 py-2 font-bold text-primary hover:bg-secondary/90 hover:scale-105 transition-transform">
+            PEÇA JÁ
+          </Button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className="lg:hidden">
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-white hover:bg-white/10"
+              >
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent
+              side="right"
+              className="bg-[#E30613] text-white border-l-white/10"
+            >
+              <nav className="mt-8 flex flex-col gap-4">
+                {navItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-lg font-bold text-white hover:text-secondary"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+                <Button className="mt-4 w-full rounded-none bg-secondary font-bold text-primary hover:bg-white hover:text-primary">
+                  PEÇA JÁ
+                </Button>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   )

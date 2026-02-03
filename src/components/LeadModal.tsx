@@ -21,7 +21,6 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { cn } from '@/lib/utils'
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -70,17 +69,17 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent className="border-secondary/20 bg-background/95 text-foreground backdrop-blur-xl sm:max-w-md">
+      <DialogContent className="border-secondary bg-white text-primary sm:max-w-md">
         {!isSuccess ? (
           <>
             <DialogHeader className="space-y-3 text-center">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-secondary/20">
-                <Ticket className="h-6 w-6 text-secondary" />
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                <Ticket className="h-7 w-7 text-primary" />
               </div>
-              <DialogTitle className="font-display text-2xl text-secondary">
+              <DialogTitle className="font-display text-2xl font-bold text-primary">
                 Resgate seu presente!
               </DialogTitle>
-              <DialogDescription className="text-muted-foreground">
+              <DialogDescription className="text-gray-600">
                 Receba um cupom especial do Lig-Lig para usar na sua próxima
                 visita.
               </DialogDescription>
@@ -96,11 +95,13 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-secondary/80">Nome</FormLabel>
+                      <FormLabel className="text-primary font-bold">
+                        Nome
+                      </FormLabel>
                       <FormControl>
                         <Input
                           placeholder="Como você se chama?"
-                          className="border-white/10 bg-white/5 text-white placeholder:text-white/30 focus:border-secondary focus:ring-secondary/50"
+                          className="border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20"
                           {...field}
                         />
                       </FormControl>
@@ -113,13 +114,13 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
                   name="contact"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-secondary/80">
+                      <FormLabel className="text-primary font-bold">
                         Email ou Telefone
                       </FormLabel>
                       <FormControl>
                         <Input
                           placeholder="seu@email.com ou (11) 99999-9999"
-                          className="border-white/10 bg-white/5 text-white placeholder:text-white/30 focus:border-secondary focus:ring-secondary/50"
+                          className="border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20"
                           {...field}
                         />
                       </FormControl>
@@ -129,7 +130,7 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
                 />
                 <Button
                   type="submit"
-                  className="w-full bg-secondary font-bold text-primary hover:bg-secondary/90"
+                  className="w-full bg-primary text-white hover:bg-primary/90 font-bold text-lg h-12"
                   disabled={isLoading}
                 >
                   {isLoading ? (
@@ -138,7 +139,7 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
                       Gerando cupom...
                     </>
                   ) : (
-                    'Quero meu cupom'
+                    'QUERO MEU CUPOM'
                   )}
                 </Button>
               </form>
@@ -146,27 +147,27 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
           </>
         ) : (
           <div className="flex flex-col items-center justify-center space-y-6 py-6 text-center animate-in fade-in zoom-in duration-300">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-500/20 text-green-500">
-              <CheckCircle2 className="h-8 w-8" />
+            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-green-600">
+              <CheckCircle2 className="h-10 w-10" />
             </div>
             <div className="space-y-2">
-              <h3 className="font-display text-2xl font-bold text-secondary">
+              <h3 className="font-display text-2xl font-bold text-primary">
                 Sua sorte está garantida!
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-gray-600 px-4">
                 Em breve você receberá seu cupom do Lig-Lig. Aproveite para
-                conhecer nosso cardápio.
+                conhecer nosso cardápio e fazer seu pedido.
               </p>
             </div>
-            <div className="flex w-full flex-col gap-3 sm:flex-row">
+            <div className="flex w-full flex-col gap-3 sm:flex-row pt-4">
               <Button
                 variant="outline"
-                className="w-full border-secondary text-secondary hover:bg-secondary/10"
+                className="w-full border-primary text-primary hover:bg-primary/5"
                 onClick={handleClose}
               >
                 Fechar
               </Button>
-              <Button className="w-full bg-secondary text-primary hover:bg-secondary/90">
+              <Button className="w-full bg-secondary text-primary hover:bg-secondary/90 font-bold">
                 Ver Cardápio
               </Button>
             </div>
