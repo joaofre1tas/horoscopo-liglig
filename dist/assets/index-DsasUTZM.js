@@ -18883,10 +18883,50 @@ var CircleCheck = createLucideIcon("circle-check", [["circle", {
 	d: "m9 12 2 2 4-4",
 	key: "dzmm74"
 }]]);
+var Copy = createLucideIcon("copy", [["rect", {
+	width: "14",
+	height: "14",
+	x: "8",
+	y: "8",
+	rx: "2",
+	ry: "2",
+	key: "17jyea"
+}], ["path", {
+	d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2",
+	key: "zix9uf"
+}]]);
+var ExternalLink = createLucideIcon("external-link", [
+	["path", {
+		d: "M15 3h6v6",
+		key: "1q9fwt"
+	}],
+	["path", {
+		d: "M10 14 21 3",
+		key: "gplh6r"
+	}],
+	["path", {
+		d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6",
+		key: "a6xqqp"
+	}]
+]);
 var LoaderCircle = createLucideIcon("loader-circle", [["path", {
 	d: "M21 12a9 9 0 1 1-6.219-8.56",
 	key: "13zald"
 }]]);
+var ShoppingBag = createLucideIcon("shopping-bag", [
+	["path", {
+		d: "M16 10a4 4 0 0 1-8 0",
+		key: "1ltviw"
+	}],
+	["path", {
+		d: "M3.103 6.034h17.794",
+		key: "awc11p"
+	}],
+	["path", {
+		d: "M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z",
+		key: "o988cm"
+	}]
+]);
 var Sparkles = createLucideIcon("sparkles", [
 	["path", {
 		d: "M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z",
@@ -30435,36 +30475,50 @@ var FormMessage = import_react.forwardRef(({ className, children, ...props }, re
 FormMessage.displayName = "FormMessage";
 var formSchema = object({
 	name: string().min(2, { message: "O nome deve ter pelo menos 2 caracteres." }),
-	contact: string().min(5, { message: "Informe um email ou telefone válido." })
+	email: string().email({ message: "Por favor, informe um email válido." }),
+	whatsapp: string().min(14, { message: "Informe um WhatsApp válido (DDD + número)." })
 });
 function LeadModal({ isOpen, onOpenChange }) {
 	const [isSuccess, setIsSuccess] = (0, import_react.useState)(false);
 	const [isLoading, setIsLoading] = (0, import_react.useState)(false);
+	const { toast: toast$2 } = useToast();
 	const form = useForm({
 		resolver: a(formSchema),
 		defaultValues: {
 			name: "",
-			contact: ""
+			email: "",
+			whatsapp: ""
 		}
 	});
+	const formatPhone = (value) => {
+		return value.replace(/\D/g, "").replace(/^(\d{2})(\d)/, "($1) $2").replace(/(\d)(\d{4})$/, "$1-$2");
+	};
 	function onSubmit(values) {
 		setIsLoading(true);
 		setTimeout(() => {
-			console.log(values);
+			console.log("Lead Captured:", values);
 			setIsLoading(false);
 			setIsSuccess(true);
 		}, 1500);
 	}
-	const handleClose = () => {
-		onOpenChange(false);
-		setTimeout(() => {
+	const handleOpenChange = (open) => {
+		onOpenChange(open);
+		if (!open) setTimeout(() => {
 			setIsSuccess(false);
 			form.reset();
 		}, 300);
 	};
+	const handleCopyCoupon = () => {
+		navigator.clipboard.writeText("ANONOVOCHINES");
+		toast$2({
+			title: "Cupom copiado!",
+			description: "Código ANONOVOCHINES copiado para a área de transferência.",
+			duration: 3e3
+		});
+	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Dialog, {
 		open: isOpen,
-		onOpenChange,
+		onOpenChange: handleOpenChange,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogContent, {
 			className: "border-secondary bg-white text-primary sm:max-w-md",
 			children: !isSuccess ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(DialogHeader, {
@@ -30480,14 +30534,14 @@ function LeadModal({ isOpen, onOpenChange }) {
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogDescription, {
 						className: "text-gray-600",
-						children: "Receba um cupom especial do Lig-Lig para usar na sua próxima visita."
+						children: "Preencha seus dados para receber um cupom exclusivo do Lig-Lig."
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Form, {
 				...form,
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
 					onSubmit: form.handleSubmit(onSubmit),
-					className: "space-y-6 pt-4",
+					className: "space-y-4 pt-2",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormField, {
 							control: form.control,
@@ -30507,55 +30561,117 @@ function LeadModal({ isOpen, onOpenChange }) {
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormField, {
 							control: form.control,
-							name: "contact",
+							name: "email",
 							render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, { children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
 									className: "text-primary font-bold",
-									children: "Email ou Telefone"
+									children: "E-mail"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
-									placeholder: "seu@email.com ou (11) 99999-9999",
+									type: "email",
+									placeholder: "seu@email.com",
 									className: "border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20",
 									...field
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {})
 							] })
 						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormField, {
+							control: form.control,
+							name: "whatsapp",
+							render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, { children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
+									className: "text-primary font-bold",
+									children: "WhatsApp"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+									placeholder: "(11) 99999-9999",
+									className: "border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20",
+									...field,
+									maxLength: 15,
+									onChange: (e) => {
+										const formatted = formatPhone(e.target.value);
+										field.onChange(formatted);
+									}
+								}) }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {})
+							] })
+						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 							type: "submit",
-							className: "w-full bg-primary text-white hover:bg-primary/90 font-bold text-lg h-12",
+							className: "mt-2 w-full bg-primary text-white hover:bg-primary/90 font-bold text-lg h-12 transition-all shadow-md hover:shadow-lg",
 							disabled: isLoading,
 							children: isLoading ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "mr-2 h-4 w-4 animate-spin" }), "Gerando cupom..."] }) : "QUERO MEU CUPOM"
 						})
 					]
 				})
 			})] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "flex flex-col items-center justify-center space-y-6 py-6 text-center animate-in fade-in zoom-in duration-300",
+				className: "flex flex-col items-center justify-center space-y-6 py-4 text-center animate-in fade-in zoom-in duration-300",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-green-600",
+						className: "flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-green-600 shadow-sm",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "h-10 w-10" })
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "space-y-2",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 							className: "font-display text-2xl font-bold text-primary",
-							children: "Sua sorte está garantida!"
+							children: "Sorte Garantida!"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-gray-600 px-4",
-							children: "Em breve você receberá seu cupom do Lig-Lig. Aproveite para conhecer nosso cardápio e fazer seu pedido."
+							className: "text-gray-600 px-2 text-sm",
+							children: "Use o cupom abaixo no nosso delivery e aproveite seu desconto especial."
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex w-full flex-col gap-3 sm:flex-row pt-4",
+						className: "w-full space-y-2 rounded-xl border-2 border-dashed border-secondary bg-secondary/5 p-4",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-xs font-bold uppercase tracking-widest text-primary/70",
+								children: "Seu Cupom"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center justify-between gap-2 rounded-lg bg-white p-2 shadow-sm ring-1 ring-black/5",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", {
+									className: "flex-1 font-mono text-xl font-bold text-primary tracking-wider",
+									children: "ANONOVOCHINES"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+									size: "icon",
+									variant: "ghost",
+									className: "h-10 w-10 text-primary hover:bg-primary/10 hover:text-primary",
+									onClick: handleCopyCoupon,
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "h-5 w-5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "sr-only",
+										children: "Copiar"
+									})]
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-[10px] text-gray-500",
+								children: "Clique no ícone para copiar"
+							})
+						]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex w-full flex-col gap-3 pt-2",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							variant: "outline",
-							className: "w-full border-primary text-primary hover:bg-primary/5",
-							onClick: handleClose,
-							children: "Fechar"
+							asChild: true,
+							className: "w-full bg-primary text-white hover:bg-primary/90 font-bold h-12 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+								href: "https://delivery.liglig.com.br",
+								target: "_blank",
+								rel: "noopener noreferrer",
+								className: "flex items-center gap-2",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShoppingBag, { className: "h-5 w-5" }),
+									"USAR NO DELIVERY",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "h-4 w-4 opacity-70" })
+								]
+							})
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-							className: "w-full bg-secondary text-primary hover:bg-secondary/90 font-bold",
-							children: "Ver Cardápio"
+							variant: "outline",
+							className: "w-full border-primary/20 text-primary hover:bg-primary/5 hover:text-primary hover:border-primary/50",
+							onClick: () => onOpenChange(false),
+							children: "Fechar"
 						})]
 					})
 				]
@@ -30775,4 +30891,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-B7BIAAOU.js.map
+//# sourceMappingURL=index-DsasUTZM.js.map
