@@ -18970,7 +18970,7 @@ var Star = createLucideIcon("star", [["path", {
 	d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",
 	key: "r04s7s"
 }]]);
-var Ticket$1 = createLucideIcon("ticket", [
+var Ticket = createLucideIcon("ticket", [
 	["path", {
 		d: "M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z",
 		key: "qn84l0"
@@ -30543,7 +30543,7 @@ function LeadModal({ isOpen, onOpenChange }) {
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ticket$1, { className: "h-7 w-7 text-primary" })
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ticket, { className: "h-7 w-7 text-primary" })
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogTitle, {
 						className: "font-display text-2xl font-bold text-primary",
@@ -31115,4 +31115,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-5cd7PM0f.js.map
+//# sourceMappingURL=index-BKdYIy0B.js.map

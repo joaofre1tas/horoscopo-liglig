@@ -3,7 +3,7 @@ import { ZodiacWheel } from '@/components/ZodiacWheel'
 import { LeadModal } from '@/components/LeadModal'
 import { type ZodiacSign } from '@/lib/zodiac'
 import { Button } from '@/components/ui/button'
-import { ChevronDown, Star } from 'lucide-react'
+import { ChevronDown, Star, Ticket } from 'lucide-react'
 
 export default function Index() {
   const [result, setResult] = useState<ZodiacSign | null>(null)
