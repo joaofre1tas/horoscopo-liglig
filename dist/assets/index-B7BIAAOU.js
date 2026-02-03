@@ -18883,69 +18883,10 @@ var CircleCheck = createLucideIcon("circle-check", [["circle", {
 	d: "m9 12 2 2 4-4",
 	key: "dzmm74"
 }]]);
-var Facebook = createLucideIcon("facebook", [["path", {
-	d: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z",
-	key: "1jg4f8"
-}]]);
-var Instagram = createLucideIcon("instagram", [
-	["rect", {
-		width: "20",
-		height: "20",
-		x: "2",
-		y: "2",
-		rx: "5",
-		ry: "5",
-		key: "2e1cvw"
-	}],
-	["path", {
-		d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z",
-		key: "9exkf1"
-	}],
-	["line", {
-		x1: "17.5",
-		x2: "17.51",
-		y1: "6.5",
-		y2: "6.5",
-		key: "r4j83e"
-	}]
-]);
-var Linkedin = createLucideIcon("linkedin", [
-	["path", {
-		d: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z",
-		key: "c2jq9f"
-	}],
-	["rect", {
-		width: "4",
-		height: "12",
-		x: "2",
-		y: "9",
-		key: "mk3on5"
-	}],
-	["circle", {
-		cx: "4",
-		cy: "4",
-		r: "2",
-		key: "bt5ra8"
-	}]
-]);
 var LoaderCircle = createLucideIcon("loader-circle", [["path", {
 	d: "M21 12a9 9 0 1 1-6.219-8.56",
 	key: "13zald"
 }]]);
-var Menu = createLucideIcon("menu", [
-	["path", {
-		d: "M4 5h16",
-		key: "1tepv9"
-	}],
-	["path", {
-		d: "M4 12h16",
-		key: "1lakjw"
-	}],
-	["path", {
-		d: "M4 19h16",
-		key: "1djgab"
-	}]
-]);
 var Sparkles = createLucideIcon("sparkles", [
 	["path", {
 		d: "M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z",
@@ -18988,23 +18929,12 @@ var Ticket = createLucideIcon("ticket", [
 		key: "1wjjxi"
 	}]
 ]);
-var Twitter = createLucideIcon("twitter", [["path", {
-	d: "M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z",
-	key: "pff0z6"
-}]]);
 var X = createLucideIcon("x", [["path", {
 	d: "M18 6 6 18",
 	key: "1bl5f8"
 }], ["path", {
 	d: "m6 6 12 12",
 	key: "d8bk6v"
-}]]);
-var Youtube = createLucideIcon("youtube", [["path", {
-	d: "M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17",
-	key: "1q2vi4"
-}], ["path", {
-	d: "m10 15 5-3-5-3z",
-	key: "1jp15x"
 }]]);
 var CLASS_PART_SEPARATOR = "-";
 var createClassGroupUtils = (config$1) => {
@@ -29635,12 +29565,12 @@ var styleHookSingleton = function() {
 };
 var styleSingleton = function() {
 	var useStyle = styleHookSingleton();
-	var Sheet$1 = function(_a$1) {
+	var Sheet = function(_a$1) {
 		var styles = _a$1.styles, dynamic = _a$1.dynamic;
 		useStyle(styles, dynamic);
 		return null;
 	};
-	return Sheet$1;
+	return Sheet;
 };
 var zeroGap = {
 	left: 0,
@@ -30316,7 +30246,6 @@ var DescriptionWarning = ({ contentRef, descriptionId }) => {
 	return null;
 };
 var Root$1 = Dialog$1;
-var Trigger = DialogTrigger$1;
 var Portal$1 = DialogPortal$1;
 var Overlay = DialogOverlay$1;
 var Content = DialogContent$1;
@@ -30780,303 +30709,34 @@ var NotFound = () => {
 	});
 };
 var NotFound_default = NotFound;
-var Sheet = Root$1;
-var SheetTrigger = Trigger;
-var SheetPortal = Portal$1;
-var SheetOverlay = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Overlay, {
-	className: cn("fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0", className),
-	...props,
-	ref
-}));
-SheetOverlay.displayName = Overlay.displayName;
-var sheetVariants = cva("fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500", {
-	variants: { side: {
-		top: "inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
-		bottom: "inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
-		left: "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
-		right: "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"
-	} },
-	defaultVariants: { side: "right" }
-});
-var SheetContent = import_react.forwardRef(({ side = "right", className, children, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SheetPortal, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SheetOverlay, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Content, {
-	ref,
-	className: cn(sheetVariants({ side }), className),
-	...props,
-	children: [children, /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Close, {
-		className: "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary",
-		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "h-4 w-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-			className: "sr-only",
-			children: "Close"
-		})]
-	})]
-})] }));
-SheetContent.displayName = Content.displayName;
-var SheetHeader = ({ className, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-	className: cn("flex flex-col space-y-2 text-center sm:text-left", className),
-	...props
-});
-SheetHeader.displayName = "SheetHeader";
-var SheetFooter = ({ className, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-	className: cn("flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2", className),
-	...props
-});
-SheetFooter.displayName = "SheetFooter";
-var SheetTitle = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Title, {
-	ref,
-	className: cn("text-lg font-semibold text-foreground", className),
-	...props
-}));
-SheetTitle.displayName = Title.displayName;
-var SheetDescription = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Description, {
-	ref,
-	className: cn("text-sm text-muted-foreground", className),
-	...props
-}));
-SheetDescription.displayName = Description.displayName;
+var logo_site_reduzido_58094_default = "/assets/logo-site-reduzido-58094-BZwu9L8I.png";
 const Header = () => {
-	const [isOpen, setIsOpen] = (0, import_react.useState)(false);
-	const navItems = [
-		{
-			name: "CARDÁPIO",
-			href: "#"
-		},
-		{
-			name: "PROMOÇÕES",
-			href: "#"
-		},
-		{
-			name: "LOJAS",
-			href: "#"
-		},
-		{
-			name: "O LIG-LIG",
-			href: "#"
-		},
-		{
-			name: "SEJA UM FRANQUEADO",
-			href: "#"
-		},
-		{
-			name: "TRABALHE CONOSCO",
-			href: "#"
-		}
-	];
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
 		className: "fixed left-0 right-0 top-0 z-50 h-20 border-b border-white/10 bg-[#E30613] text-white shadow-md transition-all",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "container mx-auto flex h-full items-center justify-between px-4",
-			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-					to: "/",
-					className: "flex items-center gap-2",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "relative flex h-14 w-14 items-center justify-center rounded-full bg-white border-2 border-secondary shadow-lg overflow-hidden p-1",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							src: "https://img.usecurling.com/i?q=chinese%20food%20chef%20logo&color=red&shape=fill",
-							alt: "Lig-Lig Logo",
-							className: "h-full w-full object-contain"
-						})
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "hidden font-display text-2xl font-bold tracking-widest text-white md:block",
-						children: "LIG-LIG"
-					})]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", {
-					className: "hidden items-center gap-6 lg:flex",
-					children: navItems.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-						href: item.href,
-						className: "text-xs font-bold uppercase tracking-wider text-white transition-colors hover:text-secondary",
-						children: item.name
-					}, item.name))
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "hidden items-center gap-4 lg:flex",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-						className: "rounded-none bg-secondary px-6 py-2 font-bold text-primary hover:bg-secondary/90 hover:scale-105 transition-transform",
-						children: "PEÇA JÁ"
-					})
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "lg:hidden",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Sheet, {
-						open: isOpen,
-						onOpenChange: setIsOpen,
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SheetTrigger, {
-							asChild: true,
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-								variant: "ghost",
-								size: "icon",
-								className: "text-white hover:bg-white/10",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, { className: "h-6 w-6" })
-							})
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SheetContent, {
-							side: "right",
-							className: "bg-[#E30613] text-white border-l-white/10",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-								className: "mt-8 flex flex-col gap-4",
-								children: [navItems.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-									href: item.href,
-									onClick: () => setIsOpen(false),
-									className: "text-lg font-bold text-white hover:text-secondary",
-									children: item.name
-								}, item.name)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-									className: "mt-4 w-full rounded-none bg-secondary font-bold text-primary hover:bg-white hover:text-primary",
-									children: "PEÇA JÁ"
-								})]
-							})
-						})]
-					})
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "container mx-auto flex h-full items-center justify-center px-4",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+				to: "/",
+				className: "flex h-full items-center py-1 transition-transform hover:scale-105",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+					src: logo_site_reduzido_58094_default,
+					alt: "Lig-Lig",
+					className: "h-full w-auto object-contain drop-shadow-md"
 				})
-			]
+			})
 		})
 	});
 };
 const Footer = () => {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("footer", {
-		className: "w-full bg-[#E30613] pt-16 text-white",
-		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "container mx-auto px-6 pb-12",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "space-y-6",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "font-display text-xl font-bold uppercase tracking-wider text-white",
-							children: "Links Úteis"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-							className: "space-y-3 text-sm font-medium opacity-90",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "hover:text-secondary hover:underline",
-									children: "Cardápio"
-								}) }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "hover:text-secondary hover:underline",
-									children: "Promoções"
-								}) }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "hover:text-secondary hover:underline",
-									children: "Lojas"
-								}) }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "hover:text-secondary hover:underline",
-									children: "Ficha Nutricional"
-								}) })
-							]
-						})]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "space-y-6",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "font-display text-xl font-bold uppercase tracking-wider text-white",
-							children: "Institucional"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-							className: "space-y-3 text-sm font-medium opacity-90",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "hover:text-secondary hover:underline",
-									children: "O Lig-Lig"
-								}) }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "hover:text-secondary hover:underline",
-									children: "Contato"
-								}) }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "hover:text-secondary hover:underline",
-									children: "Trabalhe Conosco"
-								}) }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "hover:text-secondary hover:underline",
-									children: "Seja um Fornecedor"
-								}) }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "hover:text-secondary hover:underline",
-									children: "Seja um Franqueado"
-								}) })
-							]
-						})]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "space-y-6",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "font-display text-xl font-bold uppercase tracking-wider text-white",
-							children: "Baixe o App"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex flex-col gap-3",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-								to: "#",
-								className: "block w-40 transition-transform hover:scale-105",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-									src: "https://img.usecurling.com/i?q=app%20store%20badge%20black&color=black&shape=fill",
-									alt: "Disponível na App Store",
-									className: "h-auto w-full rounded-md border border-white/20 bg-black"
-								})
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-								to: "#",
-								className: "block w-40 transition-transform hover:scale-105",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-									src: "https://img.usecurling.com/i?q=google%20play%20badge%20black&color=black&shape=fill",
-									alt: "Disponível no Google Play",
-									className: "h-auto w-full rounded-md border border-white/20 bg-black"
-								})
-							})]
-						})]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "space-y-6",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "font-display text-xl font-bold uppercase tracking-wider text-white",
-							children: "Acompanhe Nossas Redes"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex flex-wrap gap-4",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "rounded-full bg-white p-2 text-primary transition-colors hover:bg-secondary hover:text-primary",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Instagram, { className: "h-5 w-5" })
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "rounded-full bg-white p-2 text-primary transition-colors hover:bg-secondary hover:text-primary",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, { className: "h-5 w-5" })
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "rounded-full bg-white p-2 text-primary transition-colors hover:bg-secondary hover:text-primary",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Linkedin, { className: "h-5 w-5" })
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "rounded-full bg-white p-2 text-primary transition-colors hover:bg-secondary hover:text-primary",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Twitter, { className: "h-5 w-5" })
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-									to: "#",
-									className: "rounded-full bg-white p-2 text-primary transition-colors hover:bg-secondary hover:text-primary",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Youtube, { className: "h-5 w-5" })
-								})
-							]
-						})]
-					})
-				]
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", {
+		className: "w-full border-t border-white/10 bg-[#E30613] py-8 text-white",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "container mx-auto px-4 text-center",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "font-display text-sm font-medium tracking-wider opacity-90",
+				children: "Lig-Lig. Todos os direitos reservados."
 			})
-		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "border-t border-white/10 bg-black py-6 text-center text-xs text-white/60",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Site desenvolvido por João Freitas Web Design" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Políticas de Privacidade" })]
-			})
-		})]
+		})
 	});
 };
 function Layout() {
@@ -31115,4 +30775,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BKdYIy0B.js.map
+//# sourceMappingURL=index-B7BIAAOU.js.map
