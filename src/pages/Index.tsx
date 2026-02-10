@@ -3,7 +3,7 @@ import { ZodiacWheel } from '@/components/ZodiacWheel'
 import { LeadModal } from '@/components/LeadModal'
 import { type ZodiacSign } from '@/lib/zodiac'
 import { Button } from '@/components/ui/button'
-import { ChevronDown, Star, Ticket } from 'lucide-react'
+import { ChevronDown, Ticket } from 'lucide-react'
 import bannerImg from '@/assets/imagem-topo-47f11.png'
 
 export default function Index() {
@@ -22,24 +22,17 @@ export default function Index() {
   return (
     <div className="flex min-h-screen w-full flex-col">
       {/* Top Banner - Replaces the old Header/Logo area */}
-      <div className="w-full flex justify-center pt-6 px-4 relative z-20">
+      <div className="w-full flex justify-center pt-4 px-4 relative z-20">
         <img
           src={bannerImg}
           alt="Ano Novo Chinês Lig-Lig"
-          className="w-full max-w-3xl object-contain drop-shadow-2xl"
+          className="w-full max-w-xs md:max-w-sm object-contain drop-shadow-2xl"
         />
       </div>
 
       {/* Hero Section */}
-      <section className="relative flex min-h-[400px] flex-col items-center justify-start px-4 pt-8 pb-16 text-center text-white md:pt-12 md:pb-20">
+      <section className="relative flex min-h-[400px] flex-col items-center justify-start px-4 pt-2 pb-16 text-center text-white md:pt-6 md:pb-20">
         <div className="relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6">
-          <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full bg-white/10 px-4 py-1 backdrop-blur-sm">
-            <Star className="h-4 w-4 text-secondary fill-secondary" />
-            <span className="text-sm font-semibold uppercase tracking-wider text-secondary">
-              Lig-Lig Especial
-            </span>
-          </div>
-
           <h1 className="font-display text-4xl font-bold leading-tight drop-shadow-sm md:text-6xl lg:text-7xl">
             Descubra sua sorte no <br />
             <span className="text-secondary text-glow">Horóscopo Chinês</span>

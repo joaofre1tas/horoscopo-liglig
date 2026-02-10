@@ -18947,10 +18947,6 @@ var Sparkles = createLucideIcon("sparkles", [
 		key: "6kqj1y"
 	}]
 ]);
-var Star = createLucideIcon("star", [["path", {
-	d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",
-	key: "r04s7s"
-}]]);
 var Ticket = createLucideIcon("ticket", [
 	["path", {
 		d: "M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z",
@@ -30687,25 +30683,18 @@ function Index() {
 		className: "flex min-h-screen w-full flex-col",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "w-full flex justify-center pt-6 px-4 relative z-20",
+				className: "w-full flex justify-center pt-4 px-4 relative z-20",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 					src: imagem_topo_47f11_default,
 					alt: "Ano Novo Chinês Lig-Lig",
-					className: "w-full max-w-3xl object-contain drop-shadow-2xl"
+					className: "w-full max-w-xs md:max-w-sm object-contain drop-shadow-2xl"
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-				className: "relative flex min-h-[400px] flex-col items-center justify-start px-4 pt-8 pb-16 text-center text-white md:pt-12 md:pb-20",
+				className: "relative flex min-h-[400px] flex-col items-center justify-start px-4 pt-2 pb-16 text-center text-white md:pt-6 md:pb-20",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6",
 					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "mx-auto mb-4 flex w-fit items-center gap-2 rounded-full bg-white/10 px-4 py-1 backdrop-blur-sm",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "h-4 w-4 text-secondary fill-secondary" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-sm font-semibold uppercase tracking-wider text-secondary",
-								children: "Lig-Lig Especial"
-							})]
-						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
 							className: "font-display text-4xl font-bold leading-tight drop-shadow-sm md:text-6xl lg:text-7xl",
 							children: [
@@ -30876,4 +30865,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-D3xOgqwL.js.map
+//# sourceMappingURL=index-BwNGNYxS.js.map
