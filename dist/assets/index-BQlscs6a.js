@@ -30696,15 +30696,14 @@ function Index() {
 					className: "relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-							className: "mt-[10px] font-sans font-black uppercase text-4xl leading-tight drop-shadow-sm md:text-6xl lg:text-7xl tracking-wide",
-							children: [
-								"Descubra sua sorte no ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-secondary text-glow",
-									children: "Horóscopo Chinês"
-								})
-							]
+							className: "mt-[10px] flex flex-col items-center justify-center font-sans font-black uppercase leading-none tracking-tighter",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-2xl text-white sm:text-4xl md:text-5xl lg:text-6xl",
+								children: "Descubra sua sorte no"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-3xl text-secondary sm:text-5xl md:text-6xl lg:text-[5rem]",
+								children: "Horóscopo Chinês"
+							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "mx-auto max-w-2xl text-lg text-white/90 md:text-xl font-medium leading-relaxed",
@@ -30865,4 +30864,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-wPFmNE1B.js.map
+//# sourceMappingURL=index-BQlscs6a.js.map

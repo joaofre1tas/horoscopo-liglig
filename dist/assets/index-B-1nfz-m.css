@@ -2093,6 +2093,11 @@ video {
   line-height: 2rem;
 }
 
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -2168,16 +2173,12 @@ video {
   line-height: 1.625;
 }
 
-.leading-tight{
-  line-height: 1.25;
-}
-
 .tracking-tight{
   letter-spacing: -0.025em;
 }
 
-.tracking-wide{
-  letter-spacing: 0.025em;
+.tracking-tighter{
+  letter-spacing: -0.05em;
 }
 
 .tracking-wider{
@@ -2426,11 +2427,6 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.drop-shadow-sm{
-  --tw-drop-shadow: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -2583,10 +2579,6 @@ video {
 .ease-linear{
   animation-timing-function: linear;
 }
-
-.text-glow {
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-  }
 
 /* Brand Pattern Background */
 
@@ -3725,6 +3717,16 @@ video {
     text-align: left;
   }
 
+  .sm\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .sm\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   .data-\[state\=open\]\:sm\:slide-in-from-bottom-full[data-state="open"]{
     --tw-enter-translate-y: 100%;
   }
@@ -3898,9 +3900,13 @@ video {
     text-align: left;
   }
 
-  .lg\:text-7xl{
-    font-size: 4.5rem;
+  .lg\:text-6xl{
+    font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .lg\:text-\[5rem\]{
+    font-size: 5rem;
   }
 }
 
