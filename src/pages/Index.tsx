@@ -26,7 +26,7 @@ export default function Index() {
         <img
           src={bannerImg}
           alt="Ano Novo Chinês Lig-Lig"
-          className="w-full max-w-5xl object-contain drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500"
+          className="w-full max-w-3xl object-contain drop-shadow-2xl"
         />
       </div>
 
