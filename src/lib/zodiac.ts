@@ -11,7 +11,7 @@ export const zodiacSigns: ZodiacSign[] = [
     id: 0,
     name: 'Rato',
     prediction:
-      'Um ano de agilidade e novas oportunidades baterão à sua porta. Sua inteligência será a chave para abrir caminhos inesperados.',
+      'O Ano do Cavalo de Fogo acelera decisões e abre caminhos. Confie na sua inteligência, aja com estratégia e aproveite novas oportunidades que surgirem rapidamente.',
     imageQuery: 'chinese zodiac rat elegant art',
     iconQuery: 'rat',
   },
@@ -19,7 +19,7 @@ export const zodiacSigns: ZodiacSign[] = [
     id: 1,
     name: 'Búfalo',
     prediction:
-      'Sua persistência será recompensada com estabilidade e prosperidade. Construa com calma e colha frutos duradouros.',
+      'Este é um ano para sair da zona de conforto. O Cavalo de Fogo traz mudanças que exigem flexibilidade — quanto mais você se mover, mais prosperidade atrai.',
     imageQuery: 'chinese zodiac ox buffalo elegant art',
     iconQuery: 'bull',
   },
@@ -27,7 +27,7 @@ export const zodiacSigns: ZodiacSign[] = [
     id: 2,
     name: 'Tigre',
     prediction:
-      'A coragem guiará seus passos para grandes conquistas este ano. Não tenha medo de liderar e mostrar sua verdadeira força.',
+      'Energia em alta! O Ano do Cavalo de Fogo favorece coragem, liderança e grandes conquistas. Confie no seu instinto e avance sem medo.',
     imageQuery: 'chinese zodiac tiger elegant art',
     iconQuery: 'tiger',
   },
@@ -35,7 +35,7 @@ export const zodiacSigns: ZodiacSign[] = [
     id: 3,
     name: 'Coelho',
     prediction:
-      'Um período de paz, harmonia e momentos doces com quem você ama. A sorte estará nos detalhes e nas conexões gentis.',
+      'O Cavalo de Fogo pede mais atitude. Este é o momento de equilibrar sensibilidade com ação e transformar boas ideias em resultados reais.',
     imageQuery: 'chinese zodiac rabbit elegant art',
     iconQuery: 'rabbit',
   },
@@ -43,7 +43,7 @@ export const zodiacSigns: ZodiacSign[] = [
     id: 4,
     name: 'Dragão',
     prediction:
-      'Sua energia está no auge! É hora de brilhar e liderar novos projetos. O sucesso acompanha aqueles que ousam sonhar alto.',
+      'Um ano poderoso para expansão e reconhecimento. O Cavalo de Fogo impulsiona sua força natural e favorece crescimento, sucesso e visibilidade.',
     imageQuery: 'chinese zodiac dragon elegant art',
     iconQuery: 'dragon',
   },
@@ -51,7 +51,7 @@ export const zodiacSigns: ZodiacSign[] = [
     id: 5,
     name: 'Serpente',
     prediction:
-      'A sabedoria será sua melhor aliada para tomar decisões brilhantes. Observe, planeje e ataque no momento certo.',
+      'Estratégia e sabedoria continuam sendo seus aliados. O Cavalo de Fogo traz movimento — planeje bem e aja no momento certo para prosperar.',
     imageQuery: 'chinese zodiac snake elegant art',
     iconQuery: 'snake',
   },
@@ -59,7 +59,7 @@ export const zodiacSigns: ZodiacSign[] = [
     id: 6,
     name: 'Cavalo',
     prediction:
-      'Prepare-se para uma jornada cheia de liberdade e novas aventuras. O movimento trará a renovação que você busca.',
+      'Seu ano chegou! O Cavalo de Fogo potencializa energia, liberdade e conquistas. Aproveite para liderar, ousar e seguir seu próprio ritmo.',
     imageQuery: 'chinese zodiac horse elegant art',
     iconQuery: 'horse',
   },
@@ -67,7 +67,7 @@ export const zodiacSigns: ZodiacSign[] = [
     id: 7,
     name: 'Cabra',
     prediction:
-      'Sua criatividade florescerá, trazendo beleza para todos os seus dias. Use sua arte para encantar e transformar o mundo ao redor.',
+      'Criatividade e sensibilidade ganham força. O Cavalo de Fogo convida você a confiar mais em si e transformar talento em novas oportunidades.',
     imageQuery: 'chinese zodiac goat sheep elegant art',
     iconQuery: 'goat',
   },
@@ -75,7 +75,7 @@ export const zodiacSigns: ZodiacSign[] = [
     id: 8,
     name: 'Macaco',
     prediction:
-      'Sua inteligência e bom humor abrirão caminhos antes fechados. A inovação será sua marca registrada neste ciclo.',
+      'Um ano dinâmico e cheio de possibilidades. O Cavalo de Fogo favorece inovação, inteligência e soluções rápidas — use sua criatividade a seu favor.',
     imageQuery: 'chinese zodiac monkey elegant art',
     iconQuery: 'monkey',
   },
@@ -83,15 +83,15 @@ export const zodiacSigns: ZodiacSign[] = [
     id: 9,
     name: 'Galo',
     prediction:
-      'O reconhecimento pelo seu esforço chegará de forma surpreendente. Mostre suas cores e orgulhe-se de quem você é.',
+      'Organização e foco serão essenciais. O Cavalo de Fogo traz movimento, mas recompensa quem mantém disciplina e clareza nos objetivos.',
     imageQuery: 'chinese zodiac rooster chicken elegant art',
     iconQuery: 'rooster',
   },
   {
     id: 10,
-    name: 'Cão',
+    name: 'Cachorro',
     prediction:
-      'A lealdade e as boas amizades serão o pilar de um ano inesquecível. Proteja quem você ama e será recompensado.',
+      'Relações ganham destaque. O Cavalo de Fogo favorece parcerias, confiança e lealdade — cuide dos vínculos e colha bons resultados.',
     imageQuery: 'chinese zodiac dog elegant art',
     iconQuery: 'dog',
   },
@@ -99,7 +99,7 @@ export const zodiacSigns: ZodiacSign[] = [
     id: 11,
     name: 'Porco',
     prediction:
-      'Um ano de fartura, celebração e muita alegria em cada detalhe. Aproveite a abundância e compartilhe bons momentos.',
+      'Um ano de recompensas e boas surpresas. O Cavalo de Fogo traz prosperidade, prazer e novas experiências — aproveite sem excessos.',
     imageQuery: 'chinese zodiac pig elegant art',
     iconQuery: 'pig',
   },
