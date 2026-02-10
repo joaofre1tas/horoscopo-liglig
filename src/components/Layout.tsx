@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router-dom'
-import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import bgImage from '@/assets/bg-ano-novo-chines-04-e7d0d.png'
 
@@ -15,7 +14,6 @@ export default function Layout() {
         backgroundColor: '#E30613',
       }}
     >
-      <Header />
       <main className="flex-1">
         <Outlet />
       </main>

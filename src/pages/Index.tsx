@@ -4,6 +4,7 @@ import { LeadModal } from '@/components/LeadModal'
 import { type ZodiacSign } from '@/lib/zodiac'
 import { Button } from '@/components/ui/button'
 import { ChevronDown, Star, Ticket } from 'lucide-react'
+import topoImg from '@/assets/topo-ano-novo-chines-01-f2a1a.png'
 
 export default function Index() {
   const [result, setResult] = useState<ZodiacSign | null>(null)
@@ -19,11 +20,18 @@ export default function Index() {
   }
 
   return (
-    <div className="flex min-h-screen w-full flex-col pt-20">
-      {/* Hero Section */}
-      <section className="relative flex min-h-[600px] flex-col items-center justify-center px-4 py-16 text-center text-white md:py-24">
-        {/* Removed local background to show the global layout background */}
+    <div className="flex min-h-screen w-full flex-col">
+      {/* Top Banner */}
+      <div className="w-full flex justify-center pt-8 px-4 relative z-20">
+        <img
+          src={topoImg}
+          alt="Ano Novo Chinês Lig-Lig"
+          className="w-full max-w-2xl object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
+        />
+      </div>
 
+      {/* Hero Section */}
+      <section className="relative flex min-h-[500px] flex-col items-center justify-center px-4 py-8 text-center text-white md:py-16">
         <div className="relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6">
           <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full bg-white/10 px-4 py-1 backdrop-blur-sm">
             <Star className="h-4 w-4 text-secondary fill-secondary" />
