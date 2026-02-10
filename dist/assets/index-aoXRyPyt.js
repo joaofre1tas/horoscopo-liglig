@@ -30845,12 +30845,12 @@ const Footer = () => {
 		})
 	});
 };
-var bg_ano_novo_chines_02_67df6_default = "/assets/bg-ano-novo-chines-02-67df6-CuczKzNR.png";
+var bg_ano_novo_chines_03_8ad1d_default = "/assets/bg-ano-novo-chines-03-8ad1d-YTcIHdpu.png";
 function Layout() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "flex min-h-screen flex-col font-sans text-foreground selection:bg-secondary selection:text-secondary-foreground overflow-x-hidden",
 		style: {
-			backgroundImage: `url(${bg_ano_novo_chines_02_67df6_default})`,
+			backgroundImage: `url(${bg_ano_novo_chines_03_8ad1d_default})`,
 			backgroundSize: "cover",
 			backgroundPosition: "top center",
 			backgroundRepeat: "no-repeat"
@@ -30888,4 +30888,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-2uH3RBiE.js.map
+//# sourceMappingURL=index-aoXRyPyt.js.map
