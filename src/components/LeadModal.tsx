@@ -108,10 +108,10 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
                 <Ticket className="h-7 w-7 text-primary" />
               </div>
-              <DialogTitle className="font-display text-2xl font-bold text-primary">
+              <DialogTitle className="font-sans font-black uppercase text-2xl text-primary">
                 Resgate seu presente!
               </DialogTitle>
-              <DialogDescription className="text-gray-600">
+              <DialogDescription className="text-gray-600 font-medium">
                 Preencha seus dados para receber um cupom exclusivo do Lig-Lig.
               </DialogDescription>
             </DialogHeader>
@@ -126,13 +126,13 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-primary font-bold">
+                      <FormLabel className="text-primary font-medium">
                         Nome
                       </FormLabel>
                       <FormControl>
                         <Input
                           placeholder="Como você se chama?"
-                          className="border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20"
+                          className="border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20 font-medium"
                           {...field}
                         />
                       </FormControl>
@@ -146,14 +146,14 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-primary font-bold">
+                      <FormLabel className="text-primary font-medium">
                         E-mail
                       </FormLabel>
                       <FormControl>
                         <Input
                           type="email"
                           placeholder="seu@email.com"
-                          className="border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20"
+                          className="border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20 font-medium"
                           {...field}
                         />
                       </FormControl>
@@ -167,13 +167,13 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
                   name="whatsapp"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-primary font-bold">
+                      <FormLabel className="text-primary font-medium">
                         WhatsApp
                       </FormLabel>
                       <FormControl>
                         <Input
                           placeholder="(11) 99999-9999"
-                          className="border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20"
+                          className="border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20 font-medium"
                           {...field}
                           maxLength={15}
                           onChange={(e) => {
@@ -189,7 +189,7 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
 
                 <Button
                   type="submit"
-                  className="mt-2 w-full bg-primary text-white hover:bg-primary/90 font-bold text-lg h-12 transition-all shadow-md hover:shadow-lg"
+                  className="mt-2 w-full bg-black text-secondary hover:bg-black/90 font-black uppercase text-lg h-12 transition-all shadow-md hover:shadow-lg"
                   disabled={isLoading}
                 >
                   {isLoading ? (
@@ -211,10 +211,10 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
             </div>
 
             <div className="space-y-2">
-              <h3 className="font-display text-2xl font-bold text-primary">
+              <h3 className="font-sans font-black uppercase text-2xl text-primary">
                 Sorte Garantida!
               </h3>
-              <p className="text-gray-600 px-2 text-sm">
+              <p className="text-gray-600 px-2 text-sm font-medium">
                 Use o cupom abaixo no nosso delivery e aproveite seu desconto
                 especial.
               </p>
@@ -222,7 +222,7 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
 
             {/* Coupon Display */}
             <div className="w-full space-y-2 rounded-xl border-2 border-dashed border-secondary bg-secondary/5 p-4">
-              <p className="text-xs font-bold uppercase tracking-widest text-primary/70">
+              <p className="text-xs font-black uppercase tracking-widest text-primary/70">
                 Seu Cupom
               </p>
               <div className="flex items-center justify-between gap-2 rounded-lg bg-white p-2 shadow-sm ring-1 ring-black/5">
@@ -232,7 +232,7 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
                 <Button
                   size="sm"
                   variant="ghost"
-                  className="h-9 text-primary hover:bg-primary/10 hover:text-primary gap-2 px-3 font-semibold"
+                  className="h-9 text-primary hover:bg-primary/10 hover:text-primary gap-2 px-3 font-semibold font-medium"
                   onClick={handleCopyCoupon}
                 >
                   <Copy className="h-4 w-4" />
@@ -244,7 +244,7 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
             <div className="flex w-full flex-col gap-3 pt-2">
               <Button
                 asChild
-                className="w-full bg-primary text-white hover:bg-primary/90 font-bold h-12 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all"
+                className="w-full bg-black text-white hover:bg-black/90 font-black uppercase h-12 shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-black/30 transition-all"
               >
                 <a
                   href="https://delivery.liglig.com.br"
@@ -260,7 +260,7 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
 
               <Button
                 variant="outline"
-                className="w-full border-primary/20 text-primary hover:bg-primary/5 hover:text-primary hover:border-primary/50"
+                className="w-full border-primary/20 text-primary hover:bg-primary/5 hover:text-primary hover:border-primary/50 font-medium"
                 onClick={() => onOpenChange(false)}
               >
                 Fechar

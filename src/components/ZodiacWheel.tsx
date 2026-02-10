@@ -142,11 +142,11 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
                     y="0"
                     fill="#FFD700"
                     fontSize="10"
-                    fontWeight="bold"
+                    fontWeight="900"
                     textAnchor="middle"
                     alignmentBaseline="middle"
                     transform="rotate(90)"
-                    className="font-display tracking-widest uppercase"
+                    className="font-sans uppercase tracking-widest"
                   >
                     {sign.name}
                   </text>
@@ -176,7 +176,7 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
             <div className="text-center">
               <label
                 htmlFor="year"
-                className="mb-1 block text-[10px] font-bold uppercase tracking-widest text-primary md:text-xs"
+                className="mb-1 block text-[10px] font-medium uppercase tracking-widest text-primary md:text-xs"
               >
                 Ano de Nasc.
               </label>
@@ -190,7 +190,7 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
                 value={year}
                 onChange={(e) => setYear(e.target.value.replace(/\D/g, ''))}
                 className={cn(
-                  'h-10 w-24 border-0 border-b-2 bg-transparent text-center font-display text-2xl font-bold text-primary placeholder:text-gray-300 focus-visible:border-secondary focus-visible:ring-0 md:h-12 md:w-32 md:text-3xl',
+                  'h-10 w-24 border-0 border-b-2 bg-transparent text-center font-sans text-2xl font-black text-primary placeholder:text-gray-300 focus-visible:border-secondary focus-visible:ring-0 md:h-12 md:w-32 md:text-3xl',
                   error && 'border-destructive text-destructive animate-pulse',
                 )}
                 disabled={isSpinning}
@@ -199,7 +199,7 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
             <Button
               type="submit"
               size="sm"
-              className="w-full whitespace-nowrap rounded-full bg-secondary px-6 font-bold text-primary shadow-lg transition-all hover:scale-105 hover:bg-secondary/90 disabled:opacity-50"
+              className="w-full whitespace-nowrap rounded-full bg-black px-6 font-black uppercase text-secondary shadow-lg transition-all hover:scale-105 hover:bg-black/90 disabled:opacity-50"
               disabled={isSpinning || !year}
             >
               {isSpinning ? (

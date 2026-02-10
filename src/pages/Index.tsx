@@ -33,12 +33,12 @@ export default function Index() {
       {/* Hero Section */}
       <section className="relative flex min-h-[400px] flex-col items-center justify-start px-4 pt-2 pb-16 text-center text-white md:pt-6 md:pb-20">
         <div className="relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6">
-          <h1 className="mt-[10px] font-display text-4xl font-bold leading-tight drop-shadow-sm md:text-6xl lg:text-7xl">
+          <h1 className="mt-[10px] font-sans font-black uppercase text-4xl leading-tight drop-shadow-sm md:text-6xl lg:text-7xl tracking-wide">
             Descubra sua sorte no <br />
             <span className="text-secondary text-glow">Horóscopo Chinês</span>
           </h1>
 
-          <p className="mx-auto max-w-2xl text-lg text-white/90 md:text-xl font-light leading-relaxed">
+          <p className="mx-auto max-w-2xl text-lg text-white/90 md:text-xl font-medium leading-relaxed">
             Veja o que este ano reserva para você — e ganhe um presente
             exclusivo do Lig-Lig para celebrar os bons momentos.
           </p>
@@ -77,19 +77,19 @@ export default function Index() {
                       />
                     </div>
 
-                    <h2 className="mb-2 font-display text-4xl font-bold text-primary md:text-5xl">
+                    <h2 className="mb-2 font-sans font-black uppercase text-4xl text-primary md:text-5xl">
                       {result.name}
                     </h2>
                     <div className="mb-6 h-1 w-24 bg-secondary lg:mx-0 mx-auto rounded-full" />
 
-                    <p className="mb-8 text-lg leading-relaxed text-gray-600">
+                    <p className="mb-8 text-lg font-medium leading-relaxed text-gray-600">
                       "{result.prediction}"
                     </p>
 
                     <Button
                       size="lg"
                       onClick={() => setIsModalOpen(true)}
-                      className="group relative w-full overflow-hidden rounded-xl bg-primary px-8 py-8 text-xl font-bold text-white shadow-xl transition-all hover:scale-[1.02] hover:bg-primary/90 md:w-auto"
+                      className="group relative w-full overflow-hidden rounded-xl bg-black px-8 py-8 text-xl font-black uppercase text-secondary shadow-xl transition-all hover:scale-[1.02] hover:bg-black/90 md:w-auto"
                     >
                       <div className="flex items-center justify-center gap-3">
                         <span className="relative z-10">
@@ -99,7 +99,7 @@ export default function Index() {
                       </div>
                       <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
                     </Button>
-                    <p className="mt-4 text-xs text-muted-foreground">
+                    <p className="mt-4 text-xs font-medium text-muted-foreground">
                       *Ao clicar, você ganhará um benefício exclusivo.
                     </p>
                   </div>

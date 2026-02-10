@@ -23967,11 +23967,11 @@ function ZodiacWheel({ onResult }) {
 									y: "0",
 									fill: "#FFD700",
 									fontSize: "10",
-									fontWeight: "bold",
+									fontWeight: "900",
 									textAnchor: "middle",
 									alignmentBaseline: "middle",
 									transform: "rotate(90)",
-									className: "font-display tracking-widest uppercase",
+									className: "font-sans uppercase tracking-widest",
 									children: sign.name
 								})
 							})]
@@ -23996,7 +23996,7 @@ function ZodiacWheel({ onResult }) {
 						className: "text-center",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
 							htmlFor: "year",
-							className: "mb-1 block text-[10px] font-bold uppercase tracking-widest text-primary md:text-xs",
+							className: "mb-1 block text-[10px] font-medium uppercase tracking-widest text-primary md:text-xs",
 							children: "Ano de Nasc."
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
 							ref: inputRef,
@@ -24007,13 +24007,13 @@ function ZodiacWheel({ onResult }) {
 							placeholder: "AAAA",
 							value: year,
 							onChange: (e) => setYear(e.target.value.replace(/\D/g, "")),
-							className: cn("h-10 w-24 border-0 border-b-2 bg-transparent text-center font-display text-2xl font-bold text-primary placeholder:text-gray-300 focus-visible:border-secondary focus-visible:ring-0 md:h-12 md:w-32 md:text-3xl", error && "border-destructive text-destructive animate-pulse"),
+							className: cn("h-10 w-24 border-0 border-b-2 bg-transparent text-center font-sans text-2xl font-black text-primary placeholder:text-gray-300 focus-visible:border-secondary focus-visible:ring-0 md:h-12 md:w-32 md:text-3xl", error && "border-destructive text-destructive animate-pulse"),
 							disabled: isSpinning
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
 						type: "submit",
 						size: "sm",
-						className: "w-full whitespace-nowrap rounded-full bg-secondary px-6 font-bold text-primary shadow-lg transition-all hover:scale-105 hover:bg-secondary/90 disabled:opacity-50",
+						className: "w-full whitespace-nowrap rounded-full bg-black px-6 font-black uppercase text-secondary shadow-lg transition-all hover:scale-105 hover:bg-black/90 disabled:opacity-50",
 						disabled: isSpinning || !year,
 						children: [isSpinning ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "animate-spin" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "h-4 w-4 mr-2" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: "text-xs md:text-sm",
@@ -30525,11 +30525,11 @@ function LeadModal({ isOpen, onOpenChange }) {
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ticket, { className: "h-7 w-7 text-primary" })
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogTitle, {
-						className: "font-display text-2xl font-bold text-primary",
+						className: "font-sans font-black uppercase text-2xl text-primary",
 						children: "Resgate seu presente!"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogDescription, {
-						className: "text-gray-600",
+						className: "text-gray-600 font-medium",
 						children: "Preencha seus dados para receber um cupom exclusivo do Lig-Lig."
 					})
 				]
@@ -30544,12 +30544,12 @@ function LeadModal({ isOpen, onOpenChange }) {
 							name: "name",
 							render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, { children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
-									className: "text-primary font-bold",
+									className: "text-primary font-medium",
 									children: "Nome"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
 									placeholder: "Como você se chama?",
-									className: "border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20",
+									className: "border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20 font-medium",
 									...field
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {})
@@ -30560,13 +30560,13 @@ function LeadModal({ isOpen, onOpenChange }) {
 							name: "email",
 							render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, { children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
-									className: "text-primary font-bold",
+									className: "text-primary font-medium",
 									children: "E-mail"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
 									type: "email",
 									placeholder: "seu@email.com",
-									className: "border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20",
+									className: "border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20 font-medium",
 									...field
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {})
@@ -30577,12 +30577,12 @@ function LeadModal({ isOpen, onOpenChange }) {
 							name: "whatsapp",
 							render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, { children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, {
-									className: "text-primary font-bold",
+									className: "text-primary font-medium",
 									children: "WhatsApp"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
 									placeholder: "(11) 99999-9999",
-									className: "border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20",
+									className: "border-primary/20 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-primary focus:ring-primary/20 font-medium",
 									...field,
 									maxLength: 15,
 									onChange: (e) => {
@@ -30595,7 +30595,7 @@ function LeadModal({ isOpen, onOpenChange }) {
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 							type: "submit",
-							className: "mt-2 w-full bg-primary text-white hover:bg-primary/90 font-bold text-lg h-12 transition-all shadow-md hover:shadow-lg",
+							className: "mt-2 w-full bg-black text-secondary hover:bg-black/90 font-black uppercase text-lg h-12 transition-all shadow-md hover:shadow-lg",
 							disabled: isLoading,
 							children: isLoading ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "mr-2 h-4 w-4 animate-spin" }), "Gerando cupom..."] }) : "QUERO MEU CUPOM"
 						})
@@ -30611,17 +30611,17 @@ function LeadModal({ isOpen, onOpenChange }) {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "space-y-2",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "font-display text-2xl font-bold text-primary",
+							className: "font-sans font-black uppercase text-2xl text-primary",
 							children: "Sorte Garantida!"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-gray-600 px-2 text-sm",
+							className: "text-gray-600 px-2 text-sm font-medium",
 							children: "Use o cupom abaixo no nosso delivery e aproveite seu desconto especial."
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "w-full space-y-2 rounded-xl border-2 border-dashed border-secondary bg-secondary/5 p-4",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-xs font-bold uppercase tracking-widest text-primary/70",
+							className: "text-xs font-black uppercase tracking-widest text-primary/70",
 							children: "Seu Cupom"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex items-center justify-between gap-2 rounded-lg bg-white p-2 shadow-sm ring-1 ring-black/5",
@@ -30631,7 +30631,7 @@ function LeadModal({ isOpen, onOpenChange }) {
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
 								size: "sm",
 								variant: "ghost",
-								className: "h-9 text-primary hover:bg-primary/10 hover:text-primary gap-2 px-3 font-semibold",
+								className: "h-9 text-primary hover:bg-primary/10 hover:text-primary gap-2 px-3 font-semibold font-medium",
 								onClick: handleCopyCoupon,
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "h-4 w-4" }), "COPIAR"]
 							})]
@@ -30641,7 +30641,7 @@ function LeadModal({ isOpen, onOpenChange }) {
 						className: "flex w-full flex-col gap-3 pt-2",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 							asChild: true,
-							className: "w-full bg-primary text-white hover:bg-primary/90 font-bold h-12 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all",
+							className: "w-full bg-black text-white hover:bg-black/90 font-black uppercase h-12 shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-black/30 transition-all",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 								href: "https://delivery.liglig.com.br",
 								target: "_blank",
@@ -30655,7 +30655,7 @@ function LeadModal({ isOpen, onOpenChange }) {
 							})
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 							variant: "outline",
-							className: "w-full border-primary/20 text-primary hover:bg-primary/5 hover:text-primary hover:border-primary/50",
+							className: "w-full border-primary/20 text-primary hover:bg-primary/5 hover:text-primary hover:border-primary/50 font-medium",
 							onClick: () => onOpenChange(false),
 							children: "Fechar"
 						})]
@@ -30696,7 +30696,7 @@ function Index() {
 					className: "relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-							className: "mt-[10px] font-display text-4xl font-bold leading-tight drop-shadow-sm md:text-6xl lg:text-7xl",
+							className: "mt-[10px] font-sans font-black uppercase text-4xl leading-tight drop-shadow-sm md:text-6xl lg:text-7xl tracking-wide",
 							children: [
 								"Descubra sua sorte no ",
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
@@ -30707,7 +30707,7 @@ function Index() {
 							]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mx-auto max-w-2xl text-lg text-white/90 md:text-xl font-light leading-relaxed",
+							className: "mx-auto max-w-2xl text-lg text-white/90 md:text-xl font-medium leading-relaxed",
 							children: "Veja o que este ano reserva para você — e ganhe um presente exclusivo do Lig-Lig para celebrar os bons momentos."
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -30743,12 +30743,12 @@ function Index() {
 											})
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-											className: "mb-2 font-display text-4xl font-bold text-primary md:text-5xl",
+											className: "mb-2 font-sans font-black uppercase text-4xl text-primary md:text-5xl",
 											children: result.name
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "mb-6 h-1 w-24 bg-secondary lg:mx-0 mx-auto rounded-full" }),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-											className: "mb-8 text-lg leading-relaxed text-gray-600",
+											className: "mb-8 text-lg font-medium leading-relaxed text-gray-600",
 											children: [
 												"\"",
 												result.prediction,
@@ -30758,7 +30758,7 @@ function Index() {
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
 											size: "lg",
 											onClick: () => setIsModalOpen(true),
-											className: "group relative w-full overflow-hidden rounded-xl bg-primary px-8 py-8 text-xl font-bold text-white shadow-xl transition-all hover:scale-[1.02] hover:bg-primary/90 md:w-auto",
+											className: "group relative w-full overflow-hidden rounded-xl bg-black px-8 py-8 text-xl font-black uppercase text-secondary shadow-xl transition-all hover:scale-[1.02] hover:bg-black/90 md:w-auto",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 												className: "flex items-center justify-center gap-3",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -30768,7 +30768,7 @@ function Index() {
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full" })]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "mt-4 text-xs text-muted-foreground",
+											className: "mt-4 text-xs font-medium text-muted-foreground",
 											children: "*Ao clicar, você ganhará um benefício exclusivo."
 										})
 									]
@@ -30828,7 +30828,7 @@ const Footer = () => {
 var bg_ano_novo_chines_04_e7d0d_default = "/assets/bg-ano-novo-chines-04-e7d0d-Uwxooy5p.png";
 function Layout() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "flex min-h-screen flex-col font-sans text-foreground selection:bg-secondary selection:text-secondary-foreground overflow-x-hidden",
+		className: "flex min-h-screen flex-col font-sans font-medium text-foreground selection:bg-secondary selection:text-secondary-foreground overflow-x-hidden",
 		style: {
 			backgroundImage: `url(${bg_ano_novo_chines_04_e7d0d_default})`,
 			backgroundSize: "100% auto",
@@ -30865,4 +30865,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-Dlw8TvH6.js.map
+//# sourceMappingURL=index-wPFmNE1B.js.map

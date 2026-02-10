@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap');section[aria-label^='Notifications'] {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');section[aria-label^='Notifications'] {
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -152,7 +152,7 @@ html,
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: Inter, system-ui, sans-serif; /* 4 */
+  font-family: Montserrat, system-ui, sans-serif; /* 4 */
   font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
   -webkit-tap-highlight-color: transparent; /* 7 */
@@ -1769,6 +1769,11 @@ video {
   background-color: hsl(var(--background));
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
 .bg-black\/80{
   background-color: rgb(0 0 0 / 0.8);
 }
@@ -2072,7 +2077,7 @@ video {
 }
 
 .font-display{
-  font-family: Cinzel, Playfair Display, serif;
+  font-family: Montserrat, sans-serif;
 }
 
 .font-mono{
@@ -2080,7 +2085,7 @@ video {
 }
 
 .font-sans{
-  font-family: Inter, system-ui, sans-serif;
+  font-family: Montserrat, system-ui, sans-serif;
 }
 
 .text-2xl{
@@ -2126,12 +2131,12 @@ video {
   line-height: 1rem;
 }
 
-.font-bold{
-  font-weight: 700;
+.font-black{
+  font-weight: 900;
 }
 
-.font-light{
-  font-weight: 300;
+.font-bold{
+  font-weight: 700;
 }
 
 .font-medium{
@@ -2169,6 +2174,10 @@ video {
 
 .tracking-tight{
   letter-spacing: -0.025em;
+}
+
+.tracking-wide{
+  letter-spacing: 0.025em;
 }
 
 .tracking-wider{
@@ -2348,8 +2357,8 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-primary\/20{
-  --tw-shadow-color: hsl(var(--primary) / 0.2);
+.shadow-black\/20{
+  --tw-shadow-color: rgb(0 0 0 / 0.2);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -2751,6 +2760,10 @@ video {
   background-color: hsl(var(--accent));
 }
 
+.hover\:bg-black\/90:hover{
+  background-color: rgb(0 0 0 / 0.9);
+}
+
 .hover\:bg-destructive\/80:hover{
   background-color: hsl(var(--destructive) / 0.8);
 }
@@ -2789,10 +2802,6 @@ video {
 
 .hover\:bg-secondary\/80:hover{
   background-color: hsl(var(--secondary) / 0.8);
-}
-
-.hover\:bg-secondary\/90:hover{
-  background-color: hsl(var(--secondary) / 0.9);
 }
 
 .hover\:text-accent-foreground:hover{
@@ -2842,8 +2851,8 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.hover\:shadow-primary\/30:hover{
-  --tw-shadow-color: hsl(var(--primary) / 0.3);
+.hover\:shadow-black\/30:hover{
+  --tw-shadow-color: rgb(0 0 0 / 0.3);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
