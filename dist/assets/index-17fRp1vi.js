@@ -30845,15 +30845,16 @@ const Footer = () => {
 		})
 	});
 };
-var bg_ano_novo_chines_03_8ad1d_default = "/assets/bg-ano-novo-chines-03-8ad1d-YTcIHdpu.png";
+var bg_ano_novo_chines_04_e7d0d_default = "/assets/bg-ano-novo-chines-04-e7d0d-Uwxooy5p.png";
 function Layout() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "flex min-h-screen flex-col font-sans text-foreground selection:bg-secondary selection:text-secondary-foreground overflow-x-hidden",
 		style: {
-			backgroundImage: `url(${bg_ano_novo_chines_03_8ad1d_default})`,
-			backgroundSize: "cover",
+			backgroundImage: `url(${bg_ano_novo_chines_04_e7d0d_default})`,
+			backgroundSize: "100% auto",
 			backgroundPosition: "top center",
-			backgroundRepeat: "no-repeat"
+			backgroundRepeat: "no-repeat",
+			backgroundColor: "#E30613"
 		},
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Header, {}),
@@ -30888,4 +30889,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-aoXRyPyt.js.map
+//# sourceMappingURL=index-17fRp1vi.js.map
