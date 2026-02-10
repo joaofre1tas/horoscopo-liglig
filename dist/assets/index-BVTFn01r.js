@@ -30782,19 +30782,19 @@ function Index() {
 							className: "flex flex-col items-center justify-center font-sans font-black uppercase w-full select-none",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-white leading-tight w-full block text-[1.5rem] sm:text-[2.5rem] md:text-[3.8rem] lg:text-[4.8rem] tracking-tight",
+									className: "text-white w-full block text-[1.9rem] leading-[2.5rem] tracking-tight md:text-[3.8rem] md:leading-tight md:tracking-tight lg:text-[4.8rem]",
 									children: "DESCUBRA SUA SORTE"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-white leading-snug py-2 md:py-3 block text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] tracking-widest",
+									className: "text-white w-full block text-[1.5rem] leading-[2.5rem] tracking-[0.3em] py-1 md:py-3 md:text-[2rem] md:leading-snug md:tracking-widest lg:text-[2.5rem]",
 									children: "NO"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-gold-texture leading-none w-full block pb-2 md:pb-4 text-[3.2rem] sm:text-[5rem] md:text-[7.5rem] lg:text-[9.5rem] tracking-tighter",
+									className: "text-gold-texture w-full block text-[3.4rem] leading-[3.8rem] tracking-tighter md:pb-4 md:text-[7.5rem] md:leading-none md:tracking-tighter lg:text-[9.5rem]",
 									children: "HORÓSCOPO"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-gold-texture leading-none w-full block text-[4.8rem] sm:text-[7.5rem] md:text-[11rem] lg:text-[14rem] tracking-tighter",
+									className: "text-gold-texture w-full block text-[5.2rem] leading-[5rem] tracking-tighter md:text-[11rem] md:leading-none md:tracking-tighter lg:text-[14rem]",
 									children: "CHINÊS"
 								})
 							]
@@ -30917,4 +30917,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DCcc4q62.js.map
+//# sourceMappingURL=index-BVTFn01r.js.map

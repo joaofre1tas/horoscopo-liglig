@@ -40,22 +40,22 @@ export default function Index() {
         <div className="relative z-10 mx-auto w-full max-w-5xl animate-fade-in-down space-y-4 md:space-y-8">
           <h1 className="flex flex-col items-center justify-center font-sans font-black uppercase w-full select-none">
             {/* Line 1: DESCUBRA SUA SORTE */}
-            <span className="text-white leading-tight w-full block text-[1.5rem] sm:text-[2.5rem] md:text-[3.8rem] lg:text-[4.8rem] tracking-tight">
+            <span className="text-white w-full block text-[1.9rem] leading-[2.5rem] tracking-tight md:text-[3.8rem] md:leading-tight md:tracking-tight lg:text-[4.8rem]">
               DESCUBRA SUA SORTE
             </span>
 
             {/* Line 2: NO */}
-            <span className="text-white leading-snug py-2 md:py-3 block text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] tracking-widest">
+            <span className="text-white w-full block text-[1.5rem] leading-[2.5rem] tracking-[0.3em] py-1 md:py-3 md:text-[2rem] md:leading-snug md:tracking-widest lg:text-[2.5rem]">
               NO
             </span>
 
             {/* Line 3: HORÓSCOPO */}
-            <span className="text-gold-texture leading-none w-full block pb-2 md:pb-4 text-[3.2rem] sm:text-[5rem] md:text-[7.5rem] lg:text-[9.5rem] tracking-tighter">
+            <span className="text-gold-texture w-full block text-[3.4rem] leading-[3.8rem] tracking-tighter md:pb-4 md:text-[7.5rem] md:leading-none md:tracking-tighter lg:text-[9.5rem]">
               HORÓSCOPO
             </span>
 
             {/* Line 4: CHINÊS */}
-            <span className="text-gold-texture leading-none w-full block text-[4.8rem] sm:text-[7.5rem] md:text-[11rem] lg:text-[14rem] tracking-tighter">
+            <span className="text-gold-texture w-full block text-[5.2rem] leading-[5rem] tracking-tighter md:text-[11rem] md:leading-none md:tracking-tighter lg:text-[14rem]">
               CHINÊS
             </span>
           </h1>
