@@ -30852,9 +30852,8 @@ function Layout() {
 		style: {
 			backgroundImage: `url(${bg_ano_novo_chines_02_67df6_default})`,
 			backgroundSize: "cover",
-			backgroundPosition: "center",
-			backgroundRepeat: "no-repeat",
-			backgroundAttachment: "fixed"
+			backgroundPosition: "top center",
+			backgroundRepeat: "no-repeat"
 		},
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Header, {}),
@@ -30889,4 +30888,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CoWQkBBn.js.map
+//# sourceMappingURL=index-2uH3RBiE.js.map
