@@ -30774,22 +30774,22 @@ function Index() {
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-				className: "relative flex min-h-[400px] flex-col items-center justify-start px-4 pt-2 pb-16 text-center text-white md:pt-6 md:pb-20",
+				className: "relative flex min-h-[300px] flex-col items-center justify-start px-4 pt-4 pb-8 text-center text-white md:min-h-[400px] md:pt-6 md:pb-20",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6",
+					className: "relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-3 md:space-y-6",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
 							className: "mt-[10px] flex flex-col items-center justify-center font-sans font-black uppercase leading-none tracking-tighter",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-2xl text-white sm:text-4xl md:text-5xl lg:text-6xl",
+								className: "text-3xl leading-[0.9] text-white sm:text-4xl md:text-5xl md:leading-none lg:text-6xl",
 								children: "DESCUBRA SUA SORTE NO"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-gold-texture text-3xl sm:text-5xl md:text-6xl lg:text-[5rem] py-2",
+								className: "text-gold-texture text-5xl leading-[0.85] sm:text-5xl md:text-6xl md:leading-none lg:text-[5rem] py-0 md:py-2",
 								children: "HORÓSCOPO CHINÊS"
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mx-auto max-w-2xl text-lg text-white/90 md:text-xl font-medium leading-relaxed",
+							className: "mx-auto max-w-2xl text-sm font-medium leading-snug text-white/90 px-8 md:px-0 md:text-xl md:leading-relaxed",
 							children: "Veja o que este ano reserva para você — e ganhe um presente exclusivo do Lig-Lig para celebrar os bons momentos."
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -30800,7 +30800,7 @@ function Index() {
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-				className: "relative -mt-10 mb-20 w-full md:-mt-20",
+				className: "relative -mt-6 mb-20 w-full md:-mt-20",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "container mx-auto px-4",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -30906,4 +30906,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DCf6zqxS.js.map
+//# sourceMappingURL=index-0JnsTg3l.js.map
