@@ -882,10 +882,6 @@ html,
   margin-top: 1rem;
 }
 
-.mt-\[10px\]{
-  margin-top: 10px;
-}
-
 .mt-auto{
   margin-top: auto;
 }
@@ -1246,8 +1242,8 @@ html,
   max-width: 42rem;
 }
 
-.max-w-4xl{
-  max-width: 56rem;
+.max-w-5xl{
+  max-width: 64rem;
 }
 
 .max-w-\[--skeleton-width\]{
@@ -1942,11 +1938,6 @@ html,
   padding-right: var(--cell-size);
 }
 
-.py-0{
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
 .py-0\.5{
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
@@ -1985,6 +1976,10 @@ html,
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.pb-2{
+  padding-bottom: 0.5rem;
 }
 
 .pb-3{
@@ -2076,27 +2071,33 @@ html,
   line-height: 2rem;
 }
 
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-\[0\.8rem\]{
   font-size: 0.8rem;
 }
 
+.text-\[1\.5rem\]{
+  font-size: 1.5rem;
+}
+
 .text-\[10px\]{
   font-size: 10px;
+}
+
+.text-\[1rem\]{
+  font-size: 1rem;
+}
+
+.text-\[3\.2rem\]{
+  font-size: 3.2rem;
+}
+
+.text-\[4\.8rem\]{
+  font-size: 4.8rem;
 }
 
 .text-base{
@@ -2153,14 +2154,6 @@ html,
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
-.leading-\[0\.85\]{
-  line-height: 0.85;
-}
-
-.leading-\[0\.9\]{
-  line-height: 0.9;
-}
-
 .leading-none{
   line-height: 1;
 }
@@ -2171,6 +2164,10 @@ html,
 
 .leading-snug{
   line-height: 1.375;
+}
+
+.leading-tight{
+  line-height: 1.25;
 }
 
 .tracking-tight{
@@ -3762,14 +3759,20 @@ html,
     text-align: center;
   }
 
-  .sm\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .sm\:text-\[1\.5rem\]{
+    font-size: 1.5rem;
   }
 
-  .sm\:text-5xl{
-    font-size: 3rem;
-    line-height: 1;
+  .sm\:text-\[2\.5rem\]{
+    font-size: 2.5rem;
+  }
+
+  .sm\:text-\[5rem\]{
+    font-size: 5rem;
+  }
+
+  .sm\:text-\[7\.5rem\]{
+    font-size: 7.5rem;
   }
 
   .data-\[state\=open\]\:sm\:slide-in-from-bottom-full[data-state="open"]{
@@ -3847,10 +3850,10 @@ html,
     flex-direction: row;
   }
 
-  .md\:space-y-6 > :not([hidden]) ~ :not([hidden]){
+  .md\:space-y-8 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
-    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem * var(--tw-space-y-reverse));
   }
 
   .md\:p-10{
@@ -3862,13 +3865,17 @@ html,
     padding-right: 0px;
   }
 
-  .md\:py-2{
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+  .md\:py-3{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   .md\:pb-20{
     padding-bottom: 5rem;
+  }
+
+  .md\:pb-4{
+    padding-bottom: 1rem;
   }
 
   .md\:pt-6{
@@ -3880,14 +3887,20 @@ html,
     line-height: 2.25rem;
   }
 
-  .md\:text-5xl{
-    font-size: 3rem;
-    line-height: 1;
+  .md\:text-\[11rem\]{
+    font-size: 11rem;
   }
 
-  .md\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
+  .md\:text-\[2rem\]{
+    font-size: 2rem;
+  }
+
+  .md\:text-\[3\.8rem\]{
+    font-size: 3.8rem;
+  }
+
+  .md\:text-\[7\.5rem\]{
+    font-size: 7.5rem;
   }
 
   .md\:text-sm{
@@ -3903,10 +3916,6 @@ html,
   .md\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-
-  .md\:leading-none{
-    line-height: 1;
   }
 
   .md\:leading-relaxed{
@@ -3953,13 +3962,20 @@ html,
 
 @media (min-width: 1024px){
 
-  .lg\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
+  .lg\:text-\[14rem\]{
+    font-size: 14rem;
   }
 
-  .lg\:text-\[5rem\]{
-    font-size: 5rem;
+  .lg\:text-\[2\.5rem\]{
+    font-size: 2.5rem;
+  }
+
+  .lg\:text-\[4\.8rem\]{
+    font-size: 4.8rem;
+  }
+
+  .lg\:text-\[9\.5rem\]{
+    font-size: 9.5rem;
   }
 }
 

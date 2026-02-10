@@ -37,13 +37,26 @@ export default function Index() {
 
       {/* Hero Section */}
       <section className="relative flex min-h-[300px] flex-col items-center justify-start px-4 pt-4 pb-8 text-center text-white md:min-h-[400px] md:pt-6 md:pb-20">
-        <div className="relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-3 md:space-y-6">
-          <h1 className="mt-[10px] flex flex-col items-center justify-center font-sans font-black uppercase leading-none tracking-tighter">
-            <span className="text-3xl leading-[0.9] text-white sm:text-4xl md:text-5xl md:leading-none lg:text-6xl">
-              DESCUBRA SUA SORTE NO
+        <div className="relative z-10 mx-auto w-full max-w-5xl animate-fade-in-down space-y-4 md:space-y-8">
+          <h1 className="flex flex-col items-center justify-center font-sans font-black uppercase w-full select-none">
+            {/* Line 1: DESCUBRA SUA SORTE */}
+            <span className="text-white leading-tight w-full block text-[1.5rem] sm:text-[2.5rem] md:text-[3.8rem] lg:text-[4.8rem] tracking-tight">
+              DESCUBRA SUA SORTE
             </span>
-            <span className="text-gold-texture text-5xl leading-[0.85] sm:text-5xl md:text-6xl md:leading-none lg:text-[5rem] py-0 md:py-2">
-              HORÓSCOPO CHINÊS
+
+            {/* Line 2: NO */}
+            <span className="text-white leading-snug py-2 md:py-3 block text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] tracking-widest">
+              NO
+            </span>
+
+            {/* Line 3: HORÓSCOPO */}
+            <span className="text-gold-texture leading-none w-full block pb-2 md:pb-4 text-[3.2rem] sm:text-[5rem] md:text-[7.5rem] lg:text-[9.5rem] tracking-tighter">
+              HORÓSCOPO
+            </span>
+
+            {/* Line 4: CHINÊS */}
+            <span className="text-gold-texture leading-none w-full block text-[4.8rem] sm:text-[7.5rem] md:text-[11rem] lg:text-[14rem] tracking-tighter">
+              CHINÊS
             </span>
           </h1>
 
@@ -52,7 +65,7 @@ export default function Index() {
             exclusivo do Lig-Lig para celebrar os bons momentos.
           </p>
 
-          <div className="animate-bounce">
+          <div className="animate-bounce pt-4">
             <ChevronDown className="mx-auto h-8 w-8 text-white/50" />
           </div>
         </div>
