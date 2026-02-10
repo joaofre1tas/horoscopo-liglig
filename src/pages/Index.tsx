@@ -35,10 +35,10 @@ export default function Index() {
         <div className="relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6">
           <h1 className="mt-[10px] flex flex-col items-center justify-center font-sans font-black uppercase leading-none tracking-tighter">
             <span className="text-2xl text-white sm:text-4xl md:text-5xl lg:text-6xl">
-              Descubra sua sorte no
+              DESCUBRA SUA SORTE NO
             </span>
-            <span className="text-3xl text-secondary sm:text-5xl md:text-6xl lg:text-[5rem]">
-              Horóscopo Chinês
+            <span className="text-gold-texture text-3xl sm:text-5xl md:text-6xl lg:text-[5rem]">
+              HORÓSCOPO CHINÊS
             </span>
           </h1>
 

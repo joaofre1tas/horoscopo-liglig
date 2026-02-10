@@ -30699,10 +30699,10 @@ function Index() {
 							className: "mt-[10px] flex flex-col items-center justify-center font-sans font-black uppercase leading-none tracking-tighter",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "text-2xl text-white sm:text-4xl md:text-5xl lg:text-6xl",
-								children: "Descubra sua sorte no"
+								children: "DESCUBRA SUA SORTE NO"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-3xl text-secondary sm:text-5xl md:text-6xl lg:text-[5rem]",
-								children: "Horóscopo Chinês"
+								className: "text-gold-texture text-3xl sm:text-5xl md:text-6xl lg:text-[5rem]",
+								children: "HORÓSCOPO CHINÊS"
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -30864,4 +30864,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BQlscs6a.js.map
+//# sourceMappingURL=index-B37Ffist.js.map

@@ -46,6 +46,23 @@
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
   }
 
+  /* Golden Texture Text */
+  .text-gold-texture {
+    color: hsl(var(--secondary));
+    background-image: linear-gradient(
+      180deg,
+      #fff8d6 0%,
+      #ffd700 30%,
+      #b88a00 55%,
+      #ffd700 80%,
+      #fff8d6 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
   /* Brand Pattern Background */
   .bg-pattern-brand {
     background-color: hsl(var(--primary));
