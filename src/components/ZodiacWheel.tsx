@@ -92,8 +92,8 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
 
       {/* Wheel Container */}
       <div className="relative h-[320px] w-[320px] md:h-[480px] md:w-[480px]">
-        {/* Realistic Plate Shadow - Static background layer */}
-        <div className="absolute inset-2 z-0 rounded-full shadow-[0_20px_50px_-12px_rgba(0,0,0,0.8)] md:shadow-[0_35px_70px_-15px_rgba(0,0,0,0.8)]" />
+        {/* Realistic Plate Shadow - Enhanced 3D Shadow Effect (Bottom-Left) */}
+        <div className="absolute inset-2 z-0 rounded-full shadow-[-15px_25px_50px_-5px_rgba(0,0,0,0.8)] md:shadow-[-30px_50px_90px_-10px_rgba(0,0,0,0.85)]" />
 
         <div
           className="relative z-10 h-full w-full transition-transform will-change-transform"
