@@ -113,7 +113,7 @@ export function LeadModal({
       <DialogContent className="border-secondary bg-white text-primary sm:max-w-md">
         {!isSuccess ? (
           <>
-            <DialogHeader className="space-y-3 text-center">
+            <DialogHeader className="space-y-3 text-center sm:text-center">
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
                 <Ticket className="h-7 w-7 text-primary" />
               </div>

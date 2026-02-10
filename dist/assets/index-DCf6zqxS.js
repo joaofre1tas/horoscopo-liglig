@@ -30548,7 +30548,7 @@ function LeadModal({ isOpen, onOpenChange, zodiacResult }) {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogContent, {
 			className: "border-secondary bg-white text-primary sm:max-w-md",
 			children: !isSuccess ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(DialogHeader, {
-				className: "space-y-3 text-center",
+				className: "space-y-3 text-center sm:text-center",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10",
@@ -30906,4 +30906,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-WS3Lpa1N.js.map
+//# sourceMappingURL=index-DCf6zqxS.js.map
