@@ -30669,6 +30669,7 @@ function LeadModal({ isOpen, onOpenChange }) {
 		})
 	});
 }
+var topoImg = "https://res.cloudinary.com/subframe/image/upload/v1738548981/uploads/515/f2a1ad47-7597-4048-b3d5-783967814b7e.png";
 function Index() {
 	const [result, setResult] = (0, import_react.useState)(null);
 	const [isModalOpen, setIsModalOpen] = (0, import_react.useState)(false);
@@ -30683,10 +30684,18 @@ function Index() {
 		}, 100);
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "flex min-h-screen w-full flex-col pt-20",
+		className: "flex min-h-screen w-full flex-col",
 		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "w-full flex justify-center pt-8 px-4 relative z-20",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+					src: topoImg,
+					alt: "Ano Novo Chinês Lig-Lig",
+					className: "w-full max-w-2xl object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
+				})
+			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-				className: "relative flex min-h-[600px] flex-col items-center justify-center px-4 py-16 text-center text-white md:py-24",
+				className: "relative flex min-h-[500px] flex-col items-center justify-center px-4 py-8 text-center text-white md:py-16",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6",
 					children: [
@@ -30815,24 +30824,6 @@ var NotFound = () => {
 	});
 };
 var NotFound_default = NotFound;
-var logo_site_reduzido_58094_default = "/assets/logo-site-reduzido-58094-BZwu9L8I.png";
-const Header = () => {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-		className: "fixed left-0 right-0 top-0 z-50 h-20 border-b border-white/10 bg-[#E30613] text-white shadow-md transition-all",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "container mx-auto flex h-full items-center justify-center px-4",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-				to: "/",
-				className: "flex h-full items-center py-1 transition-transform hover:scale-105",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-					src: logo_site_reduzido_58094_default,
-					alt: "Lig-Lig",
-					className: "h-full w-auto object-contain drop-shadow-md"
-				})
-			})
-		})
-	});
-};
 const Footer = () => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", {
 		className: "w-full border-t border-white/10 bg-[#E30613] py-8 text-white",
@@ -30856,14 +30847,10 @@ function Layout() {
 			backgroundRepeat: "no-repeat",
 			backgroundColor: "#E30613"
 		},
-		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Header, {}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
-				className: "flex-1",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})
-		]
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
+			className: "flex-1",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})]
 	});
 }
 var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
@@ -30889,4 +30876,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-17fRp1vi.js.map
+//# sourceMappingURL=index-DXC-hhM7.js.map

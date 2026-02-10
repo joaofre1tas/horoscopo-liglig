@@ -4,7 +4,9 @@ import { LeadModal } from '@/components/LeadModal'
 import { type ZodiacSign } from '@/lib/zodiac'
 import { Button } from '@/components/ui/button'
 import { ChevronDown, Star, Ticket } from 'lucide-react'
-import topoImg from '@/assets/topo-ano-novo-chines-01-f2a1a.png'
+
+const topoImg =
+  'https://res.cloudinary.com/subframe/image/upload/v1738548981/uploads/515/f2a1ad47-7597-4048-b3d5-783967814b7e.png'
 
 export default function Index() {
   const [result, setResult] = useState<ZodiacSign | null>(null)
