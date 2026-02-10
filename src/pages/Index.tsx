@@ -26,7 +26,7 @@ export default function Index() {
         <img
           src={bannerImg}
           alt="Ano Novo Chinês Lig-Lig"
-          className="w-full max-w-xs md:max-w-sm object-contain drop-shadow-2xl"
+          className="w-full max-w-sm md:max-w-lg object-contain drop-shadow-2xl"
         />
       </div>
 

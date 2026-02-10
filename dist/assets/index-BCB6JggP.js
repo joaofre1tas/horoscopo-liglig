@@ -30687,7 +30687,7 @@ function Index() {
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 					src: imagem_topo_47f11_default,
 					alt: "Ano Novo Chinês Lig-Lig",
-					className: "w-full max-w-xs md:max-w-sm object-contain drop-shadow-2xl"
+					className: "w-full max-w-sm md:max-w-lg object-contain drop-shadow-2xl"
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
@@ -30865,4 +30865,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BwNGNYxS.js.map
+//# sourceMappingURL=index-BCB6JggP.js.map
