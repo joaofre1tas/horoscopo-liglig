@@ -119,9 +119,9 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
                 <path
                   d={createSectorPath(sign.id, 12)}
                   fill={sign.id % 2 === 0 ? '#C40510' : '#E30613'} // Subtle tone difference
-                  stroke="#FFD700"
+                  stroke="#000000"
                   strokeWidth="1"
-                  strokeOpacity="0.5"
+                  strokeOpacity="1"
                   className="transition-all duration-300 group-hover:fill-red-800"
                 />
                 {/* Animal Name / Icon */}
@@ -143,13 +143,13 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
                   <text
                     x="0"
                     y="0"
-                    fill="#FFD700"
+                    fill="#FFFFFF"
                     fontSize="10"
                     fontWeight="900"
                     textAnchor="middle"
                     alignmentBaseline="middle"
                     transform="rotate(90)"
-                    className="font-sans uppercase tracking-widest"
+                    className="font-sans uppercase tracking-tighter"
                   >
                     {sign.name}
                   </text>

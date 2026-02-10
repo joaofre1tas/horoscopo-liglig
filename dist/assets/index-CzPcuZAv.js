@@ -23955,9 +23955,9 @@ function ZodiacWheel({ onResult }) {
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
 									d: createSectorPath(sign.id, 12),
 									fill: sign.id % 2 === 0 ? "#C40510" : "#E30613",
-									stroke: "#FFD700",
+									stroke: "#000000",
 									strokeWidth: "1",
-									strokeOpacity: "0.5",
+									strokeOpacity: "1",
 									className: "transition-all duration-300 group-hover:fill-red-800"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("g", {
 									transform: `
@@ -23967,13 +23967,13 @@ function ZodiacWheel({ onResult }) {
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
 										x: "0",
 										y: "0",
-										fill: "#FFD700",
+										fill: "#FFFFFF",
 										fontSize: "10",
 										fontWeight: "900",
 										textAnchor: "middle",
 										alignmentBaseline: "middle",
 										transform: "rotate(90)",
-										className: "font-sans uppercase tracking-widest",
+										className: "font-sans uppercase tracking-tighter",
 										children: sign.name
 									})
 								})]
@@ -30868,4 +30868,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-KWbIHR3T.js.map
+//# sourceMappingURL=index-CzPcuZAv.js.map
