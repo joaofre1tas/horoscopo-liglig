@@ -30701,7 +30701,7 @@ function Index() {
 								className: "text-2xl text-white sm:text-4xl md:text-5xl lg:text-6xl",
 								children: "DESCUBRA SUA SORTE NO"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-gold-texture text-3xl sm:text-5xl md:text-6xl lg:text-[5rem]",
+								className: "text-gold-texture text-3xl sm:text-5xl md:text-6xl lg:text-[5rem] py-2",
 								children: "HORÓSCOPO CHINÊS"
 							})]
 						}),
@@ -30727,7 +30727,7 @@ function Index() {
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ZodiacWheel, { onResult: handleResult })
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							ref: resultRef,
-							className: `w-full max-w-xl transition-all duration-1000 ${result ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1 lg:translate-x-10 pointer-events-none absolute lg:relative"}`,
+							className: cn("w-full max-w-xl transition-all duration-1000", result ? "opacity-100 translate-y-0" : "pointer-events-none absolute opacity-0 translate-y-1 lg:relative lg:translate-x-10"),
 							children: result && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "relative overflow-hidden rounded-3xl bg-white p-8 shadow-2xl ring-1 ring-black/5 md:p-12",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-10 -top-10 h-40 w-40 rounded-full bg-secondary/20 blur-3xl" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -30864,4 +30864,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-B37Ffist.js.map
+//# sourceMappingURL=index-BROQs855.js.map

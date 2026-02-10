@@ -5,6 +5,7 @@ import { type ZodiacSign } from '@/lib/zodiac'
 import { Button } from '@/components/ui/button'
 import { ChevronDown, Ticket } from 'lucide-react'
 import bannerImg from '@/assets/imagem-topo-47f11.png'
+import { cn } from '@/lib/utils'
 
 export default function Index() {
   const [result, setResult] = useState<ZodiacSign | null>(null)
@@ -37,7 +38,7 @@ export default function Index() {
             <span className="text-2xl text-white sm:text-4xl md:text-5xl lg:text-6xl">
               DESCUBRA SUA SORTE NO
             </span>
-            <span className="text-gold-texture text-3xl sm:text-5xl md:text-6xl lg:text-[5rem]">
+            <span className="text-gold-texture text-3xl sm:text-5xl md:text-6xl lg:text-[5rem] py-2">
               HORÓSCOPO CHINÊS
             </span>
           </h1>
@@ -65,7 +66,12 @@ export default function Index() {
             {/* Result Display - Shows only after spin */}
             <div
               ref={resultRef}
-              className={`w-full max-w-xl transition-all duration-1000 ${result ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1 lg:translate-x-10 pointer-events-none absolute lg:relative'}`}
+              className={cn(
+                'w-full max-w-xl transition-all duration-1000',
+                result
+                  ? 'opacity-100 translate-y-0'
+                  : 'pointer-events-none absolute opacity-0 translate-y-1 lg:relative lg:translate-x-10',
+              )}
             >
               {result && (
                 <div className="relative overflow-hidden rounded-3xl bg-white p-8 shadow-2xl ring-1 ring-black/5 md:p-12">

@@ -2580,22 +2580,23 @@ video {
   animation-timing-function: linear;
 }
 
-/* Golden Texture Text */
+/* Golden Texture Text - Smooth Premium Gradient */
 
 .text-gold-texture {
     color: hsl(var(--secondary));
     background-image: linear-gradient(
-      180deg,
-      #fff8d6 0%,
-      #ffd700 30%,
-      #b88a00 55%,
-      #ffd700 80%,
-      #fff8d6 100%
+      to bottom,
+      #fffde7 0%,
+      /* Very Light Gold (Highlight) */ #ffd700 40%,
+      /* Pure Gold */ #ffb300 70%,
+      /* Rich Amber */ #ff8f00 100% /* Dark Amber */
     );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+    /* Ensure no borders or strokes are applied */
+    -webkit-text-stroke: 0;
   }
 
 /* Brand Pattern Background */
