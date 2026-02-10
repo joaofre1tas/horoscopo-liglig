@@ -19,11 +19,10 @@ export default function Index() {
   }
 
   return (
-    <div className="flex min-h-screen w-full flex-col overflow-x-hidden bg-background pt-20">
+    <div className="flex min-h-screen w-full flex-col pt-20">
       {/* Hero Section */}
-      <section className="relative flex min-h-[600px] flex-col items-center justify-center bg-pattern-brand px-4 py-16 text-center text-white md:py-24">
-        {/* Decorative background overlay */}
-        <div className="absolute inset-0 bg-[url('https://img.usecurling.com/i?q=chinese%20clouds%20pattern%20red&color=red&shape=fill')] opacity-10 mix-blend-overlay"></div>
+      <section className="relative flex min-h-[600px] flex-col items-center justify-center px-4 py-16 text-center text-white md:py-24">
+        {/* Removed local background to show the global layout background */}
 
         <div className="relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6">
           <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full bg-white/10 px-4 py-1 backdrop-blur-sm">
@@ -61,7 +60,7 @@ export default function Index() {
             {/* Result Display - Shows only after spin */}
             <div
               ref={resultRef}
-              className={`w-full max-w-xl transition-all duration-1000 ${result ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 lg:translate-x-10 pointer-events-none absolute lg:relative'}`}
+              className={`w-full max-w-xl transition-all duration-1000 ${result ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1 lg:translate-x-10 pointer-events-none absolute lg:relative'}`}
             >
               {result && (
                 <div className="relative overflow-hidden rounded-3xl bg-white p-8 shadow-2xl ring-1 ring-black/5 md:p-12">

@@ -29,7 +29,6 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { cn } from '@/lib/utils'
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -227,22 +226,19 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
                 Seu Cupom
               </p>
               <div className="flex items-center justify-between gap-2 rounded-lg bg-white p-2 shadow-sm ring-1 ring-black/5">
-                <code className="flex-1 font-mono text-xl font-bold text-primary tracking-wider">
+                <code className="flex-1 font-mono text-xl font-bold text-primary tracking-wider pl-2">
                   ANONOVOCHINES
                 </code>
                 <Button
-                  size="icon"
+                  size="sm"
                   variant="ghost"
-                  className="h-10 w-10 text-primary hover:bg-primary/10 hover:text-primary"
+                  className="h-9 text-primary hover:bg-primary/10 hover:text-primary gap-2 px-3 font-semibold"
                   onClick={handleCopyCoupon}
                 >
-                  <Copy className="h-5 w-5" />
-                  <span className="sr-only">Copiar</span>
+                  <Copy className="h-4 w-4" />
+                  COPIAR
                 </Button>
               </div>
-              <p className="text-[10px] text-gray-500">
-                Clique no ícone para copiar
-              </p>
             </div>
 
             <div className="flex w-full flex-col gap-3 pt-2">

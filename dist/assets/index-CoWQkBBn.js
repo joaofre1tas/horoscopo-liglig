@@ -30624,32 +30624,22 @@ function LeadModal({ isOpen, onOpenChange }) {
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "w-full space-y-2 rounded-xl border-2 border-dashed border-secondary bg-secondary/5 p-4",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "text-xs font-bold uppercase tracking-widest text-primary/70",
-								children: "Seu Cupom"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex items-center justify-between gap-2 rounded-lg bg-white p-2 shadow-sm ring-1 ring-black/5",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", {
-									className: "flex-1 font-mono text-xl font-bold text-primary tracking-wider",
-									children: "ANONOVOCHINES"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-									size: "icon",
-									variant: "ghost",
-									className: "h-10 w-10 text-primary hover:bg-primary/10 hover:text-primary",
-									onClick: handleCopyCoupon,
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "h-5 w-5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "sr-only",
-										children: "Copiar"
-									})]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "text-[10px] text-gray-500",
-								children: "Clique no ícone para copiar"
-							})
-						]
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-xs font-bold uppercase tracking-widest text-primary/70",
+							children: "Seu Cupom"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center justify-between gap-2 rounded-lg bg-white p-2 shadow-sm ring-1 ring-black/5",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", {
+								className: "flex-1 font-mono text-xl font-bold text-primary tracking-wider pl-2",
+								children: "ANONOVOCHINES"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+								size: "sm",
+								variant: "ghost",
+								className: "h-9 text-primary hover:bg-primary/10 hover:text-primary gap-2 px-3 font-semibold",
+								onClick: handleCopyCoupon,
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "h-4 w-4" }), "COPIAR"]
+							})]
+						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex w-full flex-col gap-3 pt-2",
@@ -30693,11 +30683,11 @@ function Index() {
 		}, 100);
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "flex min-h-screen w-full flex-col overflow-x-hidden bg-background pt-20",
+		className: "flex min-h-screen w-full flex-col pt-20",
 		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-				className: "relative flex min-h-[600px] flex-col items-center justify-center bg-pattern-brand px-4 py-16 text-center text-white md:py-24",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[url('https://img.usecurling.com/i?q=chinese%20clouds%20pattern%20red&color=red&shape=fill')] opacity-10 mix-blend-overlay" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+				className: "relative flex min-h-[600px] flex-col items-center justify-center px-4 py-16 text-center text-white md:py-24",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -30727,7 +30717,7 @@ function Index() {
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronDown, { className: "mx-auto h-8 w-8 text-white/50" })
 						})
 					]
-				})]
+				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 				className: "relative -mt-10 mb-20 w-full md:-mt-20",
@@ -30740,7 +30730,7 @@ function Index() {
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ZodiacWheel, { onResult: handleResult })
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							ref: resultRef,
-							className: `w-full max-w-xl transition-all duration-1000 ${result ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 lg:translate-x-10 pointer-events-none absolute lg:relative"}`,
+							className: `w-full max-w-xl transition-all duration-1000 ${result ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1 lg:translate-x-10 pointer-events-none absolute lg:relative"}`,
 							children: result && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "relative overflow-hidden rounded-3xl bg-white p-8 shadow-2xl ring-1 ring-black/5 md:p-12",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-10 -top-10 h-40 w-40 rounded-full bg-secondary/20 blur-3xl" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -30855,9 +30845,17 @@ const Footer = () => {
 		})
 	});
 };
+var bg_ano_novo_chines_02_67df6_default = "/assets/bg-ano-novo-chines-02-67df6-CuczKzNR.png";
 function Layout() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "flex min-h-screen flex-col bg-background font-sans text-foreground selection:bg-secondary selection:text-secondary-foreground",
+		className: "flex min-h-screen flex-col font-sans text-foreground selection:bg-secondary selection:text-secondary-foreground overflow-x-hidden",
+		style: {
+			backgroundImage: `url(${bg_ano_novo_chines_02_67df6_default})`,
+			backgroundSize: "cover",
+			backgroundPosition: "center",
+			backgroundRepeat: "no-repeat",
+			backgroundAttachment: "fixed"
+		},
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Header, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
@@ -30891,4 +30889,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DsasUTZM.js.map
+//# sourceMappingURL=index-CoWQkBBn.js.map
