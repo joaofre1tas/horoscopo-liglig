@@ -5,7 +5,7 @@ import bgImage from '@/assets/bg-ano-novo-chines-04-e7d0d.png'
 export default function Layout() {
   return (
     <div
-      className="flex min-h-screen flex-col font-sans font-medium text-foreground selection:bg-secondary selection:text-secondary-foreground overflow-x-hidden"
+      className="flex min-h-[100dvh] w-full flex-col font-sans font-medium text-foreground selection:bg-secondary selection:text-secondary-foreground overflow-x-hidden"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: '100% auto',
@@ -14,7 +14,7 @@ export default function Layout() {
         backgroundColor: '#E30613',
       }}
     >
-      <main className="flex-1">
+      <main className="flex-1 w-full flex flex-col">
         <Outlet />
       </main>
       <Footer />

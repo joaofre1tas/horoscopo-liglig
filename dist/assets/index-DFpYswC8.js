@@ -30717,7 +30717,7 @@ function Index() {
 		}, 100);
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "flex min-h-screen w-full flex-col",
+		className: "flex w-full flex-col flex-1",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "w-full flex justify-center pt-4 px-4 relative z-20",
@@ -30865,7 +30865,7 @@ const Footer = () => {
 var bg_ano_novo_chines_04_e7d0d_default = "/assets/bg-ano-novo-chines-04-e7d0d-Uwxooy5p.png";
 function Layout() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "flex min-h-screen flex-col font-sans font-medium text-foreground selection:bg-secondary selection:text-secondary-foreground overflow-x-hidden",
+		className: "flex min-h-[100dvh] w-full flex-col font-sans font-medium text-foreground selection:bg-secondary selection:text-secondary-foreground overflow-x-hidden",
 		style: {
 			backgroundImage: `url(${bg_ano_novo_chines_04_e7d0d_default})`,
 			backgroundSize: "100% auto",
@@ -30874,7 +30874,7 @@ function Layout() {
 			backgroundColor: "#E30613"
 		},
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
-			className: "flex-1",
+			className: "flex-1 w-full flex flex-col",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})]
 	});
@@ -30902,4 +30902,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-D3CjRh-M.js.map
+//# sourceMappingURL=index-DFpYswC8.js.map

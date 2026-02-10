@@ -39,6 +39,17 @@
 
     --radius: 0.5rem;
   }
+
+  html,
+  body {
+    @apply overscroll-y-none;
+    background-color: #e30613; /* Fallback for background cut-off issues */
+    min-height: 100%;
+  }
+
+  #root {
+    min-height: 100%;
+  }
 }
 
 @layer utilities {

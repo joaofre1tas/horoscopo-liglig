@@ -548,6 +548,17 @@ video {
     --radius: 0.5rem;
   }
 
+html,
+  body{
+  overscroll-behavior-y: none;
+    background-color: #e30613; /* Fallback for background cut-off issues */
+    min-height: 100%;
+}
+
+#root {
+    min-height: 100%;
+  }
+
 .container{
   width: 100%;
   margin-right: auto;
@@ -1055,6 +1066,10 @@ video {
 
 .min-h-0{
   min-height: 0px;
+}
+
+.min-h-\[100dvh\]{
+  min-height: 100dvh;
 }
 
 .min-h-\[400px\]{

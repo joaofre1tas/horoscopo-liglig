@@ -21,7 +21,7 @@ export default function Index() {
   }
 
   return (
-    <div className="flex min-h-screen w-full flex-col">
+    <div className="flex w-full flex-col flex-1">
       {/* Top Banner - Replaces the old Header/Logo area */}
       <div className="w-full flex justify-center pt-4 px-4 relative z-20">
         <img
