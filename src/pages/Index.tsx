@@ -33,7 +33,7 @@ export default function Index() {
       {/* Hero Section */}
       <section className="relative flex min-h-[400px] flex-col items-center justify-start px-4 pt-2 pb-16 text-center text-white md:pt-6 md:pb-20">
         <div className="relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6">
-          <h1 className="font-display text-4xl font-bold leading-tight drop-shadow-sm md:text-6xl lg:text-7xl">
+          <h1 className="mt-[10px] font-display text-4xl font-bold leading-tight drop-shadow-sm md:text-6xl lg:text-7xl">
             Descubra sua sorte no <br />
             <span className="text-secondary text-glow">Horóscopo Chinês</span>
           </h1>

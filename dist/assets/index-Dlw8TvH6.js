@@ -30696,7 +30696,7 @@ function Index() {
 					className: "relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-							className: "font-display text-4xl font-bold leading-tight drop-shadow-sm md:text-6xl lg:text-7xl",
+							className: "mt-[10px] font-display text-4xl font-bold leading-tight drop-shadow-sm md:text-6xl lg:text-7xl",
 							children: [
 								"Descubra sua sorte no ",
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
@@ -30865,4 +30865,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BCB6JggP.js.map
+//# sourceMappingURL=index-Dlw8TvH6.js.map
