@@ -48,7 +48,7 @@ export default function Index() {
             exclusivo do Lig-Lig para celebrar os bons momentos.
           </p>
 
-          <div className="pt-8 animate-bounce">
+          <div className="animate-bounce">
             <ChevronDown className="mx-auto h-8 w-8 text-white/50" />
           </div>
         </div>

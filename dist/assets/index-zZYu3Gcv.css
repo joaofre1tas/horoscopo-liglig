@@ -819,8 +819,8 @@ video {
   margin-top: -2.5rem;
 }
 
-.-mt-12{
-  margin-top: -3rem;
+.-mt-3{
+  margin-top: -0.75rem;
 }
 
 .-mt-4{
@@ -849,10 +849,6 @@ video {
 
 .mb-8{
   margin-bottom: 2rem;
-}
-
-.mb-\[-4px\]{
-  margin-bottom: -4px;
 }
 
 .ml-1{
@@ -1894,10 +1890,6 @@ video {
   fill: currentColor;
 }
 
-.stroke-\[3\]{
-  stroke-width: 3;
-}
-
 .object-contain{
   -o-object-fit: contain;
      object-fit: contain;
@@ -2078,10 +2070,6 @@ video {
 
 .pt-4{
   padding-top: 1rem;
-}
-
-.pt-8{
-  padding-top: 2rem;
 }
 
 .text-left{
@@ -3796,12 +3784,12 @@ video {
     position: absolute;
   }
 
-  .md\:-mt-14{
-    margin-top: -3.5rem;
-  }
-
   .md\:-mt-20{
     margin-top: -5rem;
+  }
+
+  .md\:-mt-5{
+    margin-top: -1.25rem;
   }
 
   .md\:block{

@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils'
 import { calculateZodiac, zodiacSigns, type ZodiacSign } from '@/lib/zodiac'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Loader2, Sparkles, ChevronDown } from 'lucide-react'
+import { Loader2, Sparkles } from 'lucide-react'
 
 interface ZodiacWheelProps {
   onResult: (sign: ZodiacSign) => void
@@ -86,10 +86,7 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
   return (
     <div className="relative mx-auto flex w-full max-w-[500px] flex-col items-center justify-center">
       {/* Indicator/Pointer - Highest Z-Index to overlap wheel */}
-      <div className="absolute top-0 z-30 -mt-12 flex flex-col items-center justify-center drop-shadow-lg filter md:-mt-14">
-        {/* Arrow Icon Adjustment: Moved further up and ensures it is above diamond */}
-        <ChevronDown className="relative z-10 mb-[-4px] h-10 w-10 stroke-[3] text-white" />
-        {/* Golden Indicator Adjustment: Moved slightly downwards */}
+      <div className="absolute top-0 z-30 -mt-3 flex flex-col items-center justify-center drop-shadow-lg filter md:-mt-5">
         <div className="h-6 w-6 rotate-45 transform rounded-sm bg-gold-gradient shadow-md md:h-7 md:w-7"></div>
       </div>
 
