@@ -30320,7 +30320,7 @@ var Dialog = Root$1;
 var DialogPortal = Portal$1;
 var DialogOverlay = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Overlay, {
 	ref,
-	className: cn("fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0", className),
+	className: cn("fixed inset-0 z-50 bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0", className),
 	...props
 }));
 DialogOverlay.displayName = Overlay.displayName;
@@ -30702,19 +30702,65 @@ function LeadModal({ isOpen, onOpenChange, zodiacResult }) {
 		})
 	});
 }
+function ResultModal({ isOpen, onOpenChange, result, onClaim }) {
+	if (!result) return null;
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Dialog, {
+		open: isOpen,
+		onOpenChange,
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(DialogContent, {
+			className: "sm:max-w-md border-0 bg-white shadow-2xl p-8 rounded-3xl flex flex-col items-center text-center",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "bg-red-100 p-4 rounded-full mb-4 w-24 h-24 flex items-center justify-center",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+						src: `https://img.usecurling.com/i?q=${result.iconQuery}&color=black&shape=fill`,
+						alt: result.name,
+						className: "w-16 h-16 object-contain opacity-80"
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogTitle, {
+					className: "text-4xl font-black text-red-600 uppercase mb-2 text-center",
+					children: result.name
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-16 h-1 bg-yellow-400 mb-6 rounded-full" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(DialogDescription, {
+					className: "text-gray-600 font-medium text-lg leading-relaxed text-center mb-8",
+					children: [
+						"\"",
+						result.prediction,
+						"\""
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+					className: "w-full bg-black hover:bg-black/90 text-yellow-400 font-black uppercase text-lg py-6 rounded-xl shadow-lg hover:shadow-xl transition-all",
+					onClick: onClaim,
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "mr-2",
+						children: "SUA SORTE NO LIG-LIG"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ticket, { className: "w-5 h-5" })]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-4 text-xs text-gray-400 font-medium",
+					children: "*Ao clicar, você ganhará um benefício exclusivo."
+				})
+			]
+		})
+	});
+}
 var imagem_topo_47f11_default = "/assets/imagem-topo-47f11-Dqj1oGvz.png";
 function Index() {
 	const [result, setResult] = (0, import_react.useState)(null);
-	const [isModalOpen, setIsModalOpen] = (0, import_react.useState)(false);
-	const resultRef = (0, import_react.useRef)(null);
+	const [isResultModalOpen, setIsResultModalOpen] = (0, import_react.useState)(false);
+	const [isLeadModalOpen, setIsLeadModalOpen] = (0, import_react.useState)(false);
 	const handleResult = (sign) => {
 		setResult(sign);
+		setIsResultModalOpen(true);
+	};
+	const handleClaim = () => {
+		setIsResultModalOpen(false);
 		setTimeout(() => {
-			resultRef.current?.scrollIntoView({
-				behavior: "smooth",
-				block: "center"
-			});
-		}, 100);
+			setIsLeadModalOpen(true);
+		}, 200);
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "flex w-full flex-col flex-1",
@@ -30757,66 +30803,24 @@ function Index() {
 				className: "relative -mt-10 mb-20 w-full md:-mt-20",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "container mx-auto px-4",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex flex-col items-center justify-center gap-12 lg:flex-row",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex flex-col items-center justify-center gap-12",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							className: "relative z-20 animate-fade-in-up",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ZodiacWheel, { onResult: handleResult })
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							ref: resultRef,
-							className: cn("w-full max-w-xl transition-all duration-1000", result ? "opacity-100 translate-y-0" : "pointer-events-none absolute opacity-0 translate-y-1 lg:relative lg:translate-x-10"),
-							children: result && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "relative overflow-hidden rounded-3xl bg-white p-8 shadow-2xl ring-1 ring-black/5 md:p-12",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-10 -top-10 h-40 w-40 rounded-full bg-secondary/20 blur-3xl" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "mb-6 rounded-full bg-red-50 p-4",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-												src: `https://img.usecurling.com/i?q=${result.iconQuery}&color=red&shape=fill`,
-												alt: result.name,
-												className: "h-16 w-16 md:h-20 md:w-20 object-contain"
-											})
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-											className: "mb-2 font-sans font-black uppercase text-4xl text-primary md:text-5xl",
-											children: result.name
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "mb-6 h-1 w-24 bg-secondary lg:mx-0 mx-auto rounded-full" }),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-											className: "mb-8 text-lg font-medium leading-relaxed text-gray-600",
-											children: [
-												"\"",
-												result.prediction,
-												"\""
-											]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-											size: "lg",
-											onClick: () => setIsModalOpen(true),
-											className: "group relative w-full overflow-hidden rounded-xl bg-black px-8 py-8 text-xl font-black uppercase text-secondary shadow-xl transition-all hover:scale-[1.02] hover:bg-black/90 md:w-auto",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-												className: "flex items-center justify-center gap-3",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													className: "relative z-10",
-													children: "SUA SORTE NO LIG-LIG"
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ticket, { className: "h-6 w-6 relative z-10" })]
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full" })]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "mt-4 text-xs font-medium text-muted-foreground",
-											children: "*Ao clicar, você ganhará um benefício exclusivo."
-										})
-									]
-								})]
-							})
-						})]
+						})
 					})
 				})
 			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ResultModal, {
+				isOpen: isResultModalOpen,
+				onOpenChange: setIsResultModalOpen,
+				result,
+				onClaim: handleClaim
+			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LeadModal, {
-				isOpen: isModalOpen,
-				onOpenChange: setIsModalOpen,
+				isOpen: isLeadModalOpen,
+				onOpenChange: setIsLeadModalOpen,
 				zodiacResult: result
 			})
 		]
@@ -30902,4 +30906,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DFpYswC8.js.map
+//# sourceMappingURL=index-WS3Lpa1N.js.map
