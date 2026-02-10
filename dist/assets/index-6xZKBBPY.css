@@ -819,12 +819,12 @@ video {
   margin-top: -2.5rem;
 }
 
-.-mt-4{
-  margin-top: -1rem;
+.-mt-12{
+  margin-top: -3rem;
 }
 
-.-mt-8{
-  margin-top: -2rem;
+.-mt-4{
+  margin-top: -1rem;
 }
 
 .mb-1{
@@ -849,6 +849,10 @@ video {
 
 .mb-8{
   margin-bottom: 2rem;
+}
+
+.mb-\[-4px\]{
+  margin-bottom: -4px;
 }
 
 .ml-1{
@@ -1888,6 +1892,10 @@ video {
 
 .fill-current{
   fill: currentColor;
+}
+
+.stroke-\[3\]{
+  stroke-width: 3;
 }
 
 .object-contain{
@@ -3788,6 +3796,10 @@ video {
     position: absolute;
   }
 
+  .md\:-mt-14{
+    margin-top: -3.5rem;
+  }
+
   .md\:-mt-20{
     margin-top: -5rem;
   }
@@ -3808,6 +3820,10 @@ video {
     height: 5rem;
   }
 
+  .md\:h-7{
+    height: 1.75rem;
+  }
+
   .md\:h-\[480px\]{
     height: 480px;
   }
@@ -3818,6 +3834,10 @@ video {
 
   .md\:w-32{
     width: 8rem;
+  }
+
+  .md\:w-7{
+    width: 1.75rem;
   }
 
   .md\:w-\[480px\]{

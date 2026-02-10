@@ -23924,9 +23924,9 @@ function ZodiacWheel({ onResult }) {
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "relative mx-auto flex w-full max-w-[500px] flex-col items-center justify-center",
-		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "absolute top-0 z-30 -mt-8 drop-shadow-lg filter",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-8 w-8 rotate-45 transform rounded-sm bg-gold-gradient shadow-md" })
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "absolute top-0 z-30 -mt-12 flex flex-col items-center justify-center drop-shadow-lg filter md:-mt-14",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronDown, { className: "relative z-10 mb-[-4px] h-10 w-10 stroke-[3] text-white" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-6 w-6 rotate-45 transform rounded-sm bg-gold-gradient shadow-md md:h-7 md:w-7" })]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "relative h-[320px] w-[320px] md:h-[480px] md:w-[480px]",
 			children: [
@@ -30868,4 +30868,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-B6rgrBKq.js.map
+//# sourceMappingURL=index-BxNmbjB3.js.map
