@@ -4,9 +4,7 @@ import { LeadModal } from '@/components/LeadModal'
 import { type ZodiacSign } from '@/lib/zodiac'
 import { Button } from '@/components/ui/button'
 import { ChevronDown, Star, Ticket } from 'lucide-react'
-
-const topoImg =
-  'https://res.cloudinary.com/subframe/image/upload/v1738548981/uploads/515/f2a1ad47-7597-4048-b3d5-783967814b7e.png'
+import bannerImg from '@/assets/imagem-topo-47f11.png'
 
 export default function Index() {
   const [result, setResult] = useState<ZodiacSign | null>(null)
@@ -23,17 +21,17 @@ export default function Index() {
 
   return (
     <div className="flex min-h-screen w-full flex-col">
-      {/* Top Banner */}
-      <div className="w-full flex justify-center pt-8 px-4 relative z-20">
+      {/* Top Banner - Replaces the old Header/Logo area */}
+      <div className="w-full flex justify-center pt-6 px-4 relative z-20">
         <img
-          src={topoImg}
+          src={bannerImg}
           alt="Ano Novo Chinês Lig-Lig"
-          className="w-full max-w-2xl object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
+          className="w-full max-w-5xl object-contain drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500"
         />
       </div>
 
       {/* Hero Section */}
-      <section className="relative flex min-h-[500px] flex-col items-center justify-center px-4 py-8 text-center text-white md:py-16">
+      <section className="relative flex min-h-[400px] flex-col items-center justify-start px-4 pt-8 pb-16 text-center text-white md:pt-12 md:pb-20">
         <div className="relative z-10 mx-auto max-w-4xl animate-fade-in-down space-y-6">
           <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full bg-white/10 px-4 py-1 backdrop-blur-sm">
             <Star className="h-4 w-4 text-secondary fill-secondary" />
