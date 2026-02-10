@@ -121,7 +121,11 @@ export default function Index() {
       </section>
 
       {/* Modal */}
-      <LeadModal isOpen={isModalOpen} onOpenChange={setIsModalOpen} />
+      <LeadModal
+        isOpen={isModalOpen}
+        onOpenChange={setIsModalOpen}
+        zodiacResult={result}
+      />
     </div>
   )
 }

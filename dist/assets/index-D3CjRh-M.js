@@ -23666,84 +23666,108 @@ const zodiacSigns = [
 		name: "Rato",
 		prediction: "O Ano do Cavalo de Fogo acelera decisões e abre caminhos. Confie na sua inteligência, aja com estratégia e aproveite novas oportunidades que surgirem rapidamente.",
 		imageQuery: "chinese zodiac rat elegant art",
-		iconQuery: "rat"
+		iconQuery: "rat",
+		couponCode: "12OFF",
+		couponCondition: "(NOS PEDIDOS ACIMA DE R$80)"
 	},
 	{
 		id: 1,
 		name: "Búfalo",
 		prediction: "Este é um ano para sair da zona de conforto. O Cavalo de Fogo traz mudanças que exigem flexibilidade — quanto mais você se mover, mais prosperidade atrai.",
 		imageQuery: "chinese zodiac ox buffalo elegant art",
-		iconQuery: "bull"
+		iconQuery: "bull",
+		couponCode: "12OFF",
+		couponCondition: "(NOS PEDIDOS ACIMA DE R$80)"
 	},
 	{
 		id: 2,
 		name: "Tigre",
 		prediction: "Energia em alta! O Ano do Cavalo de Fogo favorece coragem, liderança e grandes conquistas. Confie no seu instinto e avance sem medo.",
 		imageQuery: "chinese zodiac tiger elegant art",
-		iconQuery: "tiger"
+		iconQuery: "tiger",
+		couponCode: "30OFF",
+		couponCondition: "(NOS PEDIDOS ACIMA DE R$200)"
 	},
 	{
 		id: 3,
 		name: "Coelho",
 		prediction: "O Cavalo de Fogo pede mais atitude. Este é o momento de equilibrar sensibilidade com ação e transformar boas ideias em resultados reais.",
 		imageQuery: "chinese zodiac rabbit elegant art",
-		iconQuery: "rabbit"
+		iconQuery: "rabbit",
+		couponCode: "12OFF",
+		couponCondition: "(NOS PEDIDOS ACIMA DE R$80)"
 	},
 	{
 		id: 4,
 		name: "Dragão",
 		prediction: "Um ano poderoso para expansão e reconhecimento. O Cavalo de Fogo impulsiona sua força natural e favorece crescimento, sucesso e visibilidade.",
 		imageQuery: "chinese zodiac dragon elegant art",
-		iconQuery: "dragon"
+		iconQuery: "dragon",
+		couponCode: "30OFF",
+		couponCondition: "(NOS PEDIDOS ACIMA DE R$200)"
 	},
 	{
 		id: 5,
 		name: "Serpente",
 		prediction: "Estratégia e sabedoria continuam sendo seus aliados. O Cavalo de Fogo traz movimento — planeje bem e aja no momento certo para prosperar.",
 		imageQuery: "chinese zodiac snake elegant art",
-		iconQuery: "snake"
+		iconQuery: "snake",
+		couponCode: "12OFF",
+		couponCondition: "(NOS PEDIDOS ACIMA DE R$80)"
 	},
 	{
 		id: 6,
 		name: "Cavalo",
 		prediction: "Seu ano chegou! O Cavalo de Fogo potencializa energia, liberdade e conquistas. Aproveite para liderar, ousar e seguir seu próprio ritmo.",
 		imageQuery: "chinese zodiac horse elegant art",
-		iconQuery: "horse"
+		iconQuery: "horse",
+		couponCode: "30OFF",
+		couponCondition: "(NOS PEDIDOS ACIMA DE R$200)"
 	},
 	{
 		id: 7,
 		name: "Cabra",
 		prediction: "Criatividade e sensibilidade ganham força. O Cavalo de Fogo convida você a confiar mais em si e transformar talento em novas oportunidades.",
 		imageQuery: "chinese zodiac goat sheep elegant art",
-		iconQuery: "goat"
+		iconQuery: "goat",
+		couponCode: "12OFF",
+		couponCondition: "(NOS PEDIDOS ACIMA DE R$80)"
 	},
 	{
 		id: 8,
 		name: "Macaco",
 		prediction: "Um ano dinâmico e cheio de possibilidades. O Cavalo de Fogo favorece inovação, inteligência e soluções rápidas — use sua criatividade a seu favor.",
 		imageQuery: "chinese zodiac monkey elegant art",
-		iconQuery: "monkey"
+		iconQuery: "monkey",
+		couponCode: "30OFF",
+		couponCondition: "(NOS PEDIDOS ACIMA DE R$200)"
 	},
 	{
 		id: 9,
 		name: "Galo",
 		prediction: "Organização e foco serão essenciais. O Cavalo de Fogo traz movimento, mas recompensa quem mantém disciplina e clareza nos objetivos.",
 		imageQuery: "chinese zodiac rooster chicken elegant art",
-		iconQuery: "rooster"
+		iconQuery: "rooster",
+		couponCode: "30OFF",
+		couponCondition: "(NOS PEDIDOS ACIMA DE R$200)"
 	},
 	{
 		id: 10,
 		name: "Cachorro",
 		prediction: "Relações ganham destaque. O Cavalo de Fogo favorece parcerias, confiança e lealdade — cuide dos vínculos e colha bons resultados.",
 		imageQuery: "chinese zodiac dog elegant art",
-		iconQuery: "dog"
+		iconQuery: "dog",
+		couponCode: "30OFF",
+		couponCondition: "(NOS PEDIDOS ACIMA DE R$200)"
 	},
 	{
 		id: 11,
 		name: "Porco",
 		prediction: "Um ano de recompensas e boas surpresas. O Cavalo de Fogo traz prosperidade, prazer e novas experiências — aproveite sem excessos.",
 		imageQuery: "chinese zodiac pig elegant art",
-		iconQuery: "pig"
+		iconQuery: "pig",
+		couponCode: "12OFF",
+		couponCondition: "(NOS PEDIDOS ACIMA DE R$80)"
 	}
 ];
 function calculateZodiac(year) {
@@ -30478,7 +30502,7 @@ var formSchema = object({
 	email: string().email({ message: "Por favor, informe um email válido." }),
 	whatsapp: string().min(14, { message: "Informe um WhatsApp válido (DDD + número)." })
 });
-function LeadModal({ isOpen, onOpenChange }) {
+function LeadModal({ isOpen, onOpenChange, zodiacResult }) {
 	const [isSuccess, setIsSuccess] = (0, import_react.useState)(false);
 	const [isLoading, setIsLoading] = (0, import_react.useState)(false);
 	const { toast: toast$2 } = useToast();
@@ -30508,11 +30532,13 @@ function LeadModal({ isOpen, onOpenChange }) {
 			form.reset();
 		}, 300);
 	};
+	const couponCode = zodiacResult?.couponCode || "ANONOVOCHINES";
+	const couponCondition = zodiacResult?.couponCondition || "";
 	const handleCopyCoupon = () => {
-		navigator.clipboard.writeText("ANONOVOCHINES");
+		navigator.clipboard.writeText(couponCode);
 		toast$2({
 			title: "Cupom copiado!",
-			description: "Código ANONOVOCHINES copiado para a área de transferência.",
+			description: `Código ${couponCode} copiado para a área de transferência.`,
 			duration: 3e3
 		});
 	};
@@ -30624,22 +30650,29 @@ function LeadModal({ isOpen, onOpenChange }) {
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "w-full space-y-2 rounded-xl border-2 border-dashed border-secondary bg-secondary/5 p-4",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-xs font-black uppercase tracking-widest text-primary/70",
-							children: "Seu Cupom"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-center justify-between gap-2 rounded-lg bg-white p-2 shadow-sm ring-1 ring-black/5",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", {
-								className: "flex-1 font-mono text-xl font-bold text-primary tracking-wider pl-2",
-								children: "ANONOVOCHINES"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-								size: "sm",
-								variant: "ghost",
-								className: "h-9 text-primary hover:bg-primary/10 hover:text-primary gap-2 px-3 font-semibold font-medium",
-								onClick: handleCopyCoupon,
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "h-4 w-4" }), "COPIAR"]
-							})]
-						})]
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-xs font-black uppercase tracking-widest text-primary/70",
+								children: "Seu Cupom"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center justify-between gap-2 rounded-lg bg-white p-2 shadow-sm ring-1 ring-black/5",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", {
+									className: "flex-1 font-mono text-xl font-bold text-primary tracking-wider pl-2",
+									children: couponCode
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+									size: "sm",
+									variant: "ghost",
+									className: "h-9 text-primary hover:bg-primary/10 hover:text-primary gap-2 px-3 font-semibold font-medium",
+									onClick: handleCopyCoupon,
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "h-4 w-4" }), "COPIAR"]
+								})]
+							}),
+							couponCondition && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-[10px] font-bold text-primary/60 uppercase tracking-tight",
+								children: couponCondition
+							})
+						]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex w-full flex-col gap-3 pt-2",
@@ -30783,7 +30816,8 @@ function Index() {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LeadModal, {
 				isOpen: isModalOpen,
-				onOpenChange: setIsModalOpen
+				onOpenChange: setIsModalOpen,
+				zodiacResult: result
 			})
 		]
 	});
@@ -30868,4 +30902,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-w4FnwaoB.js.map
+//# sourceMappingURL=index-D3CjRh-M.js.map

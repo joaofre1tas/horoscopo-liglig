@@ -2261,6 +2261,10 @@ video {
   color: hsl(var(--primary-foreground));
 }
 
+.text-primary\/60{
+  color: hsl(var(--primary) / 0.6);
+}
+
 .text-primary\/70{
   color: hsl(var(--primary) / 0.7);
 }

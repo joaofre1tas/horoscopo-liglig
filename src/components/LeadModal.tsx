@@ -11,6 +11,7 @@ import {
   ShoppingBag,
 } from 'lucide-react'
 import { useToast } from '@/hooks/use-toast'
+import { type ZodiacSign } from '@/lib/zodiac'
 
 import {
   Dialog,
@@ -45,9 +46,14 @@ const formSchema = z.object({
 interface LeadModalProps {
   isOpen: boolean
   onOpenChange: (open: boolean) => void
+  zodiacResult: ZodiacSign | null
 }
 
-export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
+export function LeadModal({
+  isOpen,
+  onOpenChange,
+  zodiacResult,
+}: LeadModalProps) {
   const [isSuccess, setIsSuccess] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const { toast } = useToast()
@@ -90,11 +96,14 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
     }
   }
 
+  const couponCode = zodiacResult?.couponCode || 'ANONOVOCHINES'
+  const couponCondition = zodiacResult?.couponCondition || ''
+
   const handleCopyCoupon = () => {
-    navigator.clipboard.writeText('ANONOVOCHINES')
+    navigator.clipboard.writeText(couponCode)
     toast({
       title: 'Cupom copiado!',
-      description: 'Código ANONOVOCHINES copiado para a área de transferência.',
+      description: `Código ${couponCode} copiado para a área de transferência.`,
       duration: 3000,
     })
   }
@@ -227,7 +236,7 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
               </p>
               <div className="flex items-center justify-between gap-2 rounded-lg bg-white p-2 shadow-sm ring-1 ring-black/5">
                 <code className="flex-1 font-mono text-xl font-bold text-primary tracking-wider pl-2">
-                  ANONOVOCHINES
+                  {couponCode}
                 </code>
                 <Button
                   size="sm"
@@ -239,6 +248,11 @@ export function LeadModal({ isOpen, onOpenChange }: LeadModalProps) {
                   COPIAR
                 </Button>
               </div>
+              {couponCondition && (
+                <p className="text-[10px] font-bold text-primary/60 uppercase tracking-tight">
+                  {couponCondition}
+                </p>
+              )}
             </div>
 
             <div className="flex w-full flex-col gap-3 pt-2">
