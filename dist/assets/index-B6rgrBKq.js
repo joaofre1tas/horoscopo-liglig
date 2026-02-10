@@ -23925,8 +23925,8 @@ function ZodiacWheel({ onResult }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "relative mx-auto flex w-full max-w-[500px] flex-col items-center justify-center",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "absolute top-0 z-30 -mt-2 text-white drop-shadow-lg filter",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-8 w-8 rotate-45 transform rounded-sm bg-white shadow-md border-2 border-secondary" })
+			className: "absolute top-0 z-30 -mt-8 drop-shadow-lg filter",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-8 w-8 rotate-45 transform rounded-sm bg-gold-gradient shadow-md" })
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "relative h-[320px] w-[320px] md:h-[480px] md:w-[480px]",
 			children: [
@@ -30868,4 +30868,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CzPcuZAv.js.map
+//# sourceMappingURL=index-B6rgrBKq.js.map

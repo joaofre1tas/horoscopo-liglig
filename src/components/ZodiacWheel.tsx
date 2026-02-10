@@ -86,8 +86,8 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
   return (
     <div className="relative mx-auto flex w-full max-w-[500px] flex-col items-center justify-center">
       {/* Indicator/Pointer - Highest Z-Index to overlap wheel */}
-      <div className="absolute top-0 z-30 -mt-2 text-white drop-shadow-lg filter">
-        <div className="h-8 w-8 rotate-45 transform rounded-sm bg-white shadow-md border-2 border-secondary"></div>
+      <div className="absolute top-0 z-30 -mt-8 drop-shadow-lg filter">
+        <div className="h-8 w-8 rotate-45 transform rounded-sm bg-gold-gradient shadow-md"></div>
       </div>
 
       {/* Wheel Container */}

@@ -819,12 +819,12 @@ video {
   margin-top: -2.5rem;
 }
 
-.-mt-2{
-  margin-top: -0.5rem;
-}
-
 .-mt-4{
   margin-top: -1rem;
+}
+
+.-mt-8{
+  margin-top: -2rem;
 }
 
 .mb-1{
@@ -2615,6 +2615,19 @@ video {
     color: transparent;
     /* Ensure no borders or strokes are applied */
     -webkit-text-stroke: 0;
+  }
+
+/* Golden Gradient Background - Matches text-gold-texture colors */
+
+.bg-gold-gradient {
+    background-color: hsl(var(--secondary));
+    background-image: linear-gradient(
+      to bottom,
+      #fffde7 0%,
+      /* Very Light Gold (Highlight) */ #ffd700 40%,
+      /* Pure Gold */ #ffb300 70%,
+      /* Rich Amber */ #ff8f00 100% /* Dark Amber */
+    );
   }
 
 /* Brand Pattern Background */
