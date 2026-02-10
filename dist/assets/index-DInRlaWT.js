@@ -23925,103 +23925,107 @@ function ZodiacWheel({ onResult }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "relative mx-auto flex w-full max-w-[500px] flex-col items-center justify-center",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "absolute top-0 z-20 -mt-2 text-white drop-shadow-lg filter",
+			className: "absolute top-0 z-30 -mt-2 text-white drop-shadow-lg filter",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-8 w-8 rotate-45 transform rounded-sm bg-white shadow-md border-2 border-secondary" })
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "relative h-[320px] w-[320px] md:h-[480px] md:w-[480px]",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "h-full w-full transition-transform will-change-transform",
-				style: {
-					transform: `rotate(${rotation}deg)`,
-					transitionDuration: "4000ms",
-					transitionTimingFunction: "cubic-bezier(0.25, 0.1, 0.1, 1)"
-				},
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
-					viewBox: "0 0 300 300",
-					className: "h-full w-full drop-shadow-2xl",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
-							cx: "150",
-							cy: "150",
-							r: "148",
-							fill: "#E30613",
-							stroke: "#FFD700",
-							strokeWidth: "4"
-						}),
-						zodiacSigns.map((sign) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
-							className: "wheel-segment group",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
-								d: createSectorPath(sign.id, 12),
-								fill: sign.id % 2 === 0 ? "#C40510" : "#E30613",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-2 z-0 rounded-full shadow-[0_20px_50px_-12px_rgba(0,0,0,0.8)] md:shadow-[0_35px_70px_-15px_rgba(0,0,0,0.8)]" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "relative z-10 h-full w-full transition-transform will-change-transform",
+					style: {
+						transform: `rotate(${rotation}deg)`,
+						transitionDuration: "4000ms",
+						transitionTimingFunction: "cubic-bezier(0.25, 0.1, 0.1, 1)"
+					},
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+						viewBox: "0 0 300 300",
+						className: "h-full w-full",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+								cx: "150",
+								cy: "150",
+								r: "148",
+								fill: "#E30613",
 								stroke: "#FFD700",
-								strokeWidth: "1",
-								strokeOpacity: "0.5",
-								className: "transition-all duration-300 group-hover:fill-red-800"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("g", {
-								transform: `
+								strokeWidth: "4"
+							}),
+							zodiacSigns.map((sign) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+								className: "wheel-segment group",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+									d: createSectorPath(sign.id, 12),
+									fill: sign.id % 2 === 0 ? "#C40510" : "#E30613",
+									stroke: "#FFD700",
+									strokeWidth: "1",
+									strokeOpacity: "0.5",
+									className: "transition-all duration-300 group-hover:fill-red-800"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("g", {
+									transform: `
                             translate(${150 + 115 * Math.cos((sign.id * 30 - 90) * Math.PI / 180)}, ${150 + 115 * Math.sin((sign.id * 30 - 90) * Math.PI / 180)})
                             rotate(${sign.id * 30})
                         `,
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
-									x: "0",
-									y: "0",
-									fill: "#FFD700",
-									fontSize: "10",
-									fontWeight: "900",
-									textAnchor: "middle",
-									alignmentBaseline: "middle",
-									transform: "rotate(90)",
-									className: "font-sans uppercase tracking-widest",
-									children: sign.name
-								})
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
+										x: "0",
+										y: "0",
+										fill: "#FFD700",
+										fontSize: "10",
+										fontWeight: "900",
+										textAnchor: "middle",
+										alignmentBaseline: "middle",
+										transform: "rotate(90)",
+										className: "font-sans uppercase tracking-widest",
+										children: sign.name
+									})
+								})]
+							}, sign.id)),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+								cx: "150",
+								cy: "150",
+								r: "45",
+								fill: "none",
+								stroke: "#FFD700",
+								strokeWidth: "2",
+								strokeDasharray: "4 2"
+							})
+						]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "absolute left-1/2 top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-white p-6 shadow-[0_0_40px_rgba(227,6,19,0.3)] ring-4 ring-secondary/50 backdrop-blur-sm md:p-10",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
+						onSubmit: handleSpin,
+						className: "flex flex-col items-center gap-3",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "text-center",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+								htmlFor: "year",
+								className: "mb-1 block text-[10px] font-medium uppercase tracking-widest text-primary md:text-xs",
+								children: "Ano de Nasc."
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+								ref: inputRef,
+								id: "year",
+								type: "text",
+								inputMode: "numeric",
+								maxLength: 4,
+								placeholder: "AAAA",
+								value: year,
+								onChange: (e) => setYear(e.target.value.replace(/\D/g, "")),
+								className: cn("h-10 w-24 border-0 border-b-2 bg-transparent text-center font-sans text-2xl font-black text-primary placeholder:text-gray-300 focus-visible:border-secondary focus-visible:ring-0 md:h-12 md:w-32 md:text-3xl", error && "border-destructive text-destructive animate-pulse"),
+								disabled: isSpinning
 							})]
-						}, sign.id)),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
-							cx: "150",
-							cy: "150",
-							r: "45",
-							fill: "none",
-							stroke: "#FFD700",
-							strokeWidth: "2",
-							strokeDasharray: "4 2"
-						})
-					]
-				})
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-white p-6 shadow-[0_0_40px_rgba(227,6,19,0.3)] ring-4 ring-secondary/50 backdrop-blur-sm md:p-10",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
-					onSubmit: handleSpin,
-					className: "flex flex-col items-center gap-3",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "text-center",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
-							htmlFor: "year",
-							className: "mb-1 block text-[10px] font-medium uppercase tracking-widest text-primary md:text-xs",
-							children: "Ano de Nasc."
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
-							ref: inputRef,
-							id: "year",
-							type: "text",
-							inputMode: "numeric",
-							maxLength: 4,
-							placeholder: "AAAA",
-							value: year,
-							onChange: (e) => setYear(e.target.value.replace(/\D/g, "")),
-							className: cn("h-10 w-24 border-0 border-b-2 bg-transparent text-center font-sans text-2xl font-black text-primary placeholder:text-gray-300 focus-visible:border-secondary focus-visible:ring-0 md:h-12 md:w-32 md:text-3xl", error && "border-destructive text-destructive animate-pulse"),
-							disabled: isSpinning
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+							type: "submit",
+							size: "sm",
+							className: "w-full whitespace-nowrap rounded-full bg-black px-6 font-black uppercase text-secondary shadow-lg transition-all hover:scale-105 hover:bg-black/90 disabled:opacity-50",
+							disabled: isSpinning || !year,
+							children: [isSpinning ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "animate-spin" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "h-4 w-4 mr-2" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-xs md:text-sm",
+								children: isSpinning ? "Lendo o destino..." : "REVELAR"
+							})]
 						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-						type: "submit",
-						size: "sm",
-						className: "w-full whitespace-nowrap rounded-full bg-black px-6 font-black uppercase text-secondary shadow-lg transition-all hover:scale-105 hover:bg-black/90 disabled:opacity-50",
-						disabled: isSpinning || !year,
-						children: [isSpinning ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "animate-spin" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "h-4 w-4 mr-2" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-xs md:text-sm",
-							children: isSpinning ? "Lendo o destino..." : "REVELAR"
-						})]
-					})]
+					})
 				})
-			})]
+			]
 		})]
 	});
 }
@@ -30864,4 +30868,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BROQs855.js.map
+//# sourceMappingURL=index-DInRlaWT.js.map

@@ -85,22 +85,25 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
 
   return (
     <div className="relative mx-auto flex w-full max-w-[500px] flex-col items-center justify-center">
-      {/* Indicator/Pointer */}
-      <div className="absolute top-0 z-20 -mt-2 text-white drop-shadow-lg filter">
+      {/* Indicator/Pointer - Highest Z-Index to overlap wheel */}
+      <div className="absolute top-0 z-30 -mt-2 text-white drop-shadow-lg filter">
         <div className="h-8 w-8 rotate-45 transform rounded-sm bg-white shadow-md border-2 border-secondary"></div>
       </div>
 
       {/* Wheel Container */}
       <div className="relative h-[320px] w-[320px] md:h-[480px] md:w-[480px]">
+        {/* Realistic Plate Shadow - Static background layer */}
+        <div className="absolute inset-2 z-0 rounded-full shadow-[0_20px_50px_-12px_rgba(0,0,0,0.8)] md:shadow-[0_35px_70px_-15px_rgba(0,0,0,0.8)]" />
+
         <div
-          className="h-full w-full transition-transform will-change-transform"
+          className="relative z-10 h-full w-full transition-transform will-change-transform"
           style={{
             transform: `rotate(${rotation}deg)`,
             transitionDuration: '4000ms',
             transitionTimingFunction: 'cubic-bezier(0.25, 0.1, 0.1, 1)',
           }}
         >
-          <svg viewBox="0 0 300 300" className="h-full w-full drop-shadow-2xl">
+          <svg viewBox="0 0 300 300" className="h-full w-full">
             {/* Outer Ring */}
             <circle
               cx="150"
@@ -167,8 +170,8 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
           </svg>
         </div>
 
-        {/* Center Control - Absolute Center of Wheel */}
-        <div className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-white p-6 shadow-[0_0_40px_rgba(227,6,19,0.3)] ring-4 ring-secondary/50 backdrop-blur-sm md:p-10">
+        {/* Center Control - Absolute Center of Wheel - Z-Index above wheel */}
+        <div className="absolute left-1/2 top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-white p-6 shadow-[0_0_40px_rgba(227,6,19,0.3)] ring-4 ring-secondary/50 backdrop-blur-sm md:p-10">
           <form
             onSubmit={handleSpin}
             className="flex flex-col items-center gap-3"
