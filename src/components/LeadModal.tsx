@@ -99,7 +99,11 @@ export function LeadModal({
 
     setIsLoading(false)
     if (error) {
-      console.error('[LeadModal] Supabase insert error:', error.code, error.message)
+      console.error(
+        '[LeadModal] Supabase insert error:',
+        error.code,
+        error.message,
+      )
       toast({
         title: 'Erro ao salvar',
         description:

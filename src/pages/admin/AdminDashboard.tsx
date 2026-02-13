@@ -63,7 +63,10 @@ export default function AdminDashboard() {
   async function handleDeleteLead() {
     if (!leadToDelete) return
     setDeleting(true)
-    const { error } = await supabase.from('leads').delete().eq('id', leadToDelete.id)
+    const { error } = await supabase
+      .from('leads')
+      .delete()
+      .eq('id', leadToDelete.id)
     setDeleting(false)
     setLeadToDelete(null)
     if (error) {
@@ -175,12 +178,16 @@ export default function AdminDashboard() {
         leads={leads}
       />
 
-      <AlertDialog open={!!leadToDelete} onOpenChange={(open) => !open && setLeadToDelete(null)}>
+      <AlertDialog
+        open={!!leadToDelete}
+        onOpenChange={(open) => !open && setLeadToDelete(null)}
+      >
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Excluir lead?</AlertDialogTitle>
             <AlertDialogDescription>
-              Esta ação não pode ser desfeita. O registro de {leadToDelete?.name} será removido.
+              Esta ação não pode ser desfeita. O registro de{' '}
+              {leadToDelete?.name} será removido.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

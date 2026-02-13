@@ -40,7 +40,11 @@ export default function AdminLogin() {
       password: values.password,
     })
     if (error) {
-      setSubmitError(error.message === 'Invalid login credentials' ? 'E-mail ou senha incorretos.' : error.message)
+      setSubmitError(
+        error.message === 'Invalid login credentials'
+          ? 'E-mail ou senha incorretos.'
+          : error.message,
+      )
       return
     }
     navigate('/admin/dashboard', { replace: true })
@@ -62,7 +66,11 @@ export default function AdminLogin() {
                   <FormItem>
                     <FormLabel>E-mail</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="admin@exemplo.com" {...field} />
+                      <Input
+                        type="email"
+                        placeholder="admin@exemplo.com"
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -75,7 +83,11 @@ export default function AdminLogin() {
                   <FormItem>
                     <FormLabel>Senha</FormLabel>
                     <FormControl>
-                      <Input type="password" placeholder="••••••••" {...field} />
+                      <Input
+                        type="password"
+                        placeholder="••••••••"
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -84,7 +96,11 @@ export default function AdminLogin() {
               {submitError && (
                 <p className="text-sm text-destructive">{submitError}</p>
               )}
-              <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
+              <Button
+                type="submit"
+                className="w-full"
+                disabled={form.formState.isSubmitting}
+              >
                 {form.formState.isSubmitting ? (
                   <Loader2 className="h-4 w-4 animate-spin" />
                 ) : (
