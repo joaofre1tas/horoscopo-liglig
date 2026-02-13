@@ -8,11 +8,13 @@ import bannerImg from '@/assets/imagem-topo-47f11.png'
 
 export default function Index() {
   const [result, setResult] = useState<ZodiacSign | null>(null)
+  const [birthYear, setBirthYear] = useState<number | null>(null)
   const [isResultModalOpen, setIsResultModalOpen] = useState(false)
   const [isLeadModalOpen, setIsLeadModalOpen] = useState(false)
 
-  const handleResult = (sign: ZodiacSign) => {
+  const handleResult = (sign: ZodiacSign, year: number) => {
     setResult(sign)
+    setBirthYear(year)
     setIsResultModalOpen(true)
   }
 
@@ -96,6 +98,7 @@ export default function Index() {
         isOpen={isLeadModalOpen}
         onOpenChange={setIsLeadModalOpen}
         zodiacResult={result}
+        birthYear={birthYear}
       />
     </div>
   )

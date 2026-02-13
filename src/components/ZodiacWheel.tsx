@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Loader2, Sparkles } from 'lucide-react'
 
 interface ZodiacWheelProps {
-  onResult: (sign: ZodiacSign) => void
+  onResult: (sign: ZodiacSign, birthYear: number) => void
 }
 
 export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
@@ -59,7 +59,7 @@ export function ZodiacWheel({ onResult }: ZodiacWheelProps) {
     // Animation duration 4s
     setTimeout(() => {
       setIsSpinning(false)
-      onResult(sign)
+      onResult(sign, yearNum)
     }, 4000)
   }
 
