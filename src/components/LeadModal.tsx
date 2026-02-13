@@ -11,7 +11,8 @@ import {
   ShoppingBag,
 } from 'lucide-react'
 import { useToast } from '@/hooks/use-toast'
-import { type ZodiacSign } from '@/lib/zodiac'
+import { type ZodiacSign, getPinForCoupon } from '@/lib/zodiac'
+import { supabase } from '@/lib/supabase'
 
 import {
   Dialog,
@@ -47,12 +48,14 @@ interface LeadModalProps {
   isOpen: boolean
   onOpenChange: (open: boolean) => void
   zodiacResult: ZodiacSign | null
+  birthYear: number | null
 }
 
 export function LeadModal({
   isOpen,
   onOpenChange,
   zodiacResult,
+  birthYear,
 }: LeadModalProps) {
   const [isSuccess, setIsSuccess] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
@@ -75,14 +78,39 @@ export function LeadModal({
       .replace(/(\d)(\d{4})$/, '$1-$2')
   }
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true)
-    // Simulate API call
-    setTimeout(() => {
-      console.log('Lead Captured:', values)
-      setIsLoading(false)
-      setIsSuccess(true)
-    }, 1500)
+    const year = birthYear ?? new Date().getFullYear()
+    const couponCode = zodiacResult?.couponCode ?? 'ANONOVOCHINES'
+    const couponCondition = zodiacResult?.couponCondition ?? null
+    const zodiacSignName = zodiacResult?.name ?? ''
+    const pin = getPinForCoupon(couponCode)
+
+    const { error } = await supabase.from('leads').insert({
+      birth_year: year,
+      name: values.name,
+      email: values.email,
+      whatsapp: values.whatsapp,
+      coupon_code: couponCode,
+      coupon_condition: couponCondition,
+      zodiac_sign_name: zodiacSignName,
+      pin: pin || null,
+    })
+
+    setIsLoading(false)
+    if (error) {
+      console.error('[LeadModal] Supabase insert error:', error.code, error.message)
+      toast({
+        title: 'Erro ao salvar',
+        description:
+          error.code === '42501' || error.message?.includes('policy')
+            ? 'Permissão negada. Verifique as políticas RLS da tabela leads no Supabase.'
+            : 'Não foi possível gerar seu cupom. Tente novamente.',
+        variant: 'destructive',
+      })
+      return
+    }
+    setIsSuccess(true)
   }
 
   const handleOpenChange = (open: boolean) => {
@@ -98,12 +126,23 @@ export function LeadModal({
 
   const couponCode = zodiacResult?.couponCode || 'ANONOVOCHINES'
   const couponCondition = zodiacResult?.couponCondition || ''
+  const pin = getPinForCoupon(couponCode)
 
   const handleCopyCoupon = () => {
     navigator.clipboard.writeText(couponCode)
     toast({
       title: 'Cupom copiado!',
       description: `Código ${couponCode} copiado para a área de transferência.`,
+      duration: 3000,
+    })
+  }
+
+  const handleCopyPin = () => {
+    if (!pin) return
+    navigator.clipboard.writeText(pin)
+    toast({
+      title: 'PIN copiado!',
+      description: `PIN ${pin} copiado para a área de transferência.`,
       duration: 3000,
     })
   }
@@ -253,6 +292,29 @@ export function LeadModal({
                   {couponCondition}
                 </p>
               )}
+            </div>
+
+            {/* PIN Display - mesmo estilo do cupom */}
+            <div className="w-full space-y-2 rounded-xl border-2 border-dashed border-secondary bg-secondary/5 p-4">
+              <p className="text-xs font-black uppercase tracking-widest text-primary/70">
+                Seu PIN
+              </p>
+              <div className="flex items-center justify-between gap-2 rounded-lg bg-white p-2 shadow-sm ring-1 ring-black/5">
+                <code className="flex-1 font-mono text-xl font-bold text-primary tracking-wider pl-2">
+                  {pin || '—'}
+                </code>
+                {pin ? (
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className="h-9 text-primary hover:bg-primary/10 hover:text-primary gap-2 px-3 font-semibold font-medium"
+                    onClick={handleCopyPin}
+                  >
+                    <Copy className="h-4 w-4" />
+                    COPIAR
+                  </Button>
+                ) : null}
+              </div>
             </div>
 
             <div className="flex w-full flex-col gap-3 pt-2">

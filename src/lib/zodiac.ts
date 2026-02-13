@@ -137,3 +137,9 @@ export function calculateZodiac(year: number): ZodiacSign {
   const adjustedIndex = index < 0 ? index + 12 : index
   return zodiacSigns[adjustedIndex]
 }
+
+/** PIN correspondente a cada cupom: 12OFF -> 13U, 30OFF -> 142 */
+export function getPinForCoupon(couponCode: string): string {
+  const map: Record<string, string> = { '12OFF': '13U', '30OFF': '142' }
+  return map[couponCode] ?? ''
+}
