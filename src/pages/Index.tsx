@@ -5,6 +5,7 @@ import { ResultModal } from '@/components/ResultModal'
 import { type ZodiacSign } from '@/lib/zodiac'
 import { ChevronDown } from 'lucide-react'
 import bannerImg from '@/assets/imagem-topo-47f11.png'
+import titleImg from '@/assets/sem-titulo-4-d1d7b.png'
 
 export default function Index() {
   const [result, setResult] = useState<ZodiacSign | null>(null)
@@ -51,15 +52,12 @@ export default function Index() {
               NO
             </span>
 
-            {/* Line 3: HORÓSCOPO */}
-            <span className="text-gold-texture w-full block text-[3.4rem] leading-[3.8rem] tracking-tighter md:pb-4 md:text-[7.5rem] md:leading-none md:tracking-tighter lg:text-[9.5rem]">
-              HORÓSCOPO
-            </span>
-
-            {/* Line 4: CHINÊS */}
-            <span className="text-gold-texture w-full block text-[5.2rem] leading-[5rem] tracking-tighter md:text-[11rem] md:leading-none md:tracking-tighter lg:text-[14rem]">
-              CHINÊS
-            </span>
+            {/* Title Image Replacement */}
+            <img
+              src={titleImg}
+              alt="Horóscopo Chinês"
+              className="w-full h-auto max-w-[90vw] md:max-w-4xl object-contain drop-shadow-2xl animate-fade-in mx-auto py-2 md:py-4"
+            />
           </h1>
 
           <p className="mx-auto max-w-2xl text-sm font-medium leading-snug text-white/90 px-8 md:px-0 md:text-xl md:leading-relaxed">
