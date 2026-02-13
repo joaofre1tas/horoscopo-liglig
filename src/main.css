@@ -112,4 +112,9 @@
   .wheel-segment path {
     transition: fill 0.4s ease;
   }
+
+  /* Custom background size for desktop layout preservation */
+  .bg-size-full-auto {
+    background-size: 100% auto;
+  }
 }
