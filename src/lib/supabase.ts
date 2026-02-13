@@ -1,7 +1,12 @@
 import { createClient } from '@supabase/supabase-js'
 
-const url = import.meta.env.VITE_SUPABASE_URL
-const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+// Try to get env vars, but fallback to provided credentials if missing to prevent runtime crash
+const url =
+  import.meta.env.VITE_SUPABASE_URL ||
+  'https://xjcjulebwbsiijdyyjdd.supabase.co'
+const anonKey =
+  import.meta.env.VITE_SUPABASE_ANON_KEY ||
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhqY2p1bGVid2JzaWlqZHl5amRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA5Mjg4MzYsImV4cCI6MjA4NjUwNDgzNn0.mgjP0PBj_XO8TijxyrKPKAhmiHE8jEBVlXJTrvKjHnc'
 
 if (!url || !anonKey) {
   throw new Error(
