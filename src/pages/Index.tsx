@@ -42,16 +42,6 @@ export default function Index() {
       <section className="relative flex min-h-[300px] flex-col items-center justify-start px-4 pt-4 pb-8 text-center text-white md:min-h-[400px] md:pt-6 md:pb-20">
         <div className="relative z-10 mx-auto w-full max-w-5xl animate-fade-in-down space-y-4 md:space-y-8">
           <h1 className="flex flex-col items-center justify-center font-sans font-black uppercase w-full select-none">
-            {/* Line 1: DESCUBRA SUA SORTE */}
-            <span className="text-white w-full block text-[1.9rem] leading-[2.5rem] tracking-tight md:text-[3.8rem] md:leading-tight md:tracking-tight lg:text-[4.8rem]">
-              DESCUBRA SUA SORTE
-            </span>
-
-            {/* Line 2: NO */}
-            <span className="text-white w-full block text-[1.5rem] leading-[2.5rem] tracking-[0.3em] py-1 md:py-3 md:text-[2rem] md:leading-snug md:tracking-widest lg:text-[2.5rem]">
-              NO
-            </span>
-
             {/* Title Image Replacement */}
             <img
               src={titleImg}
